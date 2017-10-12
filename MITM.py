@@ -18,7 +18,7 @@ def get_DG_LH():
     wmi_out = wmi_obj.query( wmi_sql )#send command and recieve addresses
     for i in wmi_out:
         return i.DefaultIPGateway[0],i.IPAddress[0]
-    
+
 def getLocalAddrss():
     """
     returns a dictionary of all LAN IP addresses and their coresponding MAC address
@@ -32,24 +32,24 @@ def arpSpoof(lanAddr):
 def main():
     """
     control the whole program
-    gets the parameters for working 
+    gets the parameters for working
     then calls all functions in order
     """
-    
+
     #setup logging to file logFile.txt
     logging.basicConfig(filename='logFile.txt',level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
     logging.info('\n\n\n\n\n\n\n########## Program Start ##########\n\n')
-    
+
     #get default gateway and local IP address
     defaultGateway,localIP=get_DG_LH()
-    logging.debug('got default gateway:%s and local IP: %s'%(defaultGateway,localIP))
-    
+    logging.debug('got default gateway and local IP')
+
     #create a dictionary of local IP addresses and MAC addresses
 
 
     while True: #main loop
-        
-        
+
+
         #send ARP broadcast
         #listen for packets
         #save packet
