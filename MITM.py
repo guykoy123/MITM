@@ -1,6 +1,6 @@
 
 try:
-    import wmi,logging,scanip
+    import wmi,logging
     from scapy.all import * #missing pcapy
 except ImportError:
 
@@ -23,7 +23,8 @@ def getLocalAddrss():
     """
     returns a dictionary of all LAN IP addresses and their coresponding MAC address
     """
-    scanip.scanip.start_scan()
+    #find a way to scan local addresses !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    pass
 
 def arpSpoof(lanAddr):
     pass
