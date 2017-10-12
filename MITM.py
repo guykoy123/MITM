@@ -23,7 +23,7 @@ def getLocalAddrss():
     """
     returns a dictionary of all LAN IP addresses and their coresponding MAC address
     """
-    #find a way to scan local addresses !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    #TODO: find a way to scan local addresses
     pass
 
 def arpSpoof(lanAddr):
@@ -51,16 +51,16 @@ def main():
     while True: #main loop
 
 
-        #send ARP broadcast
-        #listen for packets
-        #save packet
-        #send packet to router
-        #listen to response from router
-        #save response
-        #send packet to original host
+        #TODO: send ARP broadcast
+        #TODO:listen for packets
+        #TODO:save packet
+        #TODO:send packet to router
+        #TODO:listen to response from router
+        #TODO:save response
+        #TODO:send packet to original host
         break
 
-    #save packets to file
+    #TODO:save packets to file
 
 
 if __name__=='__main__':
