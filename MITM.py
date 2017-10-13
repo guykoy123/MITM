@@ -50,7 +50,7 @@ def main():
 
     #setup logging to file logFile.txt
     logging.basicConfig(filename='logFile.txt',level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
-    logging.info('\n\n\n\n\n\n\n########## Program Start ##########\n\n')
+    logging.info('\n\n\n\n\n########## Program Start ##########\n\n')
 
     #get default gateway and local IP address
     defaultGateway,localIP,localMAC=getLocalhostAddress()
@@ -59,7 +59,7 @@ def main():
     #create a dictionary of local IP addresses and MAC addresses
     localAddresses=getLocalAddrss()
     logging.debug('created dictionary with all IP and MAC addresses on LAN')
-    
+
     while True: #main loop
 
 
