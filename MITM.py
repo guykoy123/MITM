@@ -1,30 +1,41 @@
 
 try:
-    import wmi,logging
+    import wmi,logging,subprocess,re
     from scapy.all import * #missing pcapy
 except ImportError:
 
     #TODO: handle all cases of missing modules and try to solve
     print 'a module is missing please check you have all required modules'
-    print 'modules: wmi,logging,scanip,scapy'
+    print 'modules: wmi,logging,scapy'
 
-def get_DG_LH():
+def getLocalhostAddress():
     """
-    returns default gateway address
-    and local host IP address
-    """
-    wmi_obj = wmi.WMI() #create wmi object
-    wmi_sql = "select IPAddress,DefaultIPGateway from Win32_NetworkAdapterConfiguration where IPEnabled=TRUE" #write sql command to rerieve IP addresses
-    wmi_out = wmi_obj.query( wmi_sql )#send command and recieve addresses
-    for i in wmi_out:
-        return i.DefaultIPGateway[0],i.IPAddress[0]
+    returns default gateway address,
+    Subnet Mask
+    and localhost IP address"""
+    l=[]
+    c = wmi.WMI() #create wmi object
+    for interface in c.Win32_NetworkAdapterConfiguration (IPEnabled=1):
+        return interface.DefaultIPGateway[0],interface.IPAddress[0],interface.MACAddress[0]
 
 def getLocalAddrss():
     """
-    returns a dictionary of all LAN IP addresses and their coresponding MAC address
-    """
-    #TODO: find a way to scan local addresses
-    pass
+    returns a dictionary of all LAN IP addresses and their coresponding MAC address"""
+
+    allAddresses = subprocess.check_output(['arp', '-a'])
+    temp=allAddresses.split('ff-ff-ff-ff-ff-ff')
+    localAddrss=temp[0].split('\r\n')[3:-1]
+    ipAddr=re.compile(r'\d+.\d+.\d+.\d+')
+    macAddr=re.compile(r'([0-9A-Fa-f]{2}-){5}([0-9A-Fa-f]{2})')
+    #created regex objects to extract IP and MAC
+    localAddresses=dict()
+    for i in localAddrss:
+        ip=ipAddr.search(i)
+        mac=macAddr.search(i)
+        localAddresses[ip.group()]=mac.group()
+
+    #return dict of IP and MAC on LAN
+    return localAddresses
 
 def arpSpoof(lanAddr):
     pass
@@ -42,12 +53,13 @@ def main():
     logging.info('\n\n\n\n\n\n\n########## Program Start ##########\n\n')
 
     #get default gateway and local IP address
-    defaultGateway,localIP=get_DG_LH()
-    logging.debug('got default gateway and local IP')
+    defaultGateway,localIP,localMAC=getLocalhostAddress()
+    logging.debug('got default gateway, local IP and local MAC')
 
     #create a dictionary of local IP addresses and MAC addresses
-
-
+    localAddresses=getLocalAddrss()
+    logging.debug('created dictionary with all IP and MAC addresses on LAN')
+    
     while True: #main loop
 
 
