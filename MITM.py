@@ -52,7 +52,9 @@ def arpSpoof(localAddresses,defaultGateway,localMAC):
                 gatewayPacket.show()
                 send(victimPacket)
                 send(gatewayPacket)
+
         time.sleep(60)
+
 
 
 def main():
