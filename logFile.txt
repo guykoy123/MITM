@@ -1,1 +1,632 @@
+ 2017-10-13 11:23:44,415 - INFO - 
 
+
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 11:23:44,753 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 11:23:44,782 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+
+
+
+
+
+
+
+
+
+ 2017-10-13 11:24:39,552 - INFO - ########## Program Start ##########
+
+
+
+
+
+
+
+
+
+
+
+ 2017-10-13 11:24:39,878 - DEBUG - got default gateway, local IP and local MAC
+
+
+
+
+
+
+
+
+
+ 2017-10-13 11:24:39,905 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:02:33,348 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:02:33,746 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:02:33,776 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:02:33,776 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:03:13,882 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:03:14,217 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:03:14,246 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:03:14,246 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:03:33,749 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:03:34,078 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:03:34,105 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:03:34,105 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:09:27,227 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:09:27,558 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:09:27,588 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:09:27,588 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:09:47,516 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:09:47,848 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:09:47,875 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:09:47,877 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:09:56,572 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:09:56,904 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:09:56,930 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:09:56,930 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:10:33,994 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:10:34,325 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:10:34,352 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:10:34,354 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:16:10,420 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:16:10,760 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:16:10,789 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:16:10,789 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:18:07,161 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:18:07,492 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:18:48,421 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:18:48,759 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:18:48,788 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:18:48,788 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:20:47,786 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:20:48,122 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:20:48,150 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:20:48,151 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:22:02,315 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:22:02,648 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:22:02,677 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:22:02,677 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:24:16,378 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:24:16,717 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:24:16,747 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:24:16,749 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:26:49,727 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:26:50,065 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:26:50,095 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:26:50,095 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:28:51,135 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:28:51,467 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:28:51,494 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:28:51,494 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:31:52,312 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:31:52,648 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:31:52,677 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:31:52,677 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:33:56,167 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:33:56,503 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:33:56,532 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:33:56,532 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:36:22,769 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:36:23,105 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:36:23,134 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:36:23,134 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:36:33,678 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:36:34,009 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:36:34,039 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:36:34,039 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:37:37,788 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:37:38,119 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:37:38,147 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:37:38,147 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:38:10,358 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:38:10,691 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:38:10,720 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:38:10,720 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:38:38,903 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:38:39,233 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:38:39,262 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:38:39,263 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:40:18,167 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:40:18,505 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:40:18,532 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:40:18,532 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:45:37,171 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:45:37,509 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:45:37,539 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:45:37,539 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:46:11,634 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:46:11,963 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:46:11,992 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:46:11,992 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:46:38,391 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:46:38,724 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:46:38,753 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:46:38,753 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:47:37,887 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:47:38,217 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:47:38,246 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:47:38,246 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:50:36,147 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:50:36,483 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:50:36,509 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:50:36,509 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:50:36,513 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:50:36,517 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:50:36,519 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:50:41,519 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:50:41,522 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:50:41,525 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:50:46,519 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:50:46,522 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:50:46,525 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:50:51,522 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:50:51,523 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:50:51,526 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:50:56,522 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:50:56,523 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:50:56,526 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:51:01,523 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:51:01,526 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:51:01,528 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:51:06,525 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:51:06,528 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:51:06,529 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:51:11,528 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:51:11,529 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:51:11,532 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:26,848 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 12:52:27,180 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 12:52:27,207 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 12:52:27,209 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 12:52:27,211 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:27,217 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:27,219 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:32,217 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:32,220 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:32,221 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:37,219 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:37,220 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:37,223 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:42,219 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:42,220 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:42,223 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:47,220 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:47,223 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:47,226 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:52,223 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:52,224 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:52,226 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:57,226 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:57,229 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:52:57,230 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:53:02,227 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:53:02,230 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:53:02,232 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:53:07,230 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:53:07,232 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 12:53:07,233 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 16:59:11,263 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 16:59:11,655 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 16:59:11,684 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 16:59:11,686 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 17:00:13,006 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 17:00:13,335 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 17:00:13,362 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 17:00:13,364 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 17:04:04,664 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 17:04:04,997 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 17:04:05,025 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 17:04:05,025 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 17:04:05,028 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:04:05,032 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:04:05,035 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:04:10,211 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:04:10,214 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:04:10,217 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:04:50,174 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 17:04:50,502 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 17:04:50,530 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 17:04:50,530 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 17:05:40,667 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 17:05:40,994 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 17:05:41,023 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 17:05:41,023 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 17:06:25,592 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 17:06:25,917 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 17:06:25,948 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 17:06:25,950 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 17:06:25,953 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:06:25,957 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:06:25,960 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:06:30,957 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:06:30,959 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:06:30,961 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:06:35,957 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:06:35,960 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:06:35,963 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:06:40,960 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:06:40,961 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:06:40,963 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:07:34,732 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 17:07:35,058 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 17:07:35,085 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 17:07:35,085 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 17:08:41,930 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 17:08:42,259 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 17:08:42,286 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 17:08:42,288 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 17:08:42,292 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:08:42,296 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:08:42,299 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:13:23,806 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 17:13:24,161 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 17:13:24,190 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 17:13:24,191 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 17:13:24,194 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:13:24,198 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:13:24,200 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:13:29,197 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:13:29,200 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:13:29,201 - WARNING - more Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:14:09,855 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 17:14:10,184 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 17:14:10,210 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 17:14:10,211 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 17:21:46,424 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 17:21:46,760 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 17:21:46,789 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 17:21:46,789 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 17:22:05,111 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 17:22:05,438 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 17:22:05,467 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 17:22:05,467 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 17:22:55,400 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 17:22:55,729 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 17:22:55,756 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 17:22:55,756 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 17:22:55,762 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:22:55,766 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:24:36,072 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 17:24:36,401 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 17:24:36,430 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 17:24:36,430 - DEBUG - created thread for ARP spoofing
+ 2017-10-13 17:24:36,434 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:24:36,440 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-13 17:28:54,298 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-13 17:28:54,632 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-13 17:28:54,660 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-13 17:28:54,661 - DEBUG - created thread for ARP spoofing
+ 2017-10-14 15:47:41,003 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-14 15:47:41,259 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-14 15:47:41,286 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-14 15:47:41,286 - DEBUG - created thread for ARP spoofing
+ 2017-10-14 15:48:36,789 - INFO - 
+
+
+
+
+########## Program Start ##########
+
+
+ 2017-10-14 15:48:36,993 - DEBUG - got default gateway, local IP and local MAC
+ 2017-10-14 15:48:37,017 - DEBUG - created dictionary with all IP and MAC addresses on LAN
+ 2017-10-14 15:48:37,017 - DEBUG - created thread for ARP spoofing
+ 2017-10-14 15:48:37,022 - WARNING - Mac address to reach destination not found. Using broadcast.
+ 2017-10-14 15:48:37,028 - WARNING - Mac address to reach destination not found. Using broadcast.
