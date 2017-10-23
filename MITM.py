@@ -1,42 +1,54 @@
 #python 2.7
 
 try:
-    import wmi,logging,subprocess,re, threading,time
+    import logging,subprocess,re, threading,time,socket,struct
     from scapy.all import *
 except ImportError:
 
     #TODO: handle all cases of missing modules and try to solve
     print 'a module is missing please check you have all required modules'
-    print 'modules: wmi,logging,scapy'
 
-def getLocalhostAddress():
-    """
-    returns default gateway address,
-    Subnet Mask
-    and localhost IP address"""
-    l=[]
-    c = wmi.WMI() #create wmi object
-    for interface in c.Win32_NetworkAdapterConfiguration (IPEnabled=1):
-        return interface.DefaultIPGateway[0],interface.IPAddress[0],interface.MACAddress
+def getDefaultGateway():
+    """Read the default gateway directly from /proc."""
+    with open("/proc/net/route") as fh:
+        for line in fh:
+            fields = line.strip().split()
+            if fields[1] != '00000000' or not int(fields[3], 16) & 2:
+                continue
 
-def getLocalAddrss():
+            return socket.inet_ntoa(struct.pack("<L", int(fields[2], 16)))
+
+def getSubnetMask(ip):
+    proc = subprocess.Popen('ifconfig',stdout=subprocess.PIPE)
+    while True:
+        line = proc.stdout.readline()
+        if ip.encode() in line:
+            break
+    mask = line.rstrip().split(b':')[-1].replace(b' ',b'').decode()
+    return mask
+
+def getLocalAddrss(defaultGateway,subnetMask):
     """
     returns a dictionary of all LAN IP addresses and their coresponding MAC address"""
 
-    allAddresses = subprocess.check_output(['arp', '-a'])
-    temp=allAddresses.split('ff-ff-ff-ff-ff-ff')
-    localAddrss=temp[0].split('\r\n')[3:-1]
-    ipAddr=re.compile(r'\d+.\d+.\d+.\d+')
-    macAddr=re.compile(r'([0-9A-Fa-f]{2}-){5}([0-9A-Fa-f]{2})')
-    #created regex objects to extract IP and MAC
-    localAddresses=dict()
-    for i in localAddrss:
-        ip=ipAddr.search(i)
-        mac=macAddr.search(i)
-        localAddresses[ip.group()]=mac.group().replace('-',':')#format MAC address for scapy
+    localIPAddresses=[]
+    maskParts=subnetMask.split('.')
+    IPstart='.'.join(defaultGateway.split('.')[0:2])+'.'
+    if maskParts[2]=='255':
+        for i in range(int(defaultGateway.split('.')[-1]),int(maskParts[-1])):
+            output = subprocess.Popen(['ping', '-n', '1', '-w', '500',(IPstart+str(i))], stdout=subprocess.PIPE, startupinfo=info).communicate()[0]
 
-    #return dict of IP and MAC on LAN
-    return localAddresses
+            if "Destination host unreachable" in output.decode('utf-8'):
+                pass
+                #print(str(all_hosts[i]), "is Offline")
+            elif "Request timed out" in output.decode('utf-8'):
+                pass
+                #print(str(all_hosts[i]), "is Offline")
+            else:
+                localIPAddresses.append()
+
+
+    print localIPAddresses
 
 def arpSpoof(localAddresses,defaultGateway,localMAC):
     """
@@ -69,10 +81,12 @@ def main():
     logging.basicConfig(filename='logFile.txt',level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')
     logging.info('\n\n\n\n\n########## Program Start ##########\n\n')
 
-    #get default gateway and local IP address
-    defaultGateway,localIP,localMAC=getLocalhostAddress()
-    logging.debug('got default gateway, local IP and local MAC')
+    #get default gateway
+    defaultGateway=getDefaultGateway()
+    logging.debug('got default gateway')
 
+    #get subnet mask
+    subnetMask=getSubnetMask(defaultGateway)
     #create a dictionary of local IP addresses and MAC addresses
     localAddresses=getLocalAddrss()
     logging.debug('created dictionary with all IP and MAC addresses on LAN')
