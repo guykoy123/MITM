@@ -24,7 +24,10 @@ def sendPacket(packet,defaultGateway):
     """
     sends packet to intended destination
     """
+<<<<<<< HEAD
     #TODO: test function
+=======
+>>>>>>> 336b261ab36e2e99779e15bb366f6a25bc51e4a6
     if IP in packet:
         packet[IP].pdst=defaultGateway[0]
         packet[Ether].hwdst=defaultGateway[1] # set destination address to routers address

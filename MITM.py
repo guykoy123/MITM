@@ -133,6 +133,7 @@ def setup():
     #get default gateway and local IP address
     defaultGateway,subnetMask,localHost=functions.getLocalhostAddress()
     logging.debug('got default gateway, local IP, local MAC and Subnet Mask')
+<<<<<<< HEAD
 
     monitorThread=Thread(target=get_Local_Addresses)
     #monitorThread.start()
@@ -142,6 +143,17 @@ def setup():
     #arpThread.start()
     logging.debug('created thread for ARP spoofing')
 
+=======
+
+    monitorThread=Thread(target=get_Local_Addresses)
+    #monitorThread.start()
+    logging.debug('created thread for monitoring network for new devices')
+
+    arpThread=Thread(target=arpSpoof,args=(defaultGateway,localHost[1],))
+    #arpThread.start()
+    logging.debug('created thread for ARP spoofing')
+
+>>>>>>> 336b261ab36e2e99779e15bb366f6a25bc51e4a6
     return defaultGateway,subnetMask
 
 
@@ -158,12 +170,22 @@ def main():
     managerThread=Thread(target=manager) #checks if user wants to stop
     managerThread.start()
     logging.debug('created thread for managing')
+<<<<<<< HEAD
 
     if not stop:
         defaultGateway,subnetMask=setup() # get all necessary values before beginning
 
     while not stop: #main loop
         sniff(prn=add_packet,count=5) #listen for packets
+=======
+
+    if not stop:
+        defaultGateway,subnetMask=setup() # get all necessary values before beginning
+
+    while not stop: #main loop
+        sniff(prn=add_packet,count=5) #listen for packets
+
+>>>>>>> 336b261ab36e2e99779e15bb366f6a25bc51e4a6
 
     #TODO: add function to scan packets and update information about each device
 
