@@ -39,6 +39,7 @@ def get_MAC_Address(pkt):
         if address not in localAddresses:
             localAddresses.append(address)
             print len(localAddresses)
+            #TODO: log all packets and check them for responses
 
 
 def get_Local_Addresses(subnetMask,defaultGateway):
@@ -51,6 +52,7 @@ def get_Local_Addresses(subnetMask,defaultGateway):
     lastHour=0
     #all possible ranges for networks
     low_IP_Range={'255.255.255.252':True,'255.255.255.248':True,'255.255.255.240':True,'255.255.255.224':True,'255.255.255.192':True,'255.255.255.128':True,'255.255.255.0':True}
+    #TODO: remove ranges below 255.255.255.0 and dont do higher than 255.255.248.0
     while True:
         if not stop:
             currentHour=int(datetime.now().strftime('%H'))
@@ -85,6 +87,7 @@ def arpSpoof(defaultGateway,localMAC):
 
     while True:
         if len(localAddresses)>0:
+            #TODO: change from handling dictionary to list
             for ip in localAddresses.keys()[1:]: #run through all addresses except the default gateway
                 if ip != defaultGateway:
 
