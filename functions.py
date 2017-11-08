@@ -18,7 +18,7 @@ def getLocalhostAddress():
         localHost.append(interface.IPAddress[0].encode('ascii').lower())
         localHost.append(interface.MACAddress.encode('ascii').lower())
         return interface.DefaultIPGateway[0],interface.IPSubnet[0],localHost
-
+    #TODO: convert to linux with ifconfig|grep
 
 def sendPacket(packet,defaultGateway):
     """
