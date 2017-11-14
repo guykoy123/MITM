@@ -1,0 +1,246 @@
+161 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+165 - DEBUG : created thread for managing
+161 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+163 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+113 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+92 - DEBUG : got default gateway, local IP, local MAC and Subnet Mask
+96 - DEBUG : created thread for monitoring network for new devices
+113 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+92 - DEBUG : got default gateway, local IP, local MAC and Subnet Mask
+96 - DEBUG : created thread for monitoring network for new devices
+100 - DEBUG : created thread for ARP spoofing
+113 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+113 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+113 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+113 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+113 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+115 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+115 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+114 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+114 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+114 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+114 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+114 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+112 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+113 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+113 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+113 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+114 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+122 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+122 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+122 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+123 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+123 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+123 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+122 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+122 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+

@@ -1,6 +1,6 @@
 #python 2.7
 
-import wmi
+
 from scapy.all import *
 
 # global variables:
@@ -11,13 +11,7 @@ def getLocalhostAddress():
     returns default gateway address,
     Subnet Mask
     and localhost IP address"""
-    l=[]
-    c = wmi.WMI() #create wmi object
-    for interface in c.Win32_NetworkAdapterConfiguration (IPEnabled=1):
-        global localhost
-        localHost.append(interface.IPAddress[0].encode('ascii').lower())
-        localHost.append(interface.MACAddress.encode('ascii').lower())
-        return interface.DefaultIPGateway[0],interface.IPSubnet[0],localHost
+    pass
     #TODO: convert to linux with ifconfig|grep
 
 def sendPacket(packet,defaultGateway):
