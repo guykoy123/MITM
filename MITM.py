@@ -34,6 +34,9 @@ def add_packet(pkt):
 
 
 def get_MAC_Address(pkt):
+    """
+    adds host address if does not yet exist in listen
+    """
     if pkt[ARP].op == 2: # is-at
         #if pkt[ARP].pdst==localHost[0]:
         address=(pkt[ARP].psrc,pkt[ARP].hwsrc)
@@ -61,7 +64,6 @@ def get_Local_Addresses():
         addrs.append( i.split('\n')[-1])
 
     global localAddresses
-
     for i in range(0,len(addrs),2):
         host=(addrs[i],addrs[i+1])
         localAddresses.append(host)
