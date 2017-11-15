@@ -7,7 +7,7 @@ from time import sleep
 from scapy.all import *
 from datetime import datetime
 import functions
-import os
+
 
 # except ImportError:
 #
@@ -16,7 +16,7 @@ import os
 
 # global variables:
 stop=False
-localHost=[]
+localHost=''
 localAddresses=[]
 addressesLock=Lock()
 
@@ -49,24 +49,8 @@ def get_MAC_Address(pkt):
             #TODO: log all packets and check them for responses
 
 
-def get_Local_Addresses():
-    """
-    scan network for all active hosts
-    """
 
-    os.system('arp-scan --localnet > arpscanOutput.txt')
-    with open('arpscanResult.txt','r') as f:
-        output=f.read()
-    print output
-    temp=output.split('\t')[:-1]
-    addrs=[]
-    for i in temp:
-        addrs.append( i.split('\n')[-1])
 
-    global localAddresses
-    for i in range(0,len(addrs),2):
-        host=(addrs[i],addrs[i+1])
-        localAddresses.append(host)
 
 
 def monitor_network():
@@ -101,6 +85,29 @@ def arpSpoof(router,localMAC):
             sleep(30)
 
 
+
+def get_Local_Addresses():
+    """
+    scan network for all active hosts
+    """
+
+    # os.system('arp-scan --localnet > arpscanOutput.txt')
+    # with open('arpscanOutput.txt','r') as f:
+    #     output=f.read()
+    # print output
+    output =functions.proc_output('arp-scan --localnet')
+    temp=output.split('\t')[:-1]
+    addrs=[]
+    for i in temp:
+        addrs.append( i.split('\n')[-1])
+
+    global localAddresses
+    for i in range(0,len(addrs),2):
+        host=addrs[i]
+        localAddresses.append(host)
+    print localAddresses
+
+
 def setup():
     """
     get all necessary values for the program to run
@@ -108,7 +115,8 @@ def setup():
     """
     global localHost
     #get default gateway and local IP address
-    #defaultGateway,subnetMask,localHost=functions.getLocalhostAddress()
+    #functions.getLocalhostAddress()
+    defaultGateway,localHost=functions.getLocalhostAddress()
     logging.debug('got default gateway, local IP, local MAC and Subnet Mask')
 
     get_Local_Addresses()
@@ -140,10 +148,11 @@ def main():
         #defaultGateway,subnetMask=setup() # get all necessary values before beginning
         pass
 
-    while not stop: #main loop
-        sniff(prn=add_packet,count=5) #listen for packets
+    # while not stop: #main loop
+    #     sniff(prn=add_packet,count=5) #listen for packets
 
-
+    while True:
+        pass
     #TODO: add function to scan packets and update information about each device
 
 
