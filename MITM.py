@@ -28,7 +28,7 @@ def handle_Packet(pkt):
         pass
         #TODO: decide if to do live scanning or adding to queue and then scanning
     pass
-    #functions.sendPacket(pkt,localAddresses[0])
+    #functions.sendPacket(pkt,localAddresses)
 
 
 
