@@ -1,4 +1,4 @@
-161 - INFO : 
+136 - INFO : 
 
 
 
@@ -6,8 +6,12 @@
 ########## Program Start ##########
 
 
-165 - DEBUG : created thread for managing
-161 - INFO : 
+112 - DEBUG : got default gateway and local IP
+115 - DEBUG : scanned network for all active hosts
+119 - DEBUG : created thread for monitoring network for new devices
+123 - DEBUG : created thread for ARP spoofing
+139 - INFO : setup complete
+134 - INFO : 
 
 
 
@@ -15,232 +19,14 @@
 ########## Program Start ##########
 
 
-163 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-113 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-92 - DEBUG : got default gateway, local IP, local MAC and Subnet Mask
-96 - DEBUG : created thread for monitoring network for new devices
-113 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-92 - DEBUG : got default gateway, local IP, local MAC and Subnet Mask
-96 - DEBUG : created thread for monitoring network for new devices
-100 - DEBUG : created thread for ARP spoofing
-113 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-113 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-113 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-113 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-113 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-115 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-115 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-114 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-114 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-114 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-114 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-114 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-112 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-113 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-113 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-113 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-114 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-122 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-122 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-122 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-123 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-123 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-123 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-122 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
-122 - INFO : 
-
-
-
-
-########## Program Start ##########
-
-
+110 - DEBUG : got default gateway and local IP
+113 - DEBUG : scanned network for all active hosts
+117 - DEBUG : created thread for monitoring network for new devices
+121 - DEBUG : created thread for ARP spoofing
+137 - INFO : setup complete
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+292 - WARNING : more Mac address to reach destination not found. Using broadcast.
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+292 - WARNING : more Mac address to reach destination not found. Using broadcast.
