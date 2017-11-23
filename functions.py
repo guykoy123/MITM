@@ -48,12 +48,17 @@ def getLocalhostAddress():
     localHost=proc_output('ip route | awk \'/src/ { print $9 }\'')
     return defaultGateway,localHost
 
-def sendPacket(packet,defaultGateway):
+def sendPacket(packet):
     """
     sends packet to intended destination
     """
     #TODO: rewrite
-    pass
+    if Ether in packet:
+        packet[Ether].dst='00:00:00:00:00:00'
+        sendp(packet)
+        logging.debug('sent: '+packet.summary())
+    else:
+        packet.show()
 
 
 

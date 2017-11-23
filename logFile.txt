@@ -30,3 +30,2772 @@
 292 - WARNING : Mac address to reach destination not found. Using broadcast.
 292 - WARNING : Mac address to reach destination not found. Using broadcast.
 292 - WARNING : more Mac address to reach destination not found. Using broadcast.
+106 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+80 - DEBUG : got default gateway and local IP
+84 - DEBUG : scanned network for all active hosts
+102 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+80 - DEBUG : got default gateway and local IP
+84 - DEBUG : scanned network for all active hosts
+60 - DEBUG : spoofng: 10.0.2.2
+89 - DEBUG : created thread for ARP spoofing
+105 - INFO : setup complete
+60 - DEBUG : spoofng: 10.0.2.3
+60 - DEBUG : spoofng: 10.0.2.4
+102 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+80 - DEBUG : got default gateway and local IP
+84 - DEBUG : scanned network for all active hosts
+89 - DEBUG : created thread for ARP spoofing
+105 - INFO : setup complete
+60 - DEBUG : spoofng: 10.30.56.2
+60 - DEBUG : spoofng: 10.30.56.4
+60 - DEBUG : spoofng: 10.30.56.6
+60 - DEBUG : spoofng: 10.30.56.1
+60 - DEBUG : spoofng: 10.30.56.20
+60 - DEBUG : spoofng: 10.30.56.23
+60 - DEBUG : spoofng: 10.30.56.22
+60 - DEBUG : spoofng: 10.30.56.30
+60 - DEBUG : spoofng: 10.30.56.36
+60 - DEBUG : spoofng: 10.30.56.52
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.53
+60 - DEBUG : spoofng: 10.30.56.53
+60 - DEBUG : spoofng: 10.30.56.62
+60 - DEBUG : spoofng: 10.30.56.67
+60 - DEBUG : spoofng: 10.30.56.79
+60 - DEBUG : spoofng: 10.30.56.78
+60 - DEBUG : spoofng: 10.30.56.64
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.54
+292 - WARNING : more Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.69
+60 - DEBUG : spoofng: 10.30.56.69
+60 - DEBUG : spoofng: 10.30.56.63
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.101
+60 - DEBUG : spoofng: 10.30.56.94
+60 - DEBUG : spoofng: 10.30.56.106
+60 - DEBUG : spoofng: 10.30.56.105
+60 - DEBUG : spoofng: 10.30.56.108
+60 - DEBUG : spoofng: 10.30.56.110
+60 - DEBUG : spoofng: 10.30.56.111
+60 - DEBUG : spoofng: 10.30.56.112
+60 - DEBUG : spoofng: 10.30.56.113
+60 - DEBUG : spoofng: 10.30.56.117
+60 - DEBUG : spoofng: 10.30.56.118
+60 - DEBUG : spoofng: 10.30.56.126
+60 - DEBUG : spoofng: 10.30.56.129
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.139
+60 - DEBUG : spoofng: 10.30.56.155
+60 - DEBUG : spoofng: 10.30.56.173
+60 - DEBUG : spoofng: 10.30.56.172
+60 - DEBUG : spoofng: 10.30.56.174
+60 - DEBUG : spoofng: 10.30.56.177
+60 - DEBUG : spoofng: 10.30.56.182
+60 - DEBUG : spoofng: 10.30.56.181
+60 - DEBUG : spoofng: 10.30.56.185
+60 - DEBUG : spoofng: 10.30.56.188
+60 - DEBUG : spoofng: 10.30.56.190
+60 - DEBUG : spoofng: 10.30.56.191
+60 - DEBUG : spoofng: 10.30.56.149
+60 - DEBUG : spoofng: 10.30.56.193
+60 - DEBUG : spoofng: 10.30.56.196
+60 - DEBUG : spoofng: 10.30.56.198
+60 - DEBUG : spoofng: 10.30.56.202
+60 - DEBUG : spoofng: 10.30.56.204
+60 - DEBUG : spoofng: 10.30.56.209
+60 - DEBUG : spoofng: 10.30.56.189
+60 - DEBUG : spoofng: 10.30.56.215
+60 - DEBUG : spoofng: 10.30.56.216
+60 - DEBUG : spoofng: 10.30.56.217
+60 - DEBUG : spoofng: 10.30.56.219
+60 - DEBUG : spoofng: 10.30.56.222
+60 - DEBUG : spoofng: 10.30.56.225
+60 - DEBUG : spoofng: 10.30.56.243
+60 - DEBUG : spoofng: 10.30.56.248
+60 - DEBUG : spoofng: 10.30.56.253
+60 - DEBUG : spoofng: 10.30.57.0
+60 - DEBUG : spoofng: 10.30.57.4
+60 - DEBUG : spoofng: 10.30.57.11
+60 - DEBUG : spoofng: 10.30.57.22
+60 - DEBUG : spoofng: 10.30.57.34
+60 - DEBUG : spoofng: 10.30.57.37
+60 - DEBUG : spoofng: 10.30.56.250
+60 - DEBUG : spoofng: 10.30.57.46
+60 - DEBUG : spoofng: 10.30.57.26
+60 - DEBUG : spoofng: 10.30.57.40
+60 - DEBUG : spoofng: 10.30.57.67
+60 - DEBUG : spoofng: 10.30.57.70
+60 - DEBUG : spoofng: 10.30.57.71
+60 - DEBUG : spoofng: 10.30.57.35
+60 - DEBUG : spoofng: 10.30.57.75
+60 - DEBUG : spoofng: 10.30.57.80
+60 - DEBUG : spoofng: 10.30.57.85
+60 - DEBUG : spoofng: 10.30.57.88
+60 - DEBUG : spoofng: 10.30.57.58
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.89
+60 - DEBUG : spoofng: 10.30.57.93
+60 - DEBUG : spoofng: 10.30.57.91
+60 - DEBUG : spoofng: 10.30.57.102
+60 - DEBUG : spoofng: 10.30.57.101
+60 - DEBUG : spoofng: 10.30.57.99
+60 - DEBUG : spoofng: 10.30.57.103
+60 - DEBUG : spoofng: 10.30.57.104
+60 - DEBUG : spoofng: 10.30.57.105
+60 - DEBUG : spoofng: 10.30.57.107
+60 - DEBUG : spoofng: 10.30.57.108
+60 - DEBUG : spoofng: 10.30.57.112
+60 - DEBUG : spoofng: 10.30.57.81
+60 - DEBUG : spoofng: 10.30.57.114
+60 - DEBUG : spoofng: 10.30.57.115
+60 - DEBUG : spoofng: 10.30.57.116
+60 - DEBUG : spoofng: 10.30.57.123
+60 - DEBUG : spoofng: 10.30.57.124
+60 - DEBUG : spoofng: 10.30.57.125
+60 - DEBUG : spoofng: 10.30.57.131
+60 - DEBUG : spoofng: 10.30.57.133
+60 - DEBUG : spoofng: 10.30.57.134
+60 - DEBUG : spoofng: 10.30.57.140
+60 - DEBUG : spoofng: 10.30.57.141
+60 - DEBUG : spoofng: 10.30.57.146
+60 - DEBUG : spoofng: 10.30.57.153
+60 - DEBUG : spoofng: 10.30.57.158
+60 - DEBUG : spoofng: 10.30.57.161
+60 - DEBUG : spoofng: 10.30.57.164
+60 - DEBUG : spoofng: 10.30.57.174
+60 - DEBUG : spoofng: 10.30.57.177
+60 - DEBUG : spoofng: 10.30.57.189
+60 - DEBUG : spoofng: 10.30.57.201
+60 - DEBUG : spoofng: 10.30.57.204
+60 - DEBUG : spoofng: 10.30.57.215
+60 - DEBUG : spoofng: 10.30.57.196
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.230
+60 - DEBUG : spoofng: 10.30.57.237
+60 - DEBUG : spoofng: 10.30.57.240
+60 - DEBUG : spoofng: 10.30.57.246
+60 - DEBUG : spoofng: 10.30.57.210
+60 - DEBUG : spoofng: 10.30.57.217
+60 - DEBUG : spoofng: 10.30.57.249
+60 - DEBUG : spoofng: 10.30.57.235
+60 - DEBUG : spoofng: 10.30.58.29
+60 - DEBUG : spoofng: 10.30.58.35
+60 - DEBUG : spoofng: 10.30.58.17
+60 - DEBUG : spoofng: 10.30.58.45
+60 - DEBUG : spoofng: 10.30.58.47
+60 - DEBUG : spoofng: 10.30.58.48
+60 - DEBUG : spoofng: 10.30.58.49
+60 - DEBUG : spoofng: 10.30.58.7
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.51
+60 - DEBUG : spoofng: 10.30.58.54
+60 - DEBUG : spoofng: 10.30.58.64
+60 - DEBUG : spoofng: 10.30.58.69
+60 - DEBUG : spoofng: 10.30.58.68
+60 - DEBUG : spoofng: 10.30.58.73
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.78
+60 - DEBUG : spoofng: 10.30.58.79
+60 - DEBUG : spoofng: 10.30.58.98
+60 - DEBUG : spoofng: 10.30.58.109
+60 - DEBUG : spoofng: 10.30.58.127
+60 - DEBUG : spoofng: 10.30.58.135
+60 - DEBUG : spoofng: 10.30.58.150
+60 - DEBUG : spoofng: 10.30.58.152
+60 - DEBUG : spoofng: 10.30.58.153
+60 - DEBUG : spoofng: 10.30.58.132
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.143
+60 - DEBUG : spoofng: 10.30.58.185
+60 - DEBUG : spoofng: 10.30.58.187
+60 - DEBUG : spoofng: 10.30.58.136
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.204
+60 - DEBUG : spoofng: 10.30.58.203
+60 - DEBUG : spoofng: 10.30.58.206
+60 - DEBUG : spoofng: 10.30.58.208
+60 - DEBUG : spoofng: 10.30.58.209
+60 - DEBUG : spoofng: 10.30.58.210
+60 - DEBUG : spoofng: 10.30.58.211
+60 - DEBUG : spoofng: 10.30.58.212
+60 - DEBUG : spoofng: 10.30.58.214
+60 - DEBUG : spoofng: 10.30.58.215
+60 - DEBUG : spoofng: 10.30.58.216
+60 - DEBUG : spoofng: 10.30.58.217
+60 - DEBUG : spoofng: 10.30.58.218
+60 - DEBUG : spoofng: 10.30.58.219
+60 - DEBUG : spoofng: 10.30.58.222
+60 - DEBUG : spoofng: 10.30.58.221
+60 - DEBUG : spoofng: 10.30.58.220
+60 - DEBUG : spoofng: 10.30.58.239
+60 - DEBUG : spoofng: 10.30.59.13
+60 - DEBUG : spoofng: 10.30.59.12
+60 - DEBUG : spoofng: 10.30.59.17
+60 - DEBUG : spoofng: 10.30.58.248
+60 - DEBUG : spoofng: 10.30.59.20
+60 - DEBUG : spoofng: 10.30.59.25
+60 - DEBUG : spoofng: 10.30.58.251
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.63.201
+60 - DEBUG : spoofng: 10.30.63.207
+60 - DEBUG : spoofng: 10.30.63.209
+60 - DEBUG : spoofng: 10.30.63.206
+60 - DEBUG : spoofng: 10.30.63.210
+60 - DEBUG : spoofng: 10.30.63.219
+60 - DEBUG : spoofng: 10.30.63.221
+60 - DEBUG : spoofng: 10.30.56.83
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.57
+60 - DEBUG : spoofng: 10.30.56.171
+60 - DEBUG : spoofng: 10.30.56.200
+60 - DEBUG : spoofng: 10.30.56.241
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.83
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.151
+292 - WARNING : more Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.216
+60 - DEBUG : spoofng: 10.30.58.114
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.252
+60 - DEBUG : spoofng: 10.30.63.204
+60 - DEBUG : spoofng: 10.30.63.212
+60 - DEBUG : spoofng: 10.30.63.222
+292 - WARNING : DNS decompression loop detected
+60 - DEBUG : spoofng: 10.30.56.2
+102 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+80 - DEBUG : got default gateway and local IP
+84 - DEBUG : scanned network for all active hosts
+60 - DEBUG : spoofng: 10.30.56.4
+89 - DEBUG : created thread for ARP spoofing
+105 - INFO : setup complete
+60 - DEBUG : spoofng: 10.30.56.2
+60 - DEBUG : spoofng: 10.30.56.6
+60 - DEBUG : spoofng: 10.30.56.20
+60 - DEBUG : spoofng: 10.30.56.22
+60 - DEBUG : spoofng: 10.30.56.23
+60 - DEBUG : spoofng: 10.30.56.30
+60 - DEBUG : spoofng: 10.30.56.36
+60 - DEBUG : spoofng: 10.30.56.62
+60 - DEBUG : spoofng: 10.30.56.67
+60 - DEBUG : spoofng: 10.30.56.50
+60 - DEBUG : spoofng: 10.30.56.78
+60 - DEBUG : spoofng: 10.30.56.79
+60 - DEBUG : spoofng: 10.30.56.59
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.101
+60 - DEBUG : spoofng: 10.30.56.105
+60 - DEBUG : spoofng: 10.30.56.106
+60 - DEBUG : spoofng: 10.30.56.108
+60 - DEBUG : spoofng: 10.30.56.54
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.110
+60 - DEBUG : spoofng: 10.30.56.111
+60 - DEBUG : spoofng: 10.30.56.71
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.112
+60 - DEBUG : spoofng: 10.30.56.113
+60 - DEBUG : spoofng: 10.30.56.74
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.117
+60 - DEBUG : spoofng: 10.30.56.118
+60 - DEBUG : spoofng: 10.30.56.126
+60 - DEBUG : spoofng: 10.30.56.139
+60 - DEBUG : spoofng: 10.30.56.155
+60 - DEBUG : spoofng: 10.30.56.172
+60 - DEBUG : spoofng: 10.30.56.173
+60 - DEBUG : spoofng: 10.30.56.174
+60 - DEBUG : spoofng: 10.30.56.177
+60 - DEBUG : spoofng: 10.30.56.181
+60 - DEBUG : spoofng: 10.30.56.182
+60 - DEBUG : spoofng: 10.30.56.185
+60 - DEBUG : spoofng: 10.30.56.188
+102 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+80 - DEBUG : got default gateway and local IP
+84 - DEBUG : scanned network for all active hosts
+89 - DEBUG : created thread for ARP spoofing
+105 - INFO : setup complete
+60 - DEBUG : spoofng: 10.30.56.2
+60 - DEBUG : spoofng: 10.30.56.4
+60 - DEBUG : spoofng: 10.30.56.6
+60 - DEBUG : spoofng: 10.30.56.20
+60 - DEBUG : spoofng: 10.30.56.22
+60 - DEBUG : spoofng: 10.30.56.23
+60 - DEBUG : spoofng: 10.30.56.30
+60 - DEBUG : spoofng: 10.30.56.36
+60 - DEBUG : spoofng: 10.30.56.62
+60 - DEBUG : spoofng: 10.30.56.67
+60 - DEBUG : spoofng: 10.30.56.50
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.55
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.79
+60 - DEBUG : spoofng: 10.30.56.78
+60 - DEBUG : spoofng: 10.30.56.59
+292 - WARNING : more Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.1
+60 - DEBUG : spoofng: 10.30.56.53
+60 - DEBUG : spoofng: 10.30.56.64
+60 - DEBUG : spoofng: 10.30.56.71
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.72
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.101
+60 - DEBUG : spoofng: 10.30.56.105
+60 - DEBUG : spoofng: 10.30.56.106
+60 - DEBUG : spoofng: 10.30.56.69
+60 - DEBUG : spoofng: 10.30.56.108
+60 - DEBUG : spoofng: 10.30.56.54
+60 - DEBUG : spoofng: 10.30.56.110
+60 - DEBUG : spoofng: 10.30.56.111
+60 - DEBUG : spoofng: 10.30.56.112
+60 - DEBUG : spoofng: 10.30.56.113
+60 - DEBUG : spoofng: 10.30.56.117
+60 - DEBUG : spoofng: 10.30.56.118
+60 - DEBUG : spoofng: 10.30.56.126
+60 - DEBUG : spoofng: 10.30.56.139
+60 - DEBUG : spoofng: 10.30.56.155
+60 - DEBUG : spoofng: 10.30.56.172
+60 - DEBUG : spoofng: 10.30.56.173
+60 - DEBUG : spoofng: 10.30.56.174
+60 - DEBUG : spoofng: 10.30.56.177
+60 - DEBUG : spoofng: 10.30.56.181
+60 - DEBUG : spoofng: 10.30.56.182
+60 - DEBUG : spoofng: 10.30.56.185
+60 - DEBUG : spoofng: 10.30.56.188
+60 - DEBUG : spoofng: 10.30.56.190
+60 - DEBUG : spoofng: 10.30.56.191
+60 - DEBUG : spoofng: 10.30.56.193
+60 - DEBUG : spoofng: 10.30.56.196
+60 - DEBUG : spoofng: 10.30.56.198
+60 - DEBUG : spoofng: 10.30.56.202
+60 - DEBUG : spoofng: 10.30.56.204
+60 - DEBUG : spoofng: 10.30.56.209
+60 - DEBUG : spoofng: 10.30.56.216
+60 - DEBUG : spoofng: 10.30.56.215
+60 - DEBUG : spoofng: 10.30.56.217
+60 - DEBUG : spoofng: 10.30.56.219
+60 - DEBUG : spoofng: 10.30.56.222
+60 - DEBUG : spoofng: 10.30.56.225
+60 - DEBUG : spoofng: 10.30.56.179
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.195
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.189
+60 - DEBUG : spoofng: 10.30.56.243
+60 - DEBUG : spoofng: 10.30.56.248
+60 - DEBUG : spoofng: 10.30.56.253
+60 - DEBUG : spoofng: 10.30.57.0
+60 - DEBUG : spoofng: 10.30.57.4
+60 - DEBUG : spoofng: 10.30.57.7
+60 - DEBUG : spoofng: 10.30.57.11
+60 - DEBUG : spoofng: 10.30.56.239
+60 - DEBUG : spoofng: 10.30.57.16
+60 - DEBUG : spoofng: 10.30.57.22
+60 - DEBUG : spoofng: 10.30.56.249
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.254
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.34
+60 - DEBUG : spoofng: 10.30.57.37
+60 - DEBUG : spoofng: 10.30.57.46
+60 - DEBUG : spoofng: 10.30.57.13
+292 - WARNING : more Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.67
+60 - DEBUG : spoofng: 10.30.57.70
+60 - DEBUG : spoofng: 10.30.57.71
+60 - DEBUG : spoofng: 10.30.57.19
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.26
+60 - DEBUG : spoofng: 10.30.57.75
+60 - DEBUG : spoofng: 10.30.57.35
+60 - DEBUG : spoofng: 10.30.57.40
+60 - DEBUG : spoofng: 10.30.57.80
+60 - DEBUG : spoofng: 10.30.57.85
+60 - DEBUG : spoofng: 10.30.57.88
+60 - DEBUG : spoofng: 10.30.57.89
+60 - DEBUG : spoofng: 10.30.57.91
+60 - DEBUG : spoofng: 10.30.57.93
+60 - DEBUG : spoofng: 10.30.57.99
+60 - DEBUG : spoofng: 10.30.57.101
+60 - DEBUG : spoofng: 10.30.57.102
+60 - DEBUG : spoofng: 10.30.57.103
+60 - DEBUG : spoofng: 10.30.57.104
+60 - DEBUG : spoofng: 10.30.57.105
+60 - DEBUG : spoofng: 10.30.57.58
+60 - DEBUG : spoofng: 10.30.57.107
+60 - DEBUG : spoofng: 10.30.57.108
+60 - DEBUG : spoofng: 10.30.57.112
+60 - DEBUG : spoofng: 10.30.57.114
+60 - DEBUG : spoofng: 10.30.57.115
+60 - DEBUG : spoofng: 10.30.57.116
+60 - DEBUG : spoofng: 10.30.57.123
+60 - DEBUG : spoofng: 10.30.57.124
+60 - DEBUG : spoofng: 10.30.57.125
+60 - DEBUG : spoofng: 10.30.57.131
+60 - DEBUG : spoofng: 10.30.57.133
+60 - DEBUG : spoofng: 10.30.57.134
+60 - DEBUG : spoofng: 10.30.57.140
+60 - DEBUG : spoofng: 10.30.57.141
+60 - DEBUG : spoofng: 10.30.57.146
+60 - DEBUG : spoofng: 10.30.57.81
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.158
+60 - DEBUG : spoofng: 10.30.57.161
+60 - DEBUG : spoofng: 10.30.57.164
+60 - DEBUG : spoofng: 10.30.57.174
+60 - DEBUG : spoofng: 10.30.57.189
+60 - DEBUG : spoofng: 10.30.57.201
+60 - DEBUG : spoofng: 10.30.57.204
+60 - DEBUG : spoofng: 10.30.57.215
+60 - DEBUG : spoofng: 10.30.57.219
+60 - DEBUG : spoofng: 10.30.57.230
+60 - DEBUG : spoofng: 10.30.57.237
+60 - DEBUG : spoofng: 10.30.57.246
+60 - DEBUG : spoofng: 10.30.57.249
+60 - DEBUG : spoofng: 10.30.57.153
+60 - DEBUG : spoofng: 10.30.57.210
+60 - DEBUG : spoofng: 10.30.57.160
+60 - DEBUG : spoofng: 10.30.57.160
+60 - DEBUG : spoofng: 10.30.57.177
+60 - DEBUG : spoofng: 10.30.58.35
+60 - DEBUG : spoofng: 10.30.58.45
+60 - DEBUG : spoofng: 10.30.58.47
+60 - DEBUG : spoofng: 10.30.58.48
+60 - DEBUG : spoofng: 10.30.58.49
+60 - DEBUG : spoofng: 10.30.58.51
+60 - DEBUG : spoofng: 10.30.58.54
+60 - DEBUG : spoofng: 10.30.58.17
+60 - DEBUG : spoofng: 10.30.57.217
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.220
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.64
+60 - DEBUG : spoofng: 10.30.58.68
+60 - DEBUG : spoofng: 10.30.58.69
+60 - DEBUG : spoofng: 10.30.57.235
+60 - DEBUG : spoofng: 10.30.58.78
+60 - DEBUG : spoofng: 10.30.58.79
+60 - DEBUG : spoofng: 10.30.58.98
+60 - DEBUG : spoofng: 10.30.58.109
+60 - DEBUG : spoofng: 10.30.58.127
+60 - DEBUG : spoofng: 10.30.58.29
+60 - DEBUG : spoofng: 10.30.58.135
+60 - DEBUG : spoofng: 10.30.58.150
+60 - DEBUG : spoofng: 10.30.58.152
+60 - DEBUG : spoofng: 10.30.58.153
+60 - DEBUG : spoofng: 10.30.58.110
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.73
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.185
+60 - DEBUG : spoofng: 10.30.58.187
+60 - DEBUG : spoofng: 10.30.58.204
+60 - DEBUG : spoofng: 10.30.58.203
+60 - DEBUG : spoofng: 10.30.58.206
+60 - DEBUG : spoofng: 10.30.58.208
+60 - DEBUG : spoofng: 10.30.58.209
+60 - DEBUG : spoofng: 10.30.58.210
+60 - DEBUG : spoofng: 10.30.58.211
+60 - DEBUG : spoofng: 10.30.58.214
+60 - DEBUG : spoofng: 10.30.58.212
+60 - DEBUG : spoofng: 10.30.58.215
+60 - DEBUG : spoofng: 10.30.58.216
+60 - DEBUG : spoofng: 10.30.58.217
+60 - DEBUG : spoofng: 10.30.58.218
+60 - DEBUG : spoofng: 10.30.58.219
+60 - DEBUG : spoofng: 10.30.58.220
+60 - DEBUG : spoofng: 10.30.58.221
+60 - DEBUG : spoofng: 10.30.58.222
+60 - DEBUG : spoofng: 10.30.58.239
+60 - DEBUG : spoofng: 10.30.58.143
+60 - DEBUG : spoofng: 10.30.58.132
+60 - DEBUG : spoofng: 10.30.58.236
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.59.12
+60 - DEBUG : spoofng: 10.30.59.13
+60 - DEBUG : spoofng: 10.30.59.17
+60 - DEBUG : spoofng: 10.30.59.20
+60 - DEBUG : spoofng: 10.30.59.25
+60 - DEBUG : spoofng: 10.30.58.251
+60 - DEBUG : spoofng: 10.30.58.17
+60 - DEBUG : spoofng: 10.30.58.248
+60 - DEBUG : spoofng: 10.30.58.17
+60 - DEBUG : spoofng: 10.30.63.202
+60 - DEBUG : spoofng: 10.30.63.203
+60 - DEBUG : spoofng: 10.30.63.204
+60 - DEBUG : spoofng: 10.30.63.208
+60 - DEBUG : spoofng: 10.30.63.211
+60 - DEBUG : spoofng: 10.30.63.212
+60 - DEBUG : spoofng: 10.30.63.215
+60 - DEBUG : spoofng: 10.30.63.216
+60 - DEBUG : spoofng: 10.30.63.219
+60 - DEBUG : spoofng: 10.30.63.223
+60 - DEBUG : spoofng: 10.30.63.222
+60 - DEBUG : spoofng: 10.30.63.224
+60 - DEBUG : spoofng: 10.30.56.163
+60 - DEBUG : spoofng: 10.30.56.200
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.250
+60 - DEBUG : spoofng: 10.30.57.83
+60 - DEBUG : spoofng: 10.30.56.241
+60 - DEBUG : spoofng: 10.30.57.97
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.97
+60 - DEBUG : spoofng: 10.30.57.216
+60 - DEBUG : spoofng: 10.30.58.184
+60 - DEBUG : spoofng: 10.30.58.17
+60 - DEBUG : spoofng: 10.30.63.213
+60 - DEBUG : spoofng: 10.30.63.205
+102 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+80 - DEBUG : got default gateway and local IP
+84 - DEBUG : scanned network for all active hosts
+89 - DEBUG : created thread for ARP spoofing
+60 - DEBUG : spoofng: 10.30.56.4
+105 - INFO : setup complete
+60 - DEBUG : spoofng: 10.30.56.2
+60 - DEBUG : spoofng: 10.30.56.6
+60 - DEBUG : spoofng: 10.30.56.20
+60 - DEBUG : spoofng: 10.30.56.22
+60 - DEBUG : spoofng: 10.30.56.23
+60 - DEBUG : spoofng: 10.30.56.30
+60 - DEBUG : spoofng: 10.30.56.36
+60 - DEBUG : spoofng: 10.30.56.62
+60 - DEBUG : spoofng: 10.30.56.67
+60 - DEBUG : spoofng: 10.30.56.78
+60 - DEBUG : spoofng: 10.30.56.79
+60 - DEBUG : spoofng: 10.30.56.53
+60 - DEBUG : spoofng: 10.30.56.50
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.101
+60 - DEBUG : spoofng: 10.30.56.71
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.105
+60 - DEBUG : spoofng: 10.30.56.106
+60 - DEBUG : spoofng: 10.30.56.108
+60 - DEBUG : spoofng: 10.30.56.69
+60 - DEBUG : spoofng: 10.30.56.110
+60 - DEBUG : spoofng: 10.30.56.111
+60 - DEBUG : spoofng: 10.30.56.54
+60 - DEBUG : spoofng: 10.30.56.112
+60 - DEBUG : spoofng: 10.30.56.113
+60 - DEBUG : spoofng: 10.30.56.117
+60 - DEBUG : spoofng: 10.30.56.118
+60 - DEBUG : spoofng: 10.30.56.126
+60 - DEBUG : spoofng: 10.30.56.139
+60 - DEBUG : spoofng: 10.30.56.155
+60 - DEBUG : spoofng: 10.30.56.172
+60 - DEBUG : spoofng: 10.30.56.173
+60 - DEBUG : spoofng: 10.30.56.174
+60 - DEBUG : spoofng: 10.30.56.177
+60 - DEBUG : spoofng: 10.30.56.181
+60 - DEBUG : spoofng: 10.30.56.182
+60 - DEBUG : spoofng: 10.30.56.185
+60 - DEBUG : spoofng: 10.30.56.188
+60 - DEBUG : spoofng: 10.30.56.190
+60 - DEBUG : spoofng: 10.30.56.191
+60 - DEBUG : spoofng: 10.30.56.193
+60 - DEBUG : spoofng: 10.30.56.196
+60 - DEBUG : spoofng: 10.30.56.198
+60 - DEBUG : spoofng: 10.30.56.1
+60 - DEBUG : spoofng: 10.30.56.202
+60 - DEBUG : spoofng: 10.30.56.204
+60 - DEBUG : spoofng: 10.30.56.209
+60 - DEBUG : spoofng: 10.30.56.215
+60 - DEBUG : spoofng: 10.30.56.216
+60 - DEBUG : spoofng: 10.30.56.217
+60 - DEBUG : spoofng: 10.30.56.222
+60 - DEBUG : spoofng: 10.30.56.167
+60 - DEBUG : spoofng: 10.30.56.225
+60 - DEBUG : spoofng: 10.30.56.179
+60 - DEBUG : spoofng: 10.30.56.243
+60 - DEBUG : spoofng: 10.30.56.248
+60 - DEBUG : spoofng: 10.30.56.200
+60 - DEBUG : spoofng: 10.30.56.253
+60 - DEBUG : spoofng: 10.30.57.0
+60 - DEBUG : spoofng: 10.30.57.4
+60 - DEBUG : spoofng: 10.30.57.7
+60 - DEBUG : spoofng: 10.30.57.11
+60 - DEBUG : spoofng: 10.30.57.16
+60 - DEBUG : spoofng: 10.30.57.22
+60 - DEBUG : spoofng: 10.30.57.3
+60 - DEBUG : spoofng: 10.30.57.34
+60 - DEBUG : spoofng: 10.30.57.37
+60 - DEBUG : spoofng: 10.30.57.46
+60 - DEBUG : spoofng: 10.30.57.67
+60 - DEBUG : spoofng: 10.30.57.70
+60 - DEBUG : spoofng: 10.30.57.71
+60 - DEBUG : spoofng: 10.30.57.26
+60 - DEBUG : spoofng: 10.30.57.75
+60 - DEBUG : spoofng: 10.30.57.40
+60 - DEBUG : spoofng: 10.30.57.80
+60 - DEBUG : spoofng: 10.30.57.85
+60 - DEBUG : spoofng: 10.30.57.35
+60 - DEBUG : spoofng: 10.30.57.88
+60 - DEBUG : spoofng: 10.30.57.89
+60 - DEBUG : spoofng: 10.30.57.91
+60 - DEBUG : spoofng: 10.30.57.93
+60 - DEBUG : spoofng: 10.30.57.99
+60 - DEBUG : spoofng: 10.30.57.101
+60 - DEBUG : spoofng: 10.30.57.103
+60 - DEBUG : spoofng: 10.30.57.102
+60 - DEBUG : spoofng: 10.30.57.104
+60 - DEBUG : spoofng: 10.30.57.105
+60 - DEBUG : spoofng: 10.30.57.107
+60 - DEBUG : spoofng: 10.30.57.108
+60 - DEBUG : spoofng: 10.30.57.112
+60 - DEBUG : spoofng: 10.30.57.114
+60 - DEBUG : spoofng: 10.30.57.115
+60 - DEBUG : spoofng: 10.30.57.116
+60 - DEBUG : spoofng: 10.30.57.123
+60 - DEBUG : spoofng: 10.30.57.124
+60 - DEBUG : spoofng: 10.30.57.125
+60 - DEBUG : spoofng: 10.30.57.81
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.131
+60 - DEBUG : spoofng: 10.30.57.133
+60 - DEBUG : spoofng: 10.30.57.134
+60 - DEBUG : spoofng: 10.30.57.140
+60 - DEBUG : spoofng: 10.30.57.141
+60 - DEBUG : spoofng: 10.30.57.146
+60 - DEBUG : spoofng: 10.30.57.158
+60 - DEBUG : spoofng: 10.30.57.161
+60 - DEBUG : spoofng: 10.30.57.164
+60 - DEBUG : spoofng: 10.30.57.174
+60 - DEBUG : spoofng: 10.30.57.153
+60 - DEBUG : spoofng: 10.30.57.189
+60 - DEBUG : spoofng: 10.30.57.201
+60 - DEBUG : spoofng: 10.30.57.204
+60 - DEBUG : spoofng: 10.30.57.177
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.215
+60 - DEBUG : spoofng: 10.30.57.219
+60 - DEBUG : spoofng: 10.30.57.230
+60 - DEBUG : spoofng: 10.30.57.237
+60 - DEBUG : spoofng: 10.30.57.246
+60 - DEBUG : spoofng: 10.30.57.249
+60 - DEBUG : spoofng: 10.30.57.217
+60 - DEBUG : spoofng: 10.30.57.220
+60 - DEBUG : spoofng: 10.30.57.210
+60 - DEBUG : spoofng: 10.30.57.216
+60 - DEBUG : spoofng: 10.30.57.232
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.235
+60 - DEBUG : spoofng: 10.30.57.238
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.35
+60 - DEBUG : spoofng: 10.30.58.45
+60 - DEBUG : spoofng: 10.30.58.48
+60 - DEBUG : spoofng: 10.30.58.47
+60 - DEBUG : spoofng: 10.30.58.49
+60 - DEBUG : spoofng: 10.30.58.51
+60 - DEBUG : spoofng: 10.30.58.54
+60 - DEBUG : spoofng: 10.30.58.17
+60 - DEBUG : spoofng: 10.30.58.64
+60 - DEBUG : spoofng: 10.30.58.68
+60 - DEBUG : spoofng: 10.30.58.69
+60 - DEBUG : spoofng: 10.30.58.78
+60 - DEBUG : spoofng: 10.30.58.79
+60 - DEBUG : spoofng: 10.30.58.98
+60 - DEBUG : spoofng: 10.30.58.109
+60 - DEBUG : spoofng: 10.30.58.91
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.127
+60 - DEBUG : spoofng: 10.30.58.91
+60 - DEBUG : spoofng: 10.30.58.110
+60 - DEBUG : spoofng: 10.30.58.150
+60 - DEBUG : spoofng: 10.30.58.152
+60 - DEBUG : spoofng: 10.30.58.153
+60 - DEBUG : spoofng: 10.30.58.136
+60 - DEBUG : spoofng: 10.30.58.143
+60 - DEBUG : spoofng: 10.30.58.185
+60 - DEBUG : spoofng: 10.30.58.187
+60 - DEBUG : spoofng: 10.30.58.203
+60 - DEBUG : spoofng: 10.30.58.204
+60 - DEBUG : spoofng: 10.30.58.151
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.206
+60 - DEBUG : spoofng: 10.30.58.208
+60 - DEBUG : spoofng: 10.30.58.210
+60 - DEBUG : spoofng: 10.30.58.211
+60 - DEBUG : spoofng: 10.30.58.209
+60 - DEBUG : spoofng: 10.30.58.212
+60 - DEBUG : spoofng: 10.30.58.216
+60 - DEBUG : spoofng: 10.30.58.214
+60 - DEBUG : spoofng: 10.30.58.215
+60 - DEBUG : spoofng: 10.30.58.217
+60 - DEBUG : spoofng: 10.30.58.218
+60 - DEBUG : spoofng: 10.30.58.219
+60 - DEBUG : spoofng: 10.30.58.221
+60 - DEBUG : spoofng: 10.30.58.220
+60 - DEBUG : spoofng: 10.30.58.222
+60 - DEBUG : spoofng: 10.30.58.239
+60 - DEBUG : spoofng: 10.30.58.236
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.59.12
+60 - DEBUG : spoofng: 10.30.59.13
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.248
+60 - DEBUG : spoofng: 10.30.59.17
+60 - DEBUG : spoofng: 10.30.59.20
+60 - DEBUG : spoofng: 10.30.59.25
+60 - DEBUG : spoofng: 10.30.58.251
+60 - DEBUG : spoofng: 10.30.63.201
+60 - DEBUG : spoofng: 10.30.63.205
+60 - DEBUG : spoofng: 10.30.63.206
+60 - DEBUG : spoofng: 10.30.63.207
+60 - DEBUG : spoofng: 10.30.63.209
+60 - DEBUG : spoofng: 10.30.63.213
+60 - DEBUG : spoofng: 10.30.63.219
+60 - DEBUG : spoofng: 10.30.63.221
+60 - DEBUG : spoofng: 10.30.63.210
+60 - DEBUG : spoofng: 10.30.56.149
+60 - DEBUG : spoofng: 10.30.56.168
+60 - DEBUG : spoofng: 10.30.56.239
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.250
+60 - DEBUG : spoofng: 10.30.58.29
+60 - DEBUG : spoofng: 10.30.58.132
+60 - DEBUG : spoofng: 10.30.58.184
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.63.204
+60 - DEBUG : spoofng: 10.30.63.212
+60 - DEBUG : spoofng: 10.30.63.222
+292 - WARNING : DNS decompression loop detected
+60 - DEBUG : spoofng: 10.30.56.4
+60 - DEBUG : spoofng: 10.30.56.2
+60 - DEBUG : spoofng: 10.30.56.6
+60 - DEBUG : spoofng: 10.30.56.20
+60 - DEBUG : spoofng: 10.30.56.22
+60 - DEBUG : spoofng: 10.30.56.23
+60 - DEBUG : spoofng: 10.30.56.30
+60 - DEBUG : spoofng: 10.30.56.36
+60 - DEBUG : spoofng: 10.30.56.62
+60 - DEBUG : spoofng: 10.30.56.67
+60 - DEBUG : spoofng: 10.30.56.78
+60 - DEBUG : spoofng: 10.30.56.79
+60 - DEBUG : spoofng: 10.30.56.53
+60 - DEBUG : spoofng: 10.30.56.50
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.101
+60 - DEBUG : spoofng: 10.30.56.71
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.105
+60 - DEBUG : spoofng: 10.30.56.106
+60 - DEBUG : spoofng: 10.30.56.108
+60 - DEBUG : spoofng: 10.30.56.69
+60 - DEBUG : spoofng: 10.30.56.110
+60 - DEBUG : spoofng: 10.30.56.111
+60 - DEBUG : spoofng: 10.30.56.54
+60 - DEBUG : spoofng: 10.30.56.112
+60 - DEBUG : spoofng: 10.30.56.113
+60 - DEBUG : spoofng: 10.30.56.117
+60 - DEBUG : spoofng: 10.30.56.118
+60 - DEBUG : spoofng: 10.30.56.126
+60 - DEBUG : spoofng: 10.30.56.139
+60 - DEBUG : spoofng: 10.30.56.155
+60 - DEBUG : spoofng: 10.30.56.172
+60 - DEBUG : spoofng: 10.30.56.173
+60 - DEBUG : spoofng: 10.30.56.174
+60 - DEBUG : spoofng: 10.30.56.177
+60 - DEBUG : spoofng: 10.30.56.181
+60 - DEBUG : spoofng: 10.30.56.182
+60 - DEBUG : spoofng: 10.30.56.185
+60 - DEBUG : spoofng: 10.30.56.188
+60 - DEBUG : spoofng: 10.30.56.190
+60 - DEBUG : spoofng: 10.30.56.191
+60 - DEBUG : spoofng: 10.30.56.193
+60 - DEBUG : spoofng: 10.30.56.196
+60 - DEBUG : spoofng: 10.30.56.198
+60 - DEBUG : spoofng: 10.30.56.1
+60 - DEBUG : spoofng: 10.30.56.202
+60 - DEBUG : spoofng: 10.30.56.204
+60 - DEBUG : spoofng: 10.30.56.209
+60 - DEBUG : spoofng: 10.30.56.215
+60 - DEBUG : spoofng: 10.30.56.216
+60 - DEBUG : spoofng: 10.30.56.217
+60 - DEBUG : spoofng: 10.30.56.222
+60 - DEBUG : spoofng: 10.30.56.167
+60 - DEBUG : spoofng: 10.30.56.225
+60 - DEBUG : spoofng: 10.30.56.179
+60 - DEBUG : spoofng: 10.30.56.243
+60 - DEBUG : spoofng: 10.30.56.248
+60 - DEBUG : spoofng: 10.30.56.200
+60 - DEBUG : spoofng: 10.30.56.253
+60 - DEBUG : spoofng: 10.30.57.0
+60 - DEBUG : spoofng: 10.30.57.4
+60 - DEBUG : spoofng: 10.30.57.7
+60 - DEBUG : spoofng: 10.30.57.11
+60 - DEBUG : spoofng: 10.30.57.16
+60 - DEBUG : spoofng: 10.30.57.22
+60 - DEBUG : spoofng: 10.30.57.3
+60 - DEBUG : spoofng: 10.30.57.34
+60 - DEBUG : spoofng: 10.30.57.37
+60 - DEBUG : spoofng: 10.30.57.46
+60 - DEBUG : spoofng: 10.30.57.67
+60 - DEBUG : spoofng: 10.30.57.70
+60 - DEBUG : spoofng: 10.30.57.71
+60 - DEBUG : spoofng: 10.30.57.26
+60 - DEBUG : spoofng: 10.30.57.75
+60 - DEBUG : spoofng: 10.30.57.40
+60 - DEBUG : spoofng: 10.30.57.80
+60 - DEBUG : spoofng: 10.30.57.85
+60 - DEBUG : spoofng: 10.30.57.35
+60 - DEBUG : spoofng: 10.30.57.88
+60 - DEBUG : spoofng: 10.30.57.89
+60 - DEBUG : spoofng: 10.30.57.91
+60 - DEBUG : spoofng: 10.30.57.93
+60 - DEBUG : spoofng: 10.30.57.99
+60 - DEBUG : spoofng: 10.30.57.101
+60 - DEBUG : spoofng: 10.30.57.103
+60 - DEBUG : spoofng: 10.30.57.102
+60 - DEBUG : spoofng: 10.30.57.104
+60 - DEBUG : spoofng: 10.30.57.105
+60 - DEBUG : spoofng: 10.30.57.107
+60 - DEBUG : spoofng: 10.30.57.108
+60 - DEBUG : spoofng: 10.30.57.112
+60 - DEBUG : spoofng: 10.30.57.114
+60 - DEBUG : spoofng: 10.30.57.115
+60 - DEBUG : spoofng: 10.30.57.116
+60 - DEBUG : spoofng: 10.30.57.123
+60 - DEBUG : spoofng: 10.30.57.124
+60 - DEBUG : spoofng: 10.30.57.125
+60 - DEBUG : spoofng: 10.30.57.81
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.131
+60 - DEBUG : spoofng: 10.30.57.133
+60 - DEBUG : spoofng: 10.30.57.134
+60 - DEBUG : spoofng: 10.30.57.140
+60 - DEBUG : spoofng: 10.30.57.141
+102 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+80 - DEBUG : got default gateway and local IP
+84 - DEBUG : scanned network for all active hosts
+89 - DEBUG : created thread for ARP spoofing
+105 - INFO : setup complete
+60 - DEBUG : spoofng: 10.30.56.2
+60 - DEBUG : spoofng: 10.30.56.4
+60 - DEBUG : spoofng: 10.30.56.6
+60 - DEBUG : spoofng: 10.30.56.20
+60 - DEBUG : spoofng: 10.30.56.22
+60 - DEBUG : spoofng: 10.30.56.23
+60 - DEBUG : spoofng: 10.30.56.30
+60 - DEBUG : spoofng: 10.30.56.36
+60 - DEBUG : spoofng: 10.30.56.62
+60 - DEBUG : spoofng: 10.30.56.67
+60 - DEBUG : spoofng: 10.30.56.55
+60 - DEBUG : spoofng: 10.30.56.78
+60 - DEBUG : spoofng: 10.30.56.79
+60 - DEBUG : spoofng: 10.30.56.53
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.101
+60 - DEBUG : spoofng: 10.30.56.105
+60 - DEBUG : spoofng: 10.30.56.106
+60 - DEBUG : spoofng: 10.30.56.108
+60 - DEBUG : spoofng: 10.30.56.110
+60 - DEBUG : spoofng: 10.30.56.111
+60 - DEBUG : spoofng: 10.30.56.112
+60 - DEBUG : spoofng: 10.30.56.113
+60 - DEBUG : spoofng: 10.30.56.117
+60 - DEBUG : spoofng: 10.30.56.118
+60 - DEBUG : spoofng: 10.30.56.126
+60 - DEBUG : spoofng: 10.30.56.1
+60 - DEBUG : spoofng: 10.30.56.139
+60 - DEBUG : spoofng: 10.30.56.155
+60 - DEBUG : spoofng: 10.30.56.172
+60 - DEBUG : spoofng: 10.30.56.173
+60 - DEBUG : spoofng: 10.30.56.177
+60 - DEBUG : spoofng: 10.30.56.181
+60 - DEBUG : spoofng: 10.30.56.182
+60 - DEBUG : spoofng: 10.30.56.185
+60 - DEBUG : spoofng: 10.30.56.188
+60 - DEBUG : spoofng: 10.30.56.191
+60 - DEBUG : spoofng: 10.30.56.190
+60 - DEBUG : spoofng: 10.30.56.193
+60 - DEBUG : spoofng: 10.30.56.196
+60 - DEBUG : spoofng: 10.30.56.198
+60 - DEBUG : spoofng: 10.30.56.202
+60 - DEBUG : spoofng: 10.30.56.204
+60 - DEBUG : spoofng: 10.30.56.167
+60 - DEBUG : spoofng: 10.30.56.179
+60 - DEBUG : spoofng: 10.30.56.209
+60 - DEBUG : spoofng: 10.30.56.215
+60 - DEBUG : spoofng: 10.30.56.216
+60 - DEBUG : spoofng: 10.30.56.217
+60 - DEBUG : spoofng: 10.30.56.222
+60 - DEBUG : spoofng: 10.30.56.225
+60 - DEBUG : spoofng: 10.30.56.243
+60 - DEBUG : spoofng: 10.30.56.163
+60 - DEBUG : spoofng: 10.30.56.248
+60 - DEBUG : spoofng: 10.30.56.189
+60 - DEBUG : spoofng: 10.30.56.253
+60 - DEBUG : spoofng: 10.30.57.0
+60 - DEBUG : spoofng: 10.30.57.4
+60 - DEBUG : spoofng: 10.30.57.7
+60 - DEBUG : spoofng: 10.30.57.11
+60 - DEBUG : spoofng: 10.30.57.16
+60 - DEBUG : spoofng: 10.30.57.22
+60 - DEBUG : spoofng: 10.30.57.34
+60 - DEBUG : spoofng: 10.30.56.250
+60 - DEBUG : spoofng: 10.30.57.37
+60 - DEBUG : spoofng: 10.30.56.252
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.46
+60 - DEBUG : spoofng: 10.30.57.67
+60 - DEBUG : spoofng: 10.30.57.70
+60 - DEBUG : spoofng: 10.30.57.71
+60 - DEBUG : spoofng: 10.30.57.75
+60 - DEBUG : spoofng: 10.30.57.80
+60 - DEBUG : spoofng: 10.30.56.241
+60 - DEBUG : spoofng: 10.30.57.85
+60 - DEBUG : spoofng: 10.30.57.88
+60 - DEBUG : spoofng: 10.30.57.89
+60 - DEBUG : spoofng: 10.30.57.35
+60 - DEBUG : spoofng: 10.30.57.91
+60 - DEBUG : spoofng: 10.30.57.93
+60 - DEBUG : spoofng: 10.30.57.40
+60 - DEBUG : spoofng: 10.30.57.99
+60 - DEBUG : spoofng: 10.30.57.101
+60 - DEBUG : spoofng: 10.30.57.102
+60 - DEBUG : spoofng: 10.30.57.103
+60 - DEBUG : spoofng: 10.30.57.104
+60 - DEBUG : spoofng: 10.30.57.105
+60 - DEBUG : spoofng: 10.30.57.107
+60 - DEBUG : spoofng: 10.30.57.108
+60 - DEBUG : spoofng: 10.30.57.112
+60 - DEBUG : spoofng: 10.30.57.114
+60 - DEBUG : spoofng: 10.30.57.116
+60 - DEBUG : spoofng: 10.30.57.115
+60 - DEBUG : spoofng: 10.30.57.97
+60 - DEBUG : spoofng: 10.30.57.123
+60 - DEBUG : spoofng: 10.30.57.97
+60 - DEBUG : spoofng: 10.30.57.124
+60 - DEBUG : spoofng: 10.30.57.125
+60 - DEBUG : spoofng: 10.30.57.131
+60 - DEBUG : spoofng: 10.30.57.133
+60 - DEBUG : spoofng: 10.30.57.134
+60 - DEBUG : spoofng: 10.30.57.140
+60 - DEBUG : spoofng: 10.30.57.141
+60 - DEBUG : spoofng: 10.30.57.146
+60 - DEBUG : spoofng: 10.30.57.158
+60 - DEBUG : spoofng: 10.30.57.161
+60 - DEBUG : spoofng: 10.30.57.151
+60 - DEBUG : spoofng: 10.30.57.153
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.164
+60 - DEBUG : spoofng: 10.30.57.174
+60 - DEBUG : spoofng: 10.30.57.189
+60 - DEBUG : spoofng: 10.30.57.201
+60 - DEBUG : spoofng: 10.30.57.204
+60 - DEBUG : spoofng: 10.30.57.170
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.177
+292 - WARNING : more Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.215
+60 - DEBUG : spoofng: 10.30.57.196
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.219
+60 - DEBUG : spoofng: 10.30.57.230
+60 - DEBUG : spoofng: 10.30.57.237
+60 - DEBUG : spoofng: 10.30.57.210
+60 - DEBUG : spoofng: 10.30.57.246
+60 - DEBUG : spoofng: 10.30.57.249
+60 - DEBUG : spoofng: 10.30.57.216
+60 - DEBUG : spoofng: 10.30.57.252
+60 - DEBUG : spoofng: 10.30.58.35
+60 - DEBUG : spoofng: 10.30.58.45
+60 - DEBUG : spoofng: 10.30.58.47
+60 - DEBUG : spoofng: 10.30.58.49
+60 - DEBUG : spoofng: 10.30.58.48
+60 - DEBUG : spoofng: 10.30.58.51
+60 - DEBUG : spoofng: 10.30.58.54
+60 - DEBUG : spoofng: 10.30.58.29
+60 - DEBUG : spoofng: 10.30.58.64
+60 - DEBUG : spoofng: 10.30.58.69
+60 - DEBUG : spoofng: 10.30.58.68
+60 - DEBUG : spoofng: 10.30.58.78
+60 - DEBUG : spoofng: 10.30.58.17
+60 - DEBUG : spoofng: 10.30.58.79
+60 - DEBUG : spoofng: 10.30.58.98
+60 - DEBUG : spoofng: 10.30.58.109
+60 - DEBUG : spoofng: 10.30.58.127
+60 - DEBUG : spoofng: 10.30.58.152
+60 - DEBUG : spoofng: 10.30.58.153
+60 - DEBUG : spoofng: 10.30.58.150
+60 - DEBUG : spoofng: 10.30.58.91
+60 - DEBUG : spoofng: 10.30.58.143
+60 - DEBUG : spoofng: 10.30.58.132
+60 - DEBUG : spoofng: 10.30.58.185
+60 - DEBUG : spoofng: 10.30.58.187
+60 - DEBUG : spoofng: 10.30.58.203
+60 - DEBUG : spoofng: 10.30.58.204
+60 - DEBUG : spoofng: 10.30.58.206
+60 - DEBUG : spoofng: 10.30.58.208
+60 - DEBUG : spoofng: 10.30.58.209
+60 - DEBUG : spoofng: 10.30.58.210
+60 - DEBUG : spoofng: 10.30.58.211
+60 - DEBUG : spoofng: 10.30.58.212
+60 - DEBUG : spoofng: 10.30.58.214
+60 - DEBUG : spoofng: 10.30.58.215
+60 - DEBUG : spoofng: 10.30.58.216
+60 - DEBUG : spoofng: 10.30.58.218
+60 - DEBUG : spoofng: 10.30.58.217
+60 - DEBUG : spoofng: 10.30.58.219
+60 - DEBUG : spoofng: 10.30.58.220
+60 - DEBUG : spoofng: 10.30.58.221
+60 - DEBUG : spoofng: 10.30.58.222
+60 - DEBUG : spoofng: 10.30.58.239
+60 - DEBUG : spoofng: 10.30.58.236
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.248
+60 - DEBUG : spoofng: 10.30.58.248
+60 - DEBUG : spoofng: 10.30.59.12
+60 - DEBUG : spoofng: 10.30.59.17
+60 - DEBUG : spoofng: 10.30.59.20
+60 - DEBUG : spoofng: 10.30.59.25
+60 - DEBUG : spoofng: 10.30.58.251
+60 - DEBUG : spoofng: 10.30.58.252
+60 - DEBUG : spoofng: 10.30.63.201
+60 - DEBUG : spoofng: 10.30.63.204
+60 - DEBUG : spoofng: 10.30.63.207
+60 - DEBUG : spoofng: 10.30.63.212
+60 - DEBUG : spoofng: 10.30.63.216
+60 - DEBUG : spoofng: 10.30.63.219
+60 - DEBUG : spoofng: 10.30.63.223
+60 - DEBUG : spoofng: 10.30.63.222
+60 - DEBUG : spoofng: 10.30.63.221
+60 - DEBUG : spoofng: 10.30.56.71
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.59
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.74
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.94
+60 - DEBUG : spoofng: 10.30.56.100
+292 - WARNING : more Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.26
+60 - DEBUG : spoofng: 10.30.57.217
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.220
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.238
+292 - WARNING : more Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.26
+60 - DEBUG : spoofng: 10.30.58.73
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.39
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.151
+60 - DEBUG : spoofng: 10.30.63.202
+60 - DEBUG : spoofng: 10.30.63.203
+60 - DEBUG : spoofng: 10.30.63.208
+60 - DEBUG : spoofng: 10.30.63.215
+60 - DEBUG : spoofng: 10.30.56.2
+102 - INFO : 
+
+
+
+
+########## Program Start ##########
+
+
+80 - DEBUG : got default gateway and local IP
+84 - DEBUG : scanned network for all active hosts
+89 - DEBUG : created thread for ARP spoofing
+60 - DEBUG : spoofng: 10.30.56.4
+105 - INFO : setup complete
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "_raop._tcp.local." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.91:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.124:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "_raop._tcp.local." 
+60 - DEBUG : spoofng: 10.30.56.2
+60 - DEBUG : spoofng: 10.30.56.6
+60 - DEBUG : spoofng: 10.30.56.20
+60 - DEBUG : spoofng: 10.30.56.22
+60 - DEBUG : spoofng: 10.30.56.23
+60 - DEBUG : spoofng: 10.30.56.30
+60 - DEBUG : spoofng: 10.30.56.36
+60 - DEBUG : spoofng: 10.30.56.62
+60 - DEBUG : spoofng: 10.30.56.67
+60 - DEBUG : spoofng: 10.30.56.78
+60 - DEBUG : spoofng: 10.30.56.79
+60 - DEBUG : spoofng: 10.30.56.101
+60 - DEBUG : spoofng: 10.30.56.106
+60 - DEBUG : spoofng: 10.30.56.105
+60 - DEBUG : spoofng: 10.30.56.108
+60 - DEBUG : spoofng: 10.30.56.53
+60 - DEBUG : spoofng: 10.30.56.110
+60 - DEBUG : spoofng: 10.30.56.111
+60 - DEBUG : spoofng: 10.30.56.112
+60 - DEBUG : spoofng: 10.30.56.69
+60 - DEBUG : spoofng: 10.30.56.113
+60 - DEBUG : spoofng: 10.30.56.117
+60 - DEBUG : spoofng: 10.30.56.118
+60 - DEBUG : spoofng: 10.30.56.126
+60 - DEBUG : spoofng: 10.30.56.1
+60 - DEBUG : spoofng: 10.30.56.139
+60 - DEBUG : spoofng: 10.30.56.155
+60 - DEBUG : spoofng: 10.30.56.172
+60 - DEBUG : spoofng: 10.30.56.173
+60 - DEBUG : spoofng: 10.30.56.149
+60 - DEBUG : spoofng: 10.30.56.174
+60 - DEBUG : spoofng: 10.30.56.177
+60 - DEBUG : spoofng: 10.30.56.181
+60 - DEBUG : spoofng: 10.30.56.182
+60 - DEBUG : spoofng: 10.30.56.185
+60 - DEBUG : spoofng: 10.30.56.188
+60 - DEBUG : spoofng: 10.30.56.190
+60 - DEBUG : spoofng: 10.30.56.191
+60 - DEBUG : spoofng: 10.30.56.193
+60 - DEBUG : spoofng: 10.30.56.167
+60 - DEBUG : spoofng: 10.30.56.196
+60 - DEBUG : spoofng: 10.30.56.198
+60 - DEBUG : spoofng: 10.30.56.202
+60 - DEBUG : spoofng: 10.30.56.204
+60 - DEBUG : spoofng: 10.30.56.209
+60 - DEBUG : spoofng: 10.30.56.215
+60 - DEBUG : spoofng: 10.30.56.217
+60 - DEBUG : spoofng: 10.30.56.216
+60 - DEBUG : spoofng: 10.30.56.222
+60 - DEBUG : spoofng: 10.30.56.225
+60 - DEBUG : spoofng: 10.30.56.189
+60 - DEBUG : spoofng: 10.30.56.57
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.243
+60 - DEBUG : spoofng: 10.30.56.179
+60 - DEBUG : spoofng: 10.30.56.248
+60 - DEBUG : spoofng: 10.30.56.253
+60 - DEBUG : spoofng: 10.30.57.0
+60 - DEBUG : spoofng: 10.30.57.4
+60 - DEBUG : spoofng: 10.30.57.7
+60 - DEBUG : spoofng: 10.30.57.11
+60 - DEBUG : spoofng: 10.30.57.16
+60 - DEBUG : spoofng: 10.30.57.22
+60 - DEBUG : spoofng: 10.30.57.34
+60 - DEBUG : spoofng: 10.30.57.37
+60 - DEBUG : spoofng: 10.30.57.14
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.46
+60 - DEBUG : spoofng: 10.30.56.71
+60 - DEBUG : spoofng: 10.30.57.67
+60 - DEBUG : spoofng: 10.30.57.70
+60 - DEBUG : spoofng: 10.30.57.71
+60 - DEBUG : spoofng: 10.30.57.75
+60 - DEBUG : spoofng: 10.30.57.35
+60 - DEBUG : spoofng: 10.30.57.80
+60 - DEBUG : spoofng: 10.30.57.26
+60 - DEBUG : spoofng: 10.30.56.59
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.85
+60 - DEBUG : spoofng: 10.30.57.88
+60 - DEBUG : spoofng: 10.30.57.89
+60 - DEBUG : spoofng: 10.30.57.91
+60 - DEBUG : spoofng: 10.30.57.93
+60 - DEBUG : spoofng: 10.30.57.40
+60 - DEBUG : spoofng: 10.30.57.99
+60 - DEBUG : spoofng: 10.30.56.94
+60 - DEBUG : spoofng: 10.30.57.101
+60 - DEBUG : spoofng: 10.30.57.102
+60 - DEBUG : spoofng: 10.30.57.103
+60 - DEBUG : spoofng: 10.30.57.104
+60 - DEBUG : spoofng: 10.30.57.105
+60 - DEBUG : spoofng: 10.30.57.107
+60 - DEBUG : spoofng: 10.30.57.108
+60 - DEBUG : spoofng: 10.30.57.112
+60 - DEBUG : spoofng: 10.30.57.114
+60 - DEBUG : spoofng: 10.30.57.116
+60 - DEBUG : spoofng: 10.30.57.115
+60 - DEBUG : spoofng: 10.30.57.123
+60 - DEBUG : spoofng: 10.30.57.124
+60 - DEBUG : spoofng: 10.30.57.125
+60 - DEBUG : spoofng: 10.30.57.131
+60 - DEBUG : spoofng: 10.30.57.134
+60 - DEBUG : spoofng: 10.30.57.97
+60 - DEBUG : spoofng: 10.30.57.140
+60 - DEBUG : spoofng: 10.30.57.141
+60 - DEBUG : spoofng: 10.30.57.146
+60 - DEBUG : spoofng: 10.30.57.158
+60 - DEBUG : spoofng: 10.30.57.161
+60 - DEBUG : spoofng: 10.30.57.174
+60 - DEBUG : spoofng: 10.30.57.189
+60 - DEBUG : spoofng: 10.30.57.201
+60 - DEBUG : spoofng: 10.30.57.204
+60 - DEBUG : spoofng: 10.30.57.215
+60 - DEBUG : spoofng: 10.30.57.219
+60 - DEBUG : spoofng: 10.30.57.230
+60 - DEBUG : spoofng: 10.30.57.237
+60 - DEBUG : spoofng: 10.30.57.216
+60 - DEBUG : spoofng: 10.30.57.246
+60 - DEBUG : spoofng: 10.30.57.249
+60 - DEBUG : spoofng: 10.30.58.35
+60 - DEBUG : spoofng: 10.30.58.45
+60 - DEBUG : spoofng: 10.30.58.48
+60 - DEBUG : spoofng: 10.30.58.47
+60 - DEBUG : spoofng: 10.30.58.49
+60 - DEBUG : spoofng: 10.30.58.51
+60 - DEBUG : spoofng: 10.30.58.54
+60 - DEBUG : spoofng: 10.30.57.252
+60 - DEBUG : spoofng: 10.30.58.64
+60 - DEBUG : spoofng: 10.30.58.17
+60 - DEBUG : spoofng: 10.30.58.68
+60 - DEBUG : spoofng: 10.30.58.69
+60 - DEBUG : spoofng: 10.30.58.78
+60 - DEBUG : spoofng: 10.30.58.79
+60 - DEBUG : spoofng: 10.30.58.98
+60 - DEBUG : spoofng: 10.30.58.109
+60 - DEBUG : spoofng: 10.30.58.70
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.127
+60 - DEBUG : spoofng: 10.30.58.91
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.150
+60 - DEBUG : spoofng: 10.30.58.152
+60 - DEBUG : spoofng: 10.30.58.153
+60 - DEBUG : spoofng: 10.30.58.185
+60 - DEBUG : spoofng: 10.30.58.187
+60 - DEBUG : spoofng: 10.30.58.136
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.203
+60 - DEBUG : spoofng: 10.30.58.204
+60 - DEBUG : spoofng: 10.30.58.206
+60 - DEBUG : spoofng: 10.30.58.208
+60 - DEBUG : spoofng: 10.30.58.209
+60 - DEBUG : spoofng: 10.30.58.210
+60 - DEBUG : spoofng: 10.30.58.211
+60 - DEBUG : spoofng: 10.30.58.212
+60 - DEBUG : spoofng: 10.30.58.214
+60 - DEBUG : spoofng: 10.30.58.215
+60 - DEBUG : spoofng: 10.30.58.216
+60 - DEBUG : spoofng: 10.30.58.219
+60 - DEBUG : spoofng: 10.30.58.220
+60 - DEBUG : spoofng: 10.30.58.218
+60 - DEBUG : spoofng: 10.30.58.217
+60 - DEBUG : spoofng: 10.30.58.221
+60 - DEBUG : spoofng: 10.30.58.222
+60 - DEBUG : spoofng: 10.30.58.239
+60 - DEBUG : spoofng: 10.30.59.12
+60 - DEBUG : spoofng: 10.30.58.236
+60 - DEBUG : spoofng: 10.30.59.17
+60 - DEBUG : spoofng: 10.30.59.20
+60 - DEBUG : spoofng: 10.30.59.25
+60 - DEBUG : spoofng: 10.30.56.163
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.195
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.200
+292 - WARNING : more Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.13
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.252
+60 - DEBUG : spoofng: 10.30.57.153
+60 - DEBUG : spoofng: 10.30.63.201
+60 - DEBUG : spoofng: 10.30.63.204
+60 - DEBUG : spoofng: 10.30.63.207
+60 - DEBUG : spoofng: 10.30.63.212
+60 - DEBUG : spoofng: 10.30.63.219
+60 - DEBUG : spoofng: 10.30.63.221
+60 - DEBUG : spoofng: 10.30.63.222
+60 - DEBUG : spoofng: 10.30.63.223
+60 - DEBUG : spoofng: 10.30.56.54
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.63
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.91
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.210
+60 - DEBUG : spoofng: 10.30.57.214
+292 - WARNING : more Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.160
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.63.208
+60 - DEBUG : spoofng: 10.30.63.203
+60 - DEBUG : spoofng: 10.30.63.215
+60 - DEBUG : spoofng: 10.30.63.216
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.79:59061 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "alt7-mtalk.google.com." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.91:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.54:43040 > 120.92.96.2:xmpp_client S
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:58754 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:53413 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.124:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.79:59061 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::8a7:45d8:cc98:29a2:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.107:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "_raop._tcp.local." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:52564 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:60576 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.99:56146 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.215:49289 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.215:62948 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::91de:90cc:fbbd:685e:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.104:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.114:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.99:56146 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.93:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.79:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.54:54226 > 54.243.226.115:https S
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.88:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.102:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:62272 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:53104 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:51158 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:56607 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:60599 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+292 - WARNING : DNS RR prematured end (ofs=35, len=2)
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.3:mdns > 224.0.0.251:mdns / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.101:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.99:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:54499 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IPv6 / ICMPv6ND_RS / ICMPv6 Neighbor Discovery Option - Source Link-Layer Address 5c:70:a3:03:69:6e
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.215:62948 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.215:49289 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.105:57685 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:54499 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.212:53542 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.212:60611 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.91:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.0:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:52750 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:59889 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.124:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.212:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 172.217.23.46:http > 10.30.58.151:57490 FA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.105:57685 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "r3---sn-cx1x9-ua8s.googlevideo.com." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.107:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:62272 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:53104 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "_homekit._tcp.local." 
+59 - DEBUG : sent: Ether / IPv6 / ICMPv6ND_RS / ICMPv6 Neighbor Discovery Option - Source Link-Layer Address 7c:91:22:cf:5d:37
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:51158 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:56607 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:60599 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::9490:1ad8:e1e9:2435:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "_raop._tcp.local." 
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::f53f:b06:ac81:3e07:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.105:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.114:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:53289 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:62699 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.54:43040 > 120.92.96.2:xmpp_client S
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.93:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.79:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::8a7:45d8:cc98:29a2:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / TCP 108.177.15.188:https > 10.30.56.241:53303 A
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.212:53542 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.212:60611 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:52750 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:59889 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "cas.samsungcloud.com." 
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::d99e:8e6a:7e4f:8bd3:51738 > ff02::1:3:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:51738 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::d99e:8e6a:7e4f:8bd3:64399 > ff02::1:3:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:64399 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 0.0.0.0:bootpc > 255.255.255.255:bootps / BOOTP / DHCP
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.2:bootps > 255.255.255.255:bootpc / BOOTP / DHCP
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:49867 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:49867 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.101:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.99:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:51337 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:57174 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:57971 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.88:52324 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "arg1f5.eastus.cloudapp.azure.com." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:62699 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:53289 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "gateway.fe.apple-dns.net." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:63332 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:64935 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.88:52324 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.91:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.212:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:59944 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:59006 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.222:56182 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.222:61576 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::d99e:8e6a:7e4f:8bd3:51738 > ff02::1:3:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:51738 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::d99e:8e6a:7e4f:8bd3:64399 > ff02::1:3:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:64399 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "_805741C9._sub._googlecast._tcp.local." 
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "googleadapis.l.google.com." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:65054 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 140.205.195.66:http > 10.30.56.163:43577 PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.88:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.237:52852 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:57174 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:57971 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:51337 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.68:bootpc > 255.255.255.255:bootps / BOOTP / DHCP
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.105:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:65187 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:63072 > 224.0.0.252:hostmon / LLMNRQuery
+292 - WARNING : DNS RR prematured end (ofs=36, len=2)
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.94:mdns > 224.0.0.251:mdns / Raw
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "www.startssl.com." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:65054 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.114:63090 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.104:61968 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IPv6 / ICMPv6ND_RS / ICMPv6 Neighbor Discovery Option - Source Link-Layer Address 7c:91:22:cf:5d:37
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.93:62421 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.237:55123 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.237:57949 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.79:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.0:56227 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.0:59269 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:64935 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:63332 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.237:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.114:63090 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.0:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.67:57030 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:59006 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:59944 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.104:61968 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.222:61576 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.222:56182 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.54:50506 > 54.174.175.153:https PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.93:62421 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "clients4.google.com." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.99:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "resolver.msg.xiaomi.net." 
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "test.vinaads.org." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.114:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.237:52852 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "config.samqaicongen.com." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.104:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "suggestqueries.l.google.com." 
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "play.google.com." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:63072 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:65187 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "app-measurement.com." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.93:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 140.205.195.66:http > 10.30.56.163:43577 PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:64064 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:58093 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.212:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.237:55123 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.237:57949 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.0:59269 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.0:56227 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:60232 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:65394 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.124:52828 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.124:62384 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.124:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "video-stats.l.google.com." 
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.54:54226 > 54.243.226.115:https S
+59 - DEBUG : sent: Ether / IP / TCP 216.58.206.138:https > 10.30.56.241:55696 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:52254 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:58764 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.105:49505 > 173.243.138.99:http A / Padding
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.105:49505 > 173.243.138.99:http A / Padding
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.105:49505 > 173.243.138.99:http A / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.88:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.101:57908 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.105:49505 > 173.243.138.99:http A / Padding
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.105:49505 > 173.243.138.99:http A / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.105:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.105:64499 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.237:51399 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:55801 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:64755 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.101:57908 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 173.243.138.99:http > 10.30.56.105:49505 PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.79:53831 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.237:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:58093 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:64064 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.0:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:53063 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:56379 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.108:49990 > 64.62.197.34:https A / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.106:63115 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.106:63114 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:65394 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:60232 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.124:62384 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.124:52828 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.79:53831 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.108:60246 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:59691 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:56258 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:52254 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:58764 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.101:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.105:64498 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IPv6 / ICMPv6ND_RS / ICMPv6 Neighbor Discovery Option - Source Link-Layer Address 7c:91:22:cf:5d:37
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.114:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.108:60247 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.104:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.110:62943 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.110:62943 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.110:62942 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.110:62942 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.93:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.79:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.110:62943 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.237:51399 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:55801 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:64755 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 64.62.197.34:https > 10.30.56.108:49990 PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.106:63113 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::a031:49ab:47bb:fc69:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.54:43040 > 120.92.96.2:xmpp_client S
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 173.243.138.99:http > 10.30.56.105:49505 PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:53063 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:56379 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::8a7:45d8:cc98:29a2:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:58701 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:62874 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.67:57028 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.108:49990 > 64.62.197.34:https PA / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.108:49990 > 64.62.197.34:https PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.124:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:55838 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:52913 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "_arduino._tcp.local." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:59691 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:56258 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.67:57029 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.88:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::a14d:8539:5b06:7153:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IPv6 / ICMPv6ND_RS / ICMPv6 Neighbor Discovery Option - Source Link-Layer Address 7c:91:22:cf:5d:37
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.108:49990 > 64.62.197.34:https PA / Raw
+59 - DEBUG : sent: Ether / IP / TCP 140.205.195.66:http > 10.30.56.163:43577 PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.110:62941 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "_googlecast._tcp.local." 
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "_googlecast._tcp.local." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.105:64500 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.237:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.134:64141 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.134:64475 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.0:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.108:49990 > 64.62.197.34:https PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.134:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:52349 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.108:60245 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.67:57030 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:65098 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:60321 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.105:64499 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:58701 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:62874 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:52349 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.113:56602 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:52913 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:55838 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.101:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.210:61986 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.210:53048 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:60998 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:54590 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::d99e:8e6a:7e4f:8bd3:57223 > ff02::1:3:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.210:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:57223 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::d99e:8e6a:7e4f:8bd3:56043 > ff02::1:3:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:56043 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.114:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.105:56256 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:53698 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:57724 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.104:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 114.54.23.116:xmpp_client > 10.30.56.250:49939 SA
+59 - DEBUG : sent: Ether / IP / TCP 108.168.180.111:xmpp_client > 10.30.56.250:37305 SA
+59 - DEBUG : sent: Ether / IP / TCP 52.74.246.47:xmpp_client > 10.30.56.250:55163 FA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.106:63114 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.106:63115 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.93:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.110:62942 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.79:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.113:56601 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.105:56256 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.108:60246 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.112:53727 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.134:64475 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.134:64141 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.105:64498 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:56230 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.112:53726 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.124:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::a4ef:8c48:a123:6663:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.108:60247 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:65098 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:60321 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.118:57679 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.193:57200 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.190:50647 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.51:58910 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.64:50300 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.153:56249 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.216:52397 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.204:57883 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.160.146.208:52726 > 172.217.22.106:https PA / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.201:50757 > 52.16.29.94:https A / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.189:64789 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.190:50649 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.193:57199 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.193:57198 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 0.0.0.0:bootpc > 255.255.255.255:bootps / BOOTP / DHCP
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.211:62677 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:57716 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:57627 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:53459 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.49:57815 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.153:56250 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.208:55793 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "pingstart-v1-apps-alb-1860488418.us-west-2.elb.amazonaws.com." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.210:55616 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.68:56687 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:54392 > 157.56.144.215:3544 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.80:60820 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.110:62943 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.193:49878 > 13.32.145.171:https A
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.237:57480 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.88:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:51158 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.113:56601 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.221:50581 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.109:59746 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.109:55701 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.215:60505 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.102:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.4:57505 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.78:59797 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:54499 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.155:65382 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:59741 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.98:49238 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.214:63620 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.158:56577 > 31.168.235.28:http A / Raw
+59 - DEBUG : sent: Ether / IP / TCP 192.114.147.145:https > 10.30.57.13:51486 SA
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.243:50085 > 172.217.23.46:https PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.80:60821 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.59.17:62517 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "e15.whatsapp.net." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:54588 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:63857 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:54589 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.101:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.200:49780 > 81.218.16.211:https PA / Raw
+59 - DEBUG : sent: Ether / IP / TCP 216.58.208.170:https > 10.30.58.70:57966 FA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:52906 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 216.58.208.170:https > 10.30.58.70:57963 FA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:57639 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.58.216:52728 > 40.77.226.223:https S
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:58439 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:51505 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.35:49742 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.193:49898 > 192.229.220.191:http A / Padding
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.201:50759 > 92.122.135.14:https A / Padding
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.201:50759 > 92.122.135.14:https RA / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.193:57198 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.68:56686 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.221:61789 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.58.185:50749 > 104.16.41.2:https S
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:53011 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.200:56852 > 81.218.16.207:https PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:63858 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:59837 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.109:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 216.58.204.66:http > 10.30.56.177:49968 FA / Padding
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.189:39115 > 216.58.206.142:https FA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.211:62677 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.211:62677 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.16:49807 > 216.58.212.104:https A / Raw / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.243:54777 > 172.217.17.78:https / Raw
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "i.ytimg.com." 
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.16:49813 > 13.32.145.126:https A / Raw / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.68:56687 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.253:60287 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.89:50307 > 10.30.56.1:8013 S
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.58.153:49347 > 10.30.56.1:8013 S
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.54:43040 > 120.92.96.2:xmpp_client S
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.40:49778 > 216.58.206.142:https FA / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.214:63618 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:54478 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.46:55772 > 216.58.204.46:https A / Raw / Padding
+59 - DEBUG : sent: Ether / IP / TCP 10.30.58.204:52992 > 10.20.90.106:7680 PA / Raw / Padding
+59 - DEBUG : sent: Ether / IP / TCP 10.30.58.204:53062 > 10.20.2.67:7680 PA / Raw / Padding
+59 - DEBUG : sent: Ether / IP / TCP 10.30.58.204:52979 > 10.20.9.21:7680 PA / Raw / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.68:56686 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.45:58617 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.113:56600 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 192.114.147.145:https > 10.30.57.13:51486 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.210:64918 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:57716 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.67:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.211:62677 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.221:61788 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.190:49514 > 45.40.154.221:https RA / Padding
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "teredo.ipv6.microsoft.com." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.217:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.16:49794 > 2.20.154.62:https A / Raw / Padding
+59 - DEBUG : sent: Ether / IP / UDP 0.0.0.0:bootpc > 255.255.255.255:bootps / BOOTP / DHCP
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.221:65370 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.221:64543 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.107:54352 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.79:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.58.214:53250 > 104.79.199.199:https A / Raw / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.106:63114 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.212:55376 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.212:50606 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:53658 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.16:49836 > 2.20.154.62:https A / Raw / Padding
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.215:49588 > 111.221.29.254:https A
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:57640 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.210:57554 > 216.58.211.106:https PA / Raw
+59 - DEBUG : sent: Ether / IP / TCP 37.26.145.205:https > 10.30.56.200:54616 SA
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "_805741C9._sub._googlecast._tcp.local." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.109:62481 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.153:56250 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.54:58037 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.59.17:62519 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "www3.l.google.com." 
+59 - DEBUG : sent: Ether / IP / TCP 216.58.204.66:http > 10.30.56.177:49968 FA / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.11:64780 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.78:50893 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.80:54140 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.105:64499 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "tekem.amalbet.local." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.153:56250 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.35:57179 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 31.13.64.11:https > 10.30.57.160:47331 PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.35:57179 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "v10.vortex-win.data.microsoft.com." 
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "a26-01.amalbet.local." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.16:51765 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.106:63113 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.58.57:65496 > 216.58.212.99:https A / Raw / Padding
+59 - DEBUG : sent: Ether / IP / TCP 216.58.204.66:https > 10.30.56.177:49967 FPA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:53460 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:61507 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:55409 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:59520 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.172:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.111:61392 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.131:7680 > 172.22.2.169:16721 SA
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.243:50107 > 216.239.38.120:https S
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.35:49742 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.49:57815 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.40:49792 > 216.239.38.120:https S
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.193:49799 > 216.58.204.66:http A / Raw / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.80:59403 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::d4eb:2e9c:ac1e:a194:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:57990 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.237:52852 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.78:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 192.114.147.145:https > 10.30.57.13:51459 A
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "teredo.ipv6.microsoft.com." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.107:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.80:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:59837 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.79:61865 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.211:62678 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.58.208:52634 > 10.20.90.106:7680 A
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "proddata.xobni.yahoo.com.amalbet.local." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 81.218.16.207:https > 10.30.56.200:56852 PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.59.17:62519 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.46:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.11:64780 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::f1f7:9685:d6b3:13d8:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / TCP 140.205.195.66:http > 10.30.56.163:43577 FA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.93:62421 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.215:60505 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.59.20:53606 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.155:65381 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.155:65382 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.193:57199 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.106:63115 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.107:64118 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.54:58036 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.173:53308 > 10.30.56.1:8013 S
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.204:57882 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.215:63782 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.105:64500 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.58.211:53629 > 10.30.56.1:8013 S
+59 - DEBUG : sent: Ether / IP / TCP 10.30.58.57:65512 > 74.125.140.189:https PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.190:50649 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.35:49743 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.208:55792 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.155:50169 > 216.58.211.98:https A / Raw / Padding
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.46:62511 > 216.58.206.133:https A
+59 - DEBUG : sent: Ether / IP / TCP 31.13.64.11:https > 10.30.57.160:47331 A
+59 - DEBUG : sent: Ether / IP / TCP 81.218.16.211:https > 10.30.56.200:49780 FA
+59 - DEBUG : sent: Ether / IPv6 / ICMPv6ND_RS / ICMPv6 Neighbor Discovery Option - Source Link-Layer Address 00:ec:0a:80:78:62
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.215:60504 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.104:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.80:60821 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.59.20:53607 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.153:56251 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:51468 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP / DNS Ans "scontent.xx.fbcdn.net." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.102:50785 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "e560-01.amalbet.local." 
+59 - DEBUG : sent: Ether / IP / TCP 81.218.16.211:https > 10.30.56.200:49780 FA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:63072 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 172.217.17.78:https > 10.30.57.35:60926 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:57405 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.89:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.155:65382 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.203:60001 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.0:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.80:62348 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::90da:d2e5:61a:4548:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.0:59269 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.0:56227 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.67:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 157.240.1.35:https > 10.30.57.13:51463 A
+59 - DEBUG : sent: Ether / IP / TCP 157.240.1.23:https > 10.30.57.13:51487 SA
+59 - DEBUG : sent: Ether / IP / TCP 104.244.42.67:https > 10.30.58.151:37777 FPA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.107:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::e453:766f:8b61:1267:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / TCP 216.58.206.138:https > 10.30.56.241:55696 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.89:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:56266 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 0.0.0.0:bootpc > 255.255.255.255:bootps / BOOTP / DHCP
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.185:netbios_dgm > 10.30.63.255:netbios_dgm / NBTDatagram / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.20.9.9:netbios_dgm > 10.20.9.255:netbios_dgm / NBTDatagram / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.214:52692 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.203:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "tekem.amalbet.local." 
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.105:49505 > 173.243.138.99:http A / Padding
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.46:56954 > 172.217.23.33:https R / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.105:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 216.58.204.66:https > 10.30.56.177:49967 FPA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.105:64499 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.116:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.80:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.80:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 169.45.210.90:xmpp_client > 10.30.58.236:52836 SA
+59 - DEBUG : sent: Ether / IP / TCP 81.218.16.211:https > 10.30.56.200:49780 R / Padding
+59 - DEBUG : sent: Ether / IP / TCP 173.243.138.99:http > 10.30.56.105:49505 PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:65063 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.221:53226 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "_googlecast._tcp.local." 
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "_googlecast._tcp.local." 
+59 - DEBUG : sent: Ether / IP / TCP 192.114.147.146:https > 10.30.57.13:51488 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.214:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 172.217.17.80:https > 10.30.57.35:56288 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.0:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.107:62453 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:53491 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:61235 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 172.217.17.80:https > 10.30.57.35:56291 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.124:62384 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 37.26.145.205:https > 10.30.56.200:54617 SA
+59 - DEBUG : sent: Ether / IP / TCP 216.58.213.78:https > 10.30.56.200:49031 A
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.67:56651 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.124:54440 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:60201 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:50338 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.99:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.221:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.214:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.101:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 81.218.16.206:https > 10.30.56.200:33855 A
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.93:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:54761 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:56865 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP / DNS Ans "192.114.147.146" 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 172.217.17.80:https > 10.30.57.35:56289 SA
+59 - DEBUG : sent: Ether / IP / TCP 172.217.17.80:https > 10.30.57.35:56290 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.110:62943 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.7:49175 > 23.34.237.97:https A
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.78:63248 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.102:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.107:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.78:63248 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:56865 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.210:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 91.199.99.110:4038 > 10.30.56.62:4038 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.99:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IPv6 / ICMPv6ND_RS / ICMPv6 Neighbor Discovery Option - Source Link-Layer Address 9c:2a:83:11:a0:39
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.0:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::a031:49ab:47bb:fc69:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.105:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.101:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.214:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 173.243.138.99:http > 10.30.56.105:49505 PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.203:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 31.13.90.2:https > 10.30.57.13:51489 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 104.16.61.31:http > 10.30.56.182:49277 FA / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:49784 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.116:50500 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.108:49990 > 64.62.197.34:https PA / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.108:49990 > 64.62.197.34:https PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.124:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 192.114.147.145:https > 10.30.57.13:51486 SA
+59 - DEBUG : sent: Ether / IP / TCP 157.240.1.35:https > 10.30.57.13:51463 PA / Raw
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::d99e:8e6a:7e4f:8bd3:64740 > ff02::1:3:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.67:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 108.168.180.111:xmpp_client > 10.30.56.250:37305 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.215:60504 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::2c46:fb9a:b54b:5044:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:59691 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 216.58.210.42:https > 10.30.56.71:38380 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.214:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / ICMP 10.30.56.1 > 10.30.57.13 echo-reply 0 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:64990 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:62588 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.221:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 157.240.1.32:https > 10.30.58.132:43007 SA
+59 - DEBUG : sent: Ether / IP / TCP 140.205.195.66:http > 10.30.56.163:43577 PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.110:62941 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.20.9.34:netbios_ns > 10.20.9.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.71:59149 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:52001 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 31.13.90.2:https > 10.30.57.13:51489 SA
+59 - DEBUG : sent: Ether / IP / TCP 37.26.145.205:https > 10.30.56.200:54618 SA
+59 - DEBUG : sent: Ether / IP / TCP 192.121.90.160:https > 10.30.56.71:41863 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.237:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 172.217.17.80:https > 10.30.57.35:56288 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.134:64141 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.215:60505 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.116:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.108:49990 > 64.62.197.34:https PA / Raw
+59 - DEBUG : sent: Ether / IP / TCP 37.26.145.205:https > 10.30.56.200:54619 SA
+59 - DEBUG : sent: Ether / IP / TCP 172.217.17.80:https > 10.30.57.35:56291 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.104:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.58.43:49594 > 216.58.206.46:https A
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:52349 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.7:49172 > 23.34.237.97:https A
+60 - DEBUG : spoofng: 10.30.56.4
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.2
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.203:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 216.58.213.78:https > 10.30.56.200:49032 PA / Raw
+60 - DEBUG : spoofng: 10.30.56.6
+59 - DEBUG : sent: Ether / IP / TCP 81.218.16.206:https > 10.30.56.200:33855 FPA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:60652 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.20
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:58701 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.22
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:62874 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:52349 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.23
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:60652 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.30
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.7:49175 > 23.34.237.97:https A
+59 - DEBUG : sent: Ether / IP / TCP 157.240.1.18:https > 10.30.57.13:51461 PA / Raw
+60 - DEBUG : spoofng: 10.30.56.36
+59 - DEBUG : sent: Ether / IP / TCP 216.58.213.78:https > 10.30.56.200:49030 PA / Raw
+60 - DEBUG : spoofng: 10.30.56.62
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.91:55223 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.109:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.67
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 31.13.90.2:https > 10.30.57.13:51489 SA
+60 - DEBUG : spoofng: 10.30.56.78
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.107:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.79
+59 - DEBUG : sent: Ether / IP / TCP 157.240.1.18:https > 10.30.57.13:51461 A
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.101
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.104:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.106
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.105
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:57223 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.108
+59 - DEBUG : sent: Ether / IP / TCP 37.26.145.205:https > 10.30.56.200:54619 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:63316 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.53
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.217:59997 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.217:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.110
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:59499 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.111
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:57724 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.214:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.112
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.35:62607 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.69
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 52.74.246.47:xmpp_client > 10.30.56.250:55163 FA
+60 - DEBUG : spoofng: 10.30.56.113
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.212:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.117
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:59306 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:60422 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.118
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.93:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 31.13.90.2:https > 10.30.57.160:40311 PA / Raw
+60 - DEBUG : spoofng: 10.30.56.126
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.113:56601 > 173.243.138.200:8888 / Raw
+60 - DEBUG : spoofng: 10.30.56.1
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.139
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.105:56256 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:64602 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.155
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.134:64475 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.172
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:60422 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.173
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.149
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.105:64498 > 96.45.33.73:8888 / Raw
+60 - DEBUG : spoofng: 10.30.56.174
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.214:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:56230 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.177
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.101:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.181
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.182
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::10a2:a978:f9d6:f575:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+60 - DEBUG : spoofng: 10.30.56.185
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.108:60247 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.109:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.188
+59 - DEBUG : sent: Ether / IP / TCP 31.13.90.2:https > 10.30.57.13:51456 A
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:50865 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:60321 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.190
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.118:57679 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.193:57200 > 96.45.33.73:8888 / Raw
+60 - DEBUG : spoofng: 10.30.56.191
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:55839 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.51:58910 > 96.45.33.73:8888 / Raw
+60 - DEBUG : spoofng: 10.30.56.193
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.221:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.167
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.153:56249 > 173.243.138.200:8888 / Raw
+60 - DEBUG : spoofng: 10.30.56.196
+59 - DEBUG : sent: Ether / IP / UDP 10.20.9.238:netbios_ns > 10.20.9.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.198
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.202
+59 - DEBUG : sent: Ether / IP / TCP 10.160.146.208:52726 > 172.217.22.106:https PA / Raw
+60 - DEBUG : spoofng: 10.30.56.204
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.104:57396 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.214:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.209
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.105:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.215
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:60851 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.101:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.217
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.222:52063 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.216
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.125:59808 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:63832 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.222
+59 - DEBUG : sent: Ether / IP / UDP 0.0.0.0:bootpc > 255.255.255.255:bootps / BOOTP / DHCP
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.35:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.225
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.104:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.215:60503 > 173.243.138.200:8888 / Raw
+60 - DEBUG : spoofng: 10.30.56.189
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.108:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.57
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.216:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.221:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.243
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.212:65032 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.179
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.56.248
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:62986 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.253
+59 - DEBUG : sent: Ether / IP / TCP 64.233.166.188:https > 10.30.56.182:49230 PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.0
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:54392 > 157.56.144.215:3544 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 192.114.147.145:https > 10.30.57.13:51459 A
+60 - DEBUG : spoofng: 10.30.57.4
+59 - DEBUG : sent: Ether / IP / TCP 31.13.90.2:https > 10.30.57.13:51489 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.110:62943 > 173.243.138.200:8888 / Raw
+60 - DEBUG : spoofng: 10.30.57.7
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.222:49313 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 216.58.198.238:http > 10.30.56.126:49577 FA / Padding
+60 - DEBUG : spoofng: 10.30.57.11
+59 - DEBUG : sent: Ether / IP / TCP 192.121.90.160:https > 10.30.56.71:41863 SA
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.7:49175 > 23.34.237.97:https A
+59 - DEBUG : sent: Ether / IP / TCP 172.217.17.80:https > 10.30.57.35:56289 SA
+60 - DEBUG : spoofng: 10.30.57.16
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.252:42319 > 216.58.198.170:https PA / Raw
+59 - DEBUG : sent: Ether / IP / TCP 192.114.147.146:https > 10.30.57.13:51488 SA
+60 - DEBUG : spoofng: 10.30.57.22
+59 - DEBUG : sent: Ether / IP / TCP 172.217.17.80:https > 10.30.57.35:56291 SA
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.105:50573 > 10.30.56.1:8013 S
+60 - DEBUG : spoofng: 10.30.57.34
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.212:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.37
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.101:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:61438 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.14
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.105:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.4:57505 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.78:59797 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.215:54034 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.109:58294 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.155:65382 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.89:50649 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.215:60505 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.99:52567 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.158:56577 > 31.168.235.28:http A / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.215:60503 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 157.240.1.52:https > 10.30.56.167:64091 A / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.214:53938 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.214:56307 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.116:50722 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 157.240.1.52:https > 10.30.56.167:64096 PA / Raw
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::d4eb:2e9c:ac1e:a194:dhcpv6_client > ff02::1:2:dhcpv6_server / DHCP6_Solicit / DHCP6OptElapsedTime / DHCP6OptClientId / DHCP6OptIA_NA / DHCP6OptClientFQDN / DHCP6OptVendorClass / DHCP6OptOptReq
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.67:64400 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:63649 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.116:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.200:49780 > 81.218.16.211:https PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:52906 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 216.58.206.142:https > 10.30.56.189:39117 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:50513 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.220:57639 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.58.216:52728 > 40.77.226.223:https S
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.35:49742 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.89:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.201:50759 > 92.122.135.14:https RA / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.193:57198 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.123:57978 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.78:64349 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 10.30.58.185:50749 > 104.16.41.2:https S
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.218:53011 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.116:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.200:56852 > 81.218.16.207:https PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:63858 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:59837 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.203:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 31.13.90.2:https > 10.30.57.13:51456 A
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.215:49592 > 10.30.56.1:8013 S
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.211:62677 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.211:62677 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+292 - WARNING : DNS RR prematured end (ofs=23, len=23)
+292 - WARNING : DNS RR prematured end (ofs=56, len=18)
+292 - WARNING : more DNS RR prematured end (ofs=56, len=8)
+59 - DEBUG : sent: Ether / IP / UDP / DNS Ans "_pdl-datastream._tcp." 
+59 - DEBUG : sent: Ether / IP / UDP / DNS Ans "_http._tcp." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:61279 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.212:49361 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.99:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.54:43040 > 120.92.96.2:xmpp_client S
+59 - DEBUG : sent: Ether / IP / TCP 216.58.213.78:https > 10.30.56.200:49062 SA
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+59 - DEBUG : sent: Ether / IP / TCP 157.240.1.52:https > 10.30.56.167:64096 PA / Raw
+60 - DEBUG : spoofng: 10.30.57.46
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.204:60104 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.252:44048 > 216.58.198.170:https A / Raw
+60 - DEBUG : spoofng: 10.30.56.71
+59 - DEBUG : sent: Ether / IP / TCP 216.58.213.78:https > 10.30.56.200:49030 PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.102:61755 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.67
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.101:51387 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.204:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.70
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.101:51387 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.71
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:49608 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.75
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:63634 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:62521 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.35
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.67:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:62521 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.80
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.26
+59 - DEBUG : sent: Ether / IP / TCP 216.58.213.78:https > 10.30.56.200:49058 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.216:63991 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.56.59
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.141:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 216.58.213.78:https > 10.30.56.200:49061 SA
+59 - DEBUG : sent: Ether / IP / ICMP 10.30.56.1 > 10.30.57.13 echo-reply 0 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.109:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.85
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:60709 > 239.255.255.250:3702 / Raw
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::d99e:8e6a:7e4f:8bd3:60710 > ff02::c:3702 / Raw
+60 - DEBUG : spoofng: 10.30.57.88
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.209:53658 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 52.43.19.83:https > 10.30.57.252:34635 PA / Raw
+60 - DEBUG : spoofng: 10.30.57.89
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.16:49836 > 2.20.154.62:https A / Raw / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.91
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::d99e:8e6a:7e4f:8bd3:61902 > ff02::1:3:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 37.26.145.205:https > 10.30.56.200:54616 SA
+60 - DEBUG : spoofng: 10.30.57.93
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "_805741C9._sub._googlecast._tcp.local." 
+60 - DEBUG : spoofng: 10.30.57.40
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.107:53230 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 157.240.1.35:https > 10.30.57.13:51463 A
+60 - DEBUG : spoofng: 10.30.57.99
+59 - DEBUG : sent: Ether / IPv6 / ICMPv6ND_RS / ICMPv6 Neighbor Discovery Option - Source Link-Layer Address 9c:2a:83:11:a0:39
+60 - DEBUG : spoofng: 10.30.56.94
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::d99e:8e6a:7e4f:8bd3:60710 > ff02::c:3702 / Raw
+60 - DEBUG : spoofng: 10.30.57.101
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.91:62627 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.102
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "www3.l.google.com." 
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.116:50380 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / fe80::d99e:8e6a:7e4f:8bd3 > ff02::16 (0) / IPv6ExtHdrHopByHop / Raw
+60 - DEBUG : spoofng: 10.30.57.103
+59 - DEBUG : sent: Ether / 10.30.58.222 > 224.0.0.22 igmp / Raw / Padding
+59 - DEBUG : sent: Ether / fe80::d99e:8e6a:7e4f:8bd3 > ff02::16 (0) / IPv6ExtHdrHopByHop / Raw
+60 - DEBUG : spoofng: 10.30.57.104
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.80:54140 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.105
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.222:60709 > 239.255.255.250:3702 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.214:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.107
+59 - DEBUG : sent: Ether / IPv6 / UDP fe80::d99e:8e6a:7e4f:8bd3:62270 > ff02::1:3:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.219:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.108
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.91:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.112
+59 - DEBUG : sent: Ether / IP / TCP 216.58.206.142:https > 10.30.56.189:39118 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:60763 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.204:54050 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.114
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.204:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.102:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.116
+59 - DEBUG : sent: Ether / IP / TCP 76.13.28.196:https > 10.30.56.189:46889 SA
+60 - DEBUG : spoofng: 10.30.57.115
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.123
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:61507 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:55409 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.124
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.216:59520 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.7:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.172:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.125
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.204:54050 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.131
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.131:7680 > 172.22.2.169:16721 SA
+60 - DEBUG : spoofng: 10.30.57.134
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.89:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.97
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.215:50535 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.206:60058 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.140
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.131:49858 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.141
+59 - DEBUG : sent: Ether / IP / TCP 216.58.213.78:https > 10.30.56.200:49059 SA
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "a26-01.amalbet.local." 
+60 - DEBUG : spoofng: 10.30.57.146
+59 - DEBUG : sent: Ether / IP / TCP 216.58.213.78:https > 10.30.56.200:49061 SA
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.158
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.78:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.67:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:60999 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.161
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "teredo.ipv6.microsoft.com." 
+60 - DEBUG : spoofng: 10.30.57.174
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.107:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.189
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:56857 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.187:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.201
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.217:59837 > 96.45.33.73:8888 / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.102:63097 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.204
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.78:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.215
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:56432 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP / DNS Qry "proddata.xobni.yahoo.com.amalbet.local." 
+60 - DEBUG : spoofng: 10.30.57.219
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.107:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.109:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.230
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:58723 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.237
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.102:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.46:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.216
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.11:64780 > 173.243.138.200:8888 / Raw
+59 - DEBUG : sent: Ether / IP / TCP 10.30.57.252:56618 > 216.58.198.170:https PA / Raw
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.116:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 140.205.195.66:http > 10.30.56.163:43577 FA
+60 - DEBUG : spoofng: 10.30.57.246
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:60237 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.57.249
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.93:62421 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.215:60504 > 173.243.138.200:8888 / Raw
+60 - DEBUG : spoofng: 10.30.58.35
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.103:60237 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.124:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.58.45
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.67:52333 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.99:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.58.48
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:52663 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.58.47
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.89:62966 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.139:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.58.49
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.67:52333 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.112:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.58.51
+59 - DEBUG : sent: Ether / IP / TCP 216.58.213.78:https > 10.30.56.200:49060 SA
+60 - DEBUG : spoofng: 10.30.58.54
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.78:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.215:63782 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.221:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.57.252
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.88:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:49619 > 224.0.0.252:hostmon / LLMNRQuery
+60 - DEBUG : spoofng: 10.30.58.64
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.215:49592 > 224.0.0.252:hostmon / LLMNRQuery
+59 - DEBUG : sent: Ether / IP / TCP 37.26.145.205:https > 10.30.56.200:54626 SA
+60 - DEBUG : spoofng: 10.30.58.17
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.104:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / TCP 169.63.73.51:https > 10.30.56.200:45598 SA
+60 - DEBUG : spoofng: 10.30.58.68
+59 - DEBUG : sent: Ether / IP / TCP 216.58.213.78:https > 10.30.56.200:49058 SA
+59 - DEBUG : sent: Ether / IP / TCP 10.30.56.155:50169 > 216.58.211.98:https A / Raw / Padding
+59 - DEBUG : sent: Ether / IP / UDP 10.30.58.203:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.58.69
+59 - DEBUG : sent: Ether / IP / TCP 31.13.64.11:https > 10.30.57.160:47331 A
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.215:60503 > 173.243.138.200:8888 / Raw
+60 - DEBUG : spoofng: 10.30.58.78
+59 - DEBUG : sent: Ether / IP / UDP 10.30.57.146:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+59 - DEBUG : sent: Ether / IP / UDP 10.30.56.173:netbios_ns > 10.30.63.255:netbios_ns / NBNSQueryRequest
+60 - DEBUG : spoofng: 10.30.58.79
+60 - DEBUG : spoofng: 10.30.58.98
+60 - DEBUG : spoofng: 10.30.58.109
+60 - DEBUG : spoofng: 10.30.58.70
+60 - DEBUG : spoofng: 10.30.58.127
+60 - DEBUG : spoofng: 10.30.58.91
+60 - DEBUG : spoofng: 10.30.58.150
+60 - DEBUG : spoofng: 10.30.58.152
+60 - DEBUG : spoofng: 10.30.58.153
+60 - DEBUG : spoofng: 10.30.58.185
+60 - DEBUG : spoofng: 10.30.58.187
+60 - DEBUG : spoofng: 10.30.58.136
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.58.203
+60 - DEBUG : spoofng: 10.30.58.204
+60 - DEBUG : spoofng: 10.30.58.206
+60 - DEBUG : spoofng: 10.30.58.208
+60 - DEBUG : spoofng: 10.30.58.209
+60 - DEBUG : spoofng: 10.30.58.210
+60 - DEBUG : spoofng: 10.30.58.211
+60 - DEBUG : spoofng: 10.30.58.212
+60 - DEBUG : spoofng: 10.30.58.214
+60 - DEBUG : spoofng: 10.30.58.215
+60 - DEBUG : spoofng: 10.30.58.216
+60 - DEBUG : spoofng: 10.30.58.219
+60 - DEBUG : spoofng: 10.30.58.220
+60 - DEBUG : spoofng: 10.30.58.218
+60 - DEBUG : spoofng: 10.30.58.217
+60 - DEBUG : spoofng: 10.30.58.221
+60 - DEBUG : spoofng: 10.30.58.222
+60 - DEBUG : spoofng: 10.30.58.239
+60 - DEBUG : spoofng: 10.30.59.12
+60 - DEBUG : spoofng: 10.30.58.236
+60 - DEBUG : spoofng: 10.30.59.17
+60 - DEBUG : spoofng: 10.30.59.20
+60 - DEBUG : spoofng: 10.30.59.25
+60 - DEBUG : spoofng: 10.30.56.163
+60 - DEBUG : spoofng: 10.30.56.195
+60 - DEBUG : spoofng: 10.30.56.200
+60 - DEBUG : spoofng: 10.30.57.13
+60 - DEBUG : spoofng: 10.30.57.252
+60 - DEBUG : spoofng: 10.30.57.153
+60 - DEBUG : spoofng: 10.30.63.201
+60 - DEBUG : spoofng: 10.30.63.204
+60 - DEBUG : spoofng: 10.30.63.207
+60 - DEBUG : spoofng: 10.30.63.212
+60 - DEBUG : spoofng: 10.30.63.219
+60 - DEBUG : spoofng: 10.30.63.221
+60 - DEBUG : spoofng: 10.30.63.222
+60 - DEBUG : spoofng: 10.30.63.223
+60 - DEBUG : spoofng: 10.30.56.54
+60 - DEBUG : spoofng: 10.30.56.63
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.91
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.210
+60 - DEBUG : spoofng: 10.30.57.214
+292 - WARNING : more Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.160
+60 - DEBUG : spoofng: 10.30.63.208
+60 - DEBUG : spoofng: 10.30.63.203
+60 - DEBUG : spoofng: 10.30.63.215
+60 - DEBUG : spoofng: 10.30.63.216
+60 - DEBUG : spoofng: 10.30.56.4
+60 - DEBUG : spoofng: 10.30.56.2
+60 - DEBUG : spoofng: 10.30.56.6
+60 - DEBUG : spoofng: 10.30.56.20
+60 - DEBUG : spoofng: 10.30.56.22
+60 - DEBUG : spoofng: 10.30.56.23
+60 - DEBUG : spoofng: 10.30.56.30
+60 - DEBUG : spoofng: 10.30.56.36
+60 - DEBUG : spoofng: 10.30.56.62
+60 - DEBUG : spoofng: 10.30.56.67
+60 - DEBUG : spoofng: 10.30.56.78
+60 - DEBUG : spoofng: 10.30.56.79
+60 - DEBUG : spoofng: 10.30.56.101
+60 - DEBUG : spoofng: 10.30.56.106
+60 - DEBUG : spoofng: 10.30.56.105
+60 - DEBUG : spoofng: 10.30.56.108
+60 - DEBUG : spoofng: 10.30.56.53
+60 - DEBUG : spoofng: 10.30.56.110
+60 - DEBUG : spoofng: 10.30.56.111
+60 - DEBUG : spoofng: 10.30.56.112
+60 - DEBUG : spoofng: 10.30.56.69
+60 - DEBUG : spoofng: 10.30.56.113
+60 - DEBUG : spoofng: 10.30.56.117
+60 - DEBUG : spoofng: 10.30.56.118
+60 - DEBUG : spoofng: 10.30.56.126
+60 - DEBUG : spoofng: 10.30.56.1
+60 - DEBUG : spoofng: 10.30.56.139
+60 - DEBUG : spoofng: 10.30.56.155
+60 - DEBUG : spoofng: 10.30.56.172
+60 - DEBUG : spoofng: 10.30.56.173
+60 - DEBUG : spoofng: 10.30.56.149
+60 - DEBUG : spoofng: 10.30.56.174
+60 - DEBUG : spoofng: 10.30.56.177
+60 - DEBUG : spoofng: 10.30.56.181
+60 - DEBUG : spoofng: 10.30.56.182
+60 - DEBUG : spoofng: 10.30.56.185
+60 - DEBUG : spoofng: 10.30.56.188
+60 - DEBUG : spoofng: 10.30.56.190
+60 - DEBUG : spoofng: 10.30.56.191
+60 - DEBUG : spoofng: 10.30.56.193
+60 - DEBUG : spoofng: 10.30.56.167
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.196
+60 - DEBUG : spoofng: 10.30.56.198
+60 - DEBUG : spoofng: 10.30.56.202
+60 - DEBUG : spoofng: 10.30.56.204
+60 - DEBUG : spoofng: 10.30.56.209
+60 - DEBUG : spoofng: 10.30.56.215
+60 - DEBUG : spoofng: 10.30.56.217
+60 - DEBUG : spoofng: 10.30.56.216
+60 - DEBUG : spoofng: 10.30.56.222
+60 - DEBUG : spoofng: 10.30.56.225
+60 - DEBUG : spoofng: 10.30.56.189
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.57
+60 - DEBUG : spoofng: 10.30.56.243
+60 - DEBUG : spoofng: 10.30.56.179
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.248
+60 - DEBUG : spoofng: 10.30.56.253
+60 - DEBUG : spoofng: 10.30.57.0
+60 - DEBUG : spoofng: 10.30.57.4
+60 - DEBUG : spoofng: 10.30.57.7
+60 - DEBUG : spoofng: 10.30.57.11
+60 - DEBUG : spoofng: 10.30.57.16
+60 - DEBUG : spoofng: 10.30.57.22
+60 - DEBUG : spoofng: 10.30.57.34
+60 - DEBUG : spoofng: 10.30.57.37
+60 - DEBUG : spoofng: 10.30.57.14
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.46
+60 - DEBUG : spoofng: 10.30.56.71
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.67
+60 - DEBUG : spoofng: 10.30.57.70
+60 - DEBUG : spoofng: 10.30.57.71
+60 - DEBUG : spoofng: 10.30.57.75
+60 - DEBUG : spoofng: 10.30.57.35
+60 - DEBUG : spoofng: 10.30.57.80
+60 - DEBUG : spoofng: 10.30.57.26
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.56.59
+60 - DEBUG : spoofng: 10.30.57.85
+60 - DEBUG : spoofng: 10.30.57.88
+60 - DEBUG : spoofng: 10.30.57.89
+60 - DEBUG : spoofng: 10.30.57.91
+60 - DEBUG : spoofng: 10.30.57.93
+60 - DEBUG : spoofng: 10.30.57.40
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.99
+60 - DEBUG : spoofng: 10.30.56.94
+60 - DEBUG : spoofng: 10.30.57.101
+60 - DEBUG : spoofng: 10.30.57.102
+60 - DEBUG : spoofng: 10.30.57.103
+60 - DEBUG : spoofng: 10.30.57.104
+60 - DEBUG : spoofng: 10.30.57.105
+60 - DEBUG : spoofng: 10.30.57.107
+60 - DEBUG : spoofng: 10.30.57.108
+60 - DEBUG : spoofng: 10.30.57.112
+60 - DEBUG : spoofng: 10.30.57.114
+60 - DEBUG : spoofng: 10.30.57.116
+60 - DEBUG : spoofng: 10.30.57.115
+60 - DEBUG : spoofng: 10.30.57.123
+60 - DEBUG : spoofng: 10.30.57.124
+60 - DEBUG : spoofng: 10.30.57.125
+60 - DEBUG : spoofng: 10.30.57.131
+60 - DEBUG : spoofng: 10.30.57.134
+60 - DEBUG : spoofng: 10.30.57.97
+60 - DEBUG : spoofng: 10.30.57.140
+60 - DEBUG : spoofng: 10.30.57.141
+60 - DEBUG : spoofng: 10.30.57.146
+60 - DEBUG : spoofng: 10.30.57.158
+60 - DEBUG : spoofng: 10.30.57.161
+60 - DEBUG : spoofng: 10.30.57.174
+60 - DEBUG : spoofng: 10.30.57.189
+60 - DEBUG : spoofng: 10.30.57.201
+60 - DEBUG : spoofng: 10.30.57.204
+60 - DEBUG : spoofng: 10.30.57.215
+60 - DEBUG : spoofng: 10.30.57.219
+60 - DEBUG : spoofng: 10.30.57.230
+60 - DEBUG : spoofng: 10.30.57.237
+60 - DEBUG : spoofng: 10.30.57.216
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
+60 - DEBUG : spoofng: 10.30.57.246
+60 - DEBUG : spoofng: 10.30.57.249
+60 - DEBUG : spoofng: 10.30.58.35
+60 - DEBUG : spoofng: 10.30.58.45
+60 - DEBUG : spoofng: 10.30.58.48
+60 - DEBUG : spoofng: 10.30.58.47
+60 - DEBUG : spoofng: 10.30.58.49
+60 - DEBUG : spoofng: 10.30.58.51
+60 - DEBUG : spoofng: 10.30.58.54
+60 - DEBUG : spoofng: 10.30.57.252
+60 - DEBUG : spoofng: 10.30.58.64
+60 - DEBUG : spoofng: 10.30.58.17
+60 - DEBUG : spoofng: 10.30.58.68
+60 - DEBUG : spoofng: 10.30.58.69
+60 - DEBUG : spoofng: 10.30.58.78
+60 - DEBUG : spoofng: 10.30.58.79
+60 - DEBUG : spoofng: 10.30.58.98
+60 - DEBUG : spoofng: 10.30.58.109
+60 - DEBUG : spoofng: 10.30.58.70
+60 - DEBUG : spoofng: 10.30.58.127
+60 - DEBUG : spoofng: 10.30.58.91
+60 - DEBUG : spoofng: 10.30.58.150
+60 - DEBUG : spoofng: 10.30.58.152
+60 - DEBUG : spoofng: 10.30.58.153
+60 - DEBUG : spoofng: 10.30.58.185
+60 - DEBUG : spoofng: 10.30.58.187
+60 - DEBUG : spoofng: 10.30.58.136
+60 - DEBUG : spoofng: 10.30.58.203
+60 - DEBUG : spoofng: 10.30.58.204
+60 - DEBUG : spoofng: 10.30.58.206
+60 - DEBUG : spoofng: 10.30.58.208
+60 - DEBUG : spoofng: 10.30.58.209
+60 - DEBUG : spoofng: 10.30.58.210
+60 - DEBUG : spoofng: 10.30.58.211
+60 - DEBUG : spoofng: 10.30.58.212
+60 - DEBUG : spoofng: 10.30.58.214
+60 - DEBUG : spoofng: 10.30.58.215
+60 - DEBUG : spoofng: 10.30.58.216
+60 - DEBUG : spoofng: 10.30.58.219
+60 - DEBUG : spoofng: 10.30.58.220
+60 - DEBUG : spoofng: 10.30.58.218
+60 - DEBUG : spoofng: 10.30.58.217
+60 - DEBUG : spoofng: 10.30.58.221
+60 - DEBUG : spoofng: 10.30.58.222
+60 - DEBUG : spoofng: 10.30.58.239
+60 - DEBUG : spoofng: 10.30.59.12
+60 - DEBUG : spoofng: 10.30.58.236
+292 - WARNING : Mac address to reach destination not found. Using broadcast.
