@@ -9,17 +9,16 @@ from datetime import datetime
 import functions
 
 
+
 # except ImportError:
 #
 #     #TODO: handle all cases of missing modules and try to solve
 #     print 'a module is missing please check you have all required modules'
 
 # global variables:
-localHost=''
-defaultGateway=''
 localAddresses=[]
 addressesLock=Lock()
-
+gatewayMAC=''
 
 def handle_Packet(pkt):
     """
@@ -29,7 +28,7 @@ def handle_Packet(pkt):
     """
     if ARP not in pkt:
         #print pkt.show()
-        functions.sendPacket(pkt)
+        functions.sendPacket(pkt,gatewayMAC)
     else:
         if pkt[ARP].op == 2: # is-at
 
@@ -51,7 +50,7 @@ def arpSpoof(router,localHost):
     while True:
         if len(localAddresses)>0:
             addressesLock.acquire()
-            print 'spoofing'
+            print 'spoofing',str(len(localAddresses))
             for host in localAddresses:
                 if host != router and host != localHost: #check that ip does not match default gateway or local host to not send packets to them
 
@@ -73,10 +72,10 @@ def setup():
     and start all threads
     """
     #get default gateway and local IP address
-    global defaultGateway
-    global localHost
-    defaultGateway,localHost=functions.getLocalhostAddress()
-    print defaultGateway,localHost
+    global gatewayMAC
+    logging.debug('check')
+    defaultGateway,localHost,gatewayMAC=functions.getLocalhostAddress()
+    #print defaultGateway,gatewayMAC,localHost
     logging.debug('got default gateway and local IP')
 
     global localAddresses
@@ -105,7 +104,7 @@ def main():
     logging.info('setup complete')
 
 
-    sniff(prn=handle_Packet)
+    #sniff(prn=handle_Packet)
 
     while True:
         pass

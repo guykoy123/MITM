@@ -4,9 +4,6 @@
 from scapy.all import *
 import subprocess
 
-# global variables:
-localHost=[]
-
 
 
 def proc_output(command):
@@ -23,9 +20,6 @@ def get_Local_Addresses(defaultGateway,localHost):
     """
     scan network for all active hosts
     and return list of all IP addresses
-    """
-
-    output =proc_output('arp-scan --localnet')
     temp=output.split('\t')[:-1]
     addrs=[]
     for i in temp:
@@ -36,6 +30,11 @@ def get_Local_Addresses(defaultGateway,localHost):
         host=addrs[i]
         if host != defaultGateway or host != localHost: #check if the ip is not the local host's ip or the default gateway
             localAddresses.append(host)
+    """
+
+    output =proc_output('arp-scan --localnet | awk \'{print $1}\'')
+    localAddresses=output[2:-3]
+    print localAddresses
     return localAddresses
 
 def getLocalhostAddress():
@@ -45,18 +44,31 @@ def getLocalhostAddress():
     and localhost IP address"""
 
     defaultGateway=proc_output('ip route | awk \'/default/ { print $3 }\'')
+    logging.debug('got default gateway')
     localHost=proc_output('ip route | awk \'/src/ { print $9 }\'')
-    return defaultGateway,localHost
+    logging.debug('got localhost ip')
+    gatewayMAC=proc_output("arping -f -I $(ip route show match 0/0 | awk '{print $5, $3}')|awk '{print  $5}' | grep '\['")[1:-2]
+    logging.debug('got default gateway MAC')
 
-def sendPacket(packet):
+
+    return defaultGateway,localHost,gatewayMAC
+
+def sendPacket(packet,gatewayMAC):
     """
     sends packet to intended destination
     """
     #TODO: rewrite
     if Ether in packet:
-        packet[Ether].dst='00:00:00:00:00:00'
-        sendp(packet)
-        logging.debug('sent: '+packet.summary())
+
+        packet[Ether].dst=gatewayMAC
+        try:
+            sendp(packet)
+            #packet.show()
+            logging.debug('sent: '+packet.summary())
+        except Exception as exc:
+            logging.critical('error occured:'+packet.summary()+'/r/n'+str(exc))
+            with open('error.txt','w') as f:
+                f.write(packet.show())
     else:
         packet.show()
 
