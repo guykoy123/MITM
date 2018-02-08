@@ -67,7 +67,8 @@ def sendPacket(packet,gatewayMAC):
         except Exception as exc:
             logging.critical('error occured:'+packet.summary()+'/r/n'+str(exc))
             with open('error.txt','w') as f:
-                f.write(packet.show())
+                print 'shit!!!'
+                packet.show()
     else:
         packet.show()
 

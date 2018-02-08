@@ -7,7 +7,7 @@ from time import sleep
 from scapy.all import *
 from datetime import datetime
 import functions
-
+#from scapy.layers import HTTP
 
 
 # except ImportError:
@@ -29,10 +29,17 @@ def handle_Packet(pkt):
 
     if ARP not in pkt:
         #print pkt.show()
+        #TODO: implement computer block list
         functions.sendPacket(pkt,gatewayMAC)
-        if DNS in pkt:
-            #TODO: get DNS query and block a site
-            logging.info('DNS query:',pkt[DNS].qd)
+        try:
+            if 80 == pkt[TCP].dport:
+                #TODO: get http query and block a site
+                logging.info(pkt[Raw].decode('hex'))
+                print 'http packet:',pkt[Raw],pkt[Raw].decode('hex').split['Referer'][1].split['\\r\\n'][0]
+
+        except Exception as exc:
+            logging.critical(exc)
+
     else:
         if pkt[ARP].op == 2: #check if ARP operation is: is-at
 
@@ -92,7 +99,6 @@ def setup():
     logging.debug('spoofing all hosts on network')
 
 
-n
 
 
 def main():
@@ -102,7 +108,7 @@ def main():
     then calls all functions in order
     """
     #setup logging to file logFile.txt
-    logging.basicConfig(filename='logFile.txt',level=logging.DEBUG, format='%(lineno)s - %(levelname)s : %(message)s')
+    logging.basicConfig(filename='logFile.txt',level=logging.INFO, format='%(lineno)s - %(levelname)s : %(message)s')
     logging.info('\n\n\n\n\n########## Program Start ##########\n\n')
 
     setup() #get all required variables and start all threads
