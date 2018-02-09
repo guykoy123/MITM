@@ -107,8 +107,8 @@ def main():
     gets the parameters for working
     then calls all functions in order
     """
-    #setup logging to file logFile.txt
-    logging.basicConfig(filename='logFile.txt',level=logging.INFO, format='%(lineno)s - %(levelname)s : %(message)s')
+    #setup logging to file logFile.log
+    logging.basicConfig(filename='logFile.log',level=logging.INFO, format='%(lineno)s - %(levelname)s : %(message)s')
     logging.info('\n\n\n\n\n########## Program Start ##########\n\n')
 
     setup() #get all required variables and start all threads
