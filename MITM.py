@@ -32,13 +32,17 @@ def handle_Packet(pkt):
         #TODO: implement computer block list
         functions.sendPacket(pkt,gatewayMAC)
         try:
-            if 80 == pkt[TCP].dport:
-                #TODO: get http query and block a site
-                logging.info(pkt[Raw].decode('hex'))
-                print 'http packet:',pkt[Raw],pkt[Raw].decode('hex').split['Referer'][1].split['\\r\\n'][0]
+            if 'Raw' in pkt:
+                if 'HTTP' in pkt[Raw]:
+                    url=pkt[Raw].split('Host:')[1].split('\\r\\n')[0]
+                    logging.info("URL:"+url)
+            else:
+                functions.sendPacket(pkt,gatewayMAC)
 
         except Exception as exc:
             logging.critical(exc)
+        functions.sendPacket(pkt,gatewayMAC)
+
 
     else:
         if pkt[ARP].op == 2: #check if ARP operation is: is-at
