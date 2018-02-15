@@ -62,13 +62,13 @@ def sendPacket(packet,gatewayMAC):
 
         packet[Ether].dst=gatewayMAC
         try:
-            sendp(packet)
+            sendp(packet,verbose=0)
             logging.debug('sent: '+packet.summary())
         except Exception as exc:
             logging.critical('error occured:'+packet.summary()+'/r/n'+str(exc))
             with open('error.txt','w') as f:
                 print 'shit!!!'
-                packet.show()
+                packet.summary()
     else:
         packet.show()
 
