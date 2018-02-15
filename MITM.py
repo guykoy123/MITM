@@ -31,16 +31,16 @@ def handle_Packet(pkt):
         #print pkt.show()
         #TODO: implement computer block list
         functions.sendPacket(pkt,gatewayMAC)
-        try:
-            if 'Raw' in pkt:
-                if 'HTTP' in pkt[Raw]:
-                    url=pkt[Raw].split('Host:')[1].split('\\r\\n')[0]
-                    logging.info("URL:"+url)
-            else:
-                functions.sendPacket(pkt,gatewayMAC)
 
-        except Exception as exc:
-            logging.critical(exc)
+        if TCP in pkt:
+            if 80 == pkt[TCP].dport:
+                pkt.show()
+                logging.info("HTTP:"+ pkt.summary())
+                url=pkt[Raw].split('Host:')[1].split('\\r\\n')[0]
+                logging.info("URL:"+url)
+        else:
+            functions.sendPacket(pkt,gatewayMAC)
+
         functions.sendPacket(pkt,gatewayMAC)
 
 
