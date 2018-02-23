@@ -1,6 +1,5 @@
 #ignore log files
 *.log
-error.txt
 
 #ignore .pyc files
 *.pyc

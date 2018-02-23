@@ -7,7 +7,7 @@ from time import sleep
 from scapy.all import *
 from datetime import datetime
 import functions
-#from scapy.layers import HTTP
+
 
 
 # except ImportError:
@@ -36,8 +36,9 @@ def handle_Packet(pkt):
             if 80 == pkt[TCP].dport: #check if packet is http packet
                 #pkt.show()
                 logging.info("HTTP:"+ pkt.summary())
+                logging.info(ls(pkt))
                 try:
-                    url=str(raw(pkt)).split('Host:')[1].split('\\r\\n')[0]
+                    url=str(pkt[Raw]).split('Host:')[1].split('\\r\\n')[0]
                     logging.info("URL:"+url)
                 except Exception as exc:
                     logging.info('failed to extract url, '+str(exc))
