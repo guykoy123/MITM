@@ -7,6 +7,7 @@ from time import sleep
 from scapy.all import *
 from datetime import datetime
 import functions
+from sys import exit
 
 
 
@@ -19,6 +20,7 @@ import functions
 localAddresses=[]
 addressesLock=Lock()
 gatewayMAC=''
+bad_packet=[]
 
 def handle_Packet(pkt):
     """
@@ -38,10 +40,10 @@ def handle_Packet(pkt):
                 logging.info("HTTP:"+ pkt.summary())
                 try:
                     fields=str(pkt[Raw]).split('\r\n') #split into packet fields
-                    logging.info(str(fields))
+                    #logging.info(str(fields))
                     for field in fields:
-                        if 'Host:' in field:        #if Host field exctract url
-                            url=field.split('Host:')[0]
+                        if 'Host:' == field[:5]:        #if Host field exctract url
+                            url=field[5:]
                             break
                     if (url != None):
                         logging.info("URL:"+url)
@@ -49,7 +51,10 @@ def handle_Packet(pkt):
                         logging.warning('could not extract url') #save packets that cause errors
                         wrpcap('error.pcap',pkt)
                 except Exception as exc:
+                    bad_packet.append(pkt)
                     logging.info('failed to extract url, '+str(exc))
+                    if len(bad_packet) == 10:
+                        wrpcap('exception.pcap',bad_packet)
 
 
 
@@ -131,8 +136,12 @@ def main():
 
     sniff(prn=handle_Packet)
 
+
     while True:
-        pass
+        shit=input()
+        if shit=='stop':
+            wrpcap('exception.pcap',bad_packet)
+            exit()
     #TODO: add function to scan packets and update information about each device
 
 

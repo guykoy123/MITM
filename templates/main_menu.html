@@ -1,0 +1,16 @@
+
+{% extends "base_site.html" %}
+    {% block page_title %}
+        <h1> Main Menu </h1>
+    {% endblock%}
+
+    {% block page %}
+        <ul>
+            <li>
+                <a href = "{{ url_for('users') }}"> Users </a>
+            </li>
+            <li>
+                Statistics
+            </li>
+        </ul>
+    {% endblock %}
