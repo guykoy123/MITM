@@ -4,6 +4,7 @@ from random import randint
 
 app = Flask(__name__)
 
+#TODO: delete functions for databse communication
 def get_users_list():
     """
     returns a list of all users in the network with their keys in the database
@@ -57,5 +58,6 @@ def user_page(name,key):
     return render_template('user_page.html',user=user,privilege=privilege)
 
 
+#TODO:  add main function to start the site and setup communication to main program
 if __name__ == '__main__':
     app.run(debug = True)

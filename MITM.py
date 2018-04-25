@@ -48,19 +48,12 @@ def handle_Packet(pkt):
                     if (url != None):
                         logging.info("URL:"+url)
                     else:
-                        logging.warning('could not extract url') #save packets that cause errors
+                        logging.warning('url field not found') #save packets that cause errors
                         wrpcap('error.pcap',pkt)
                 except Exception as exc:
-                    bad_packet.append(pkt)
-                    logging.info('failed to extract url, '+str(exc))
-                    if len(bad_packet) == 10:
-                        wrpcap('exception.pcap',bad_packet)
-
-
-
+                    logging.warning('failed to extract url, '+str(exc),'in:',pkt.summary())
     else:
         if pkt[ARP].op == 2: #check if ARP operation is: is-at
-
             address=pkt[ARP].psrc #extract IP address
             addressesLock.acquire()
             global localAddresses
@@ -75,7 +68,6 @@ def arpSpoof(router,localHost):
     """
     every 30 seconds send ARP broadcast to spoof all machines on LAN
     """
-    whitelist=['10.30.58.202',]
     while True:
         if len(localAddresses)>0:
             addressesLock.acquire()
@@ -138,11 +130,8 @@ def main():
 
 
     while True:
-        shit=input()
-        if shit=='stop':
-            wrpcap('exception.pcap',bad_packet)
-            exit()
-    #TODO: add function to scan packets and update information about each device
+        pass
+    #TODO: add queue to communicate to main program to update changing information for each user for example :ip address, privilege, url list
 
 
 
