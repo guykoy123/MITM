@@ -1,6 +1,6 @@
 #python 2.7
 
-
+from multiprocessing import Queue
 import logging
 from threading import Thread,Lock
 from time import sleep
@@ -112,7 +112,7 @@ def setup():
 
 
 
-def main():
+def main(q):
     """
     control the whole program
     gets the parameters for working

@@ -6,3 +6,6 @@
 
 #ignore .pcap files
 *.pcap
+
+#ignore .db files
+*.db
