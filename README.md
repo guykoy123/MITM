@@ -9,21 +9,64 @@ It will reroute all traffic on the network through the localhost and saves all d
 process communication protocol:
 
   server to main:
-    push action to queue: add user : 1, delete user : 2, add url : 3, delete url : 4, get users : 5, get urls : 6
-    if action is add user,  send name, password and privilege
-    if action is delete user, send user id
-    if action is add url, send url,user id
-    if action is delete url, send url id
+    send action:
+      add user : 1, delete user : 2, add url : 3, delete url : 4, get users : 5, get urls : 6, update password : 7
+
+    if action is add user
+      send [name, password, privilege]
+
+    if action is delete user
+      send user id
+
+    if action is add url
+      send [url,user id]
+
+    if action is delete url
+      send url id
+
+    if action is update password
+      send [user id, password]
+
+
 
   main to server:
-    get action
-    if action is between 1 and 4, update database
-    if action is get users, return list of tuples (name,user id)
-    if action is get urls, return list of tuples (url,url id)
+    receive action
+
+    if action is between 1 and 4
+      update database and return successful or error code
+      return codes:
+        successful: 0
+        already exists: 1
+        invalid data: 2
+
+
+    if action is get users
+      return [(name,user id)]
+
+    if action is get urls
+      return [(url,url id)]
+
+
 
   main to MITM:
-    push action, add user : 1, delete user : 2, add url : 3, delete url : 4,
-    if action is add user,  send user id, privilege, url:url id
-    if action is delete user, send user id
-    if action is add url, send url, user id
-    if action is delete url, send user id, url id
+    push action:
+      add user : 1, delete user : 2, add url : 3, delete url : 4
+
+    if action is add user
+      send [user id, ip address, privilege, [url]]
+
+    if action is delete user
+      send user id
+
+    if action is add url
+      send [user id,url]
+
+    if action is delete url
+      send [user id, url id]
+
+
+
+
+* [] list
+* () tuple
+* {:} dictionary

@@ -7,5 +7,5 @@
 #ignore .pcap files
 *.pcap
 
-#ignore .db files
-*.db
+#ignore database folder
+database/*
