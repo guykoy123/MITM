@@ -9,8 +9,9 @@ It will reroute all traffic on the network through the localhost and saves all d
 process communication protocol:
 
   server to main:
+  
     send action:
-      add user : 1, delete user : 2, add url : 3, delete url : 4, get users : 5, get urls : 6, update password : 7
+      add user = 1, delete user = 2, add url = 3, delete url = 4, get users = 5, get urls = 6, update password = 7
 
     if action is add user
       send [name, password, privilege]
@@ -30,6 +31,7 @@ process communication protocol:
 
 
   main to server:
+  
     receive action
 
     if action is between 1 and 4
@@ -49,8 +51,9 @@ process communication protocol:
 
 
   main to MITM:
+  
     push action:
-      add user : 1, delete user : 2, add url : 3, delete url : 4
+      add user = 1, delete user = 2, add url = 3, delete url = 4
 
     if action is add user
       send [user id, ip address, privilege, [url]]
