@@ -4,23 +4,6 @@ from random import randint
 
 app = Flask(__name__)
 
-#TODO: delete functions for databse communication
-def get_users_list():
-    """
-    returns a list of all users in the network with their keys in the database
-    """
-    #TODO: retrieve users from database
-    return [('guy',1),('emily',2),('ewok',2)]
-
-def get_user_privilege(key):
-    """
-    retrieve privilege for a user from database
-    (uses the users key in the database)
-    """
-    #TODO: retrive user privilege from database
-    pr=randint(0,1)
-    print pr
-    return pr
 
 @app.route('/')
 def login():
