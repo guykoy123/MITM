@@ -18,7 +18,17 @@ process communication protocol:
   server to main:
 
     send action:
-      add user : 1, delete user : 2, add url : 3, delete url : 4, get users list : 5, get user : 6, get urls : 7, update password : 8
+      add user : 1,
+      delete user : 2,
+      add url : 3,
+      delete url : 4,
+      get users list : 5,
+      get user : 6,
+      get urls : 7,
+      update password : 8,
+      update ip : 9
+
+
 
     if action is add user
       send [name, password, privilege]
@@ -41,14 +51,14 @@ process communication protocol:
     if action is update password
       send [user id, password]
 
+    if action is update ip
+      send [user id, ip address]
+
 
 TODO: fix protocol
   main to server:
 
     receive action
-
-
-
 
     if action is get users
       return [(name,user id)]
@@ -60,8 +70,13 @@ TODO: fix protocol
 
   main to MITM:
 
-    push action:
-      add user = 1, delete user = 2, add url = 3, delete url = 4
+    send action:
+      add user : 1,
+      delete user : 2,
+      add url : 3,
+      delete url : 4
+
+
 
     if action is add user
       send [user id, ip address, privilege, [url]]

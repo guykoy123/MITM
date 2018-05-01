@@ -1,12 +1,12 @@
-from multiprocessing import Process, Pipe, Queue
+from multiprocessing import Process, Pipe
 from MITM import main as MITM_main
 from db_api import *
 #from server import main  as server_main
 
 
 def main():
-    MITM_conn= Queue() #create queue for MITM
-    MITM_p = Process(target=MITM_main, args=(MITM_conn,)) #create process for MITM and give the queue as a variable
+    MITM_conn, child_conn= Pipe() #create queue for MITM
+    MITM_p = Process(target=MITM_main, args=(child_conn,)) #create process for MITM and give the queue as a variable
 
     server_conn,child_conn=Pipe() #create pipe for server
     server_p=Process(target=server_main,args=(child_conn,)) #create process for server and give the pipe as a variable

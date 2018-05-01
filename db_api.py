@@ -104,13 +104,18 @@ def get_urls(data):
         url_list.append(row)
     return url_list
 
+def update_ip(data):
+    """
+    updates user ip address
+    """
+    conn=sqlite3.connect(database) #connect to database
+    conn.execute('''UPDATE users SET ip = "%s" WHERE user_id = %s;''' % (data[1],data[0]))#update ip address
+    conn.commit()#commit changes
+    conn.close() #close connection
 
 
 
 
-
-
-#TODO:  add rest of functions
 
 def main():
     pass

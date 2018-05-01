@@ -8,7 +8,9 @@ CREATE TABLE IF NOT EXISTS users (
     user_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     password TEXT NOT NULL,
-    privilege INTEGER NOT NULL);
+    privilege INTEGER NOT NULL,
+    ip TEXT);
+    
 DROP TABLE IF EXISTS sites;
 
 CREATE TABLE IF NOT EXISTS sites (
