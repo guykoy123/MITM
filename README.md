@@ -27,6 +27,7 @@ process communication protocol:
       get urls : 7,
       update password : 8,
       update ip : 9
+      update privilege : 10
 
 
 

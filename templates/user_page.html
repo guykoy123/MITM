@@ -1,13 +1,75 @@
-
 {% extends "base_site.html" %}
-    {% block page_title %}
-        <h1> User page for {{user[0]}} </h1>
-    {% endblock%}
 
-    {% block page %}
-        {% if privilege == 0 %}
+  {% block scripts %}
+    <script type="text/javascript" src="{{ url_for('static', filename='user_page.js') }}"></script>
+
+  {% endblock %}
+
+  {% block page_title %}
+    <h1> User page for {{user[0]}} </h1>
+  {% endblock%}
+
+  {% block page %}
+  <table style="width:100%">
+
+    <tr>
+      <th>
+        <!--TODO: add admin privilege check -->
+        {% if user[2] == 1 %}
             <h2>Blacklisted sites:</h2>
         {%else%}
             <h2>Whitelisted sites:</h2>
         {%endif%}
-    {% endblock %}
+      </th>
+      <th>
+        <h2>Settings</h2>
+      </th>
+    </tr>
+
+    <tr>
+      <th>
+        {% if url_list != None %}
+          <table style = "width:60%">
+            {% for url in url_list%}
+              <tr>
+                <th>
+                  <p>  {{url[1]}}  </p>
+                </th>
+                <th>
+                  <p> remove, update url </p>
+                  <!-- TODO: add remove and update url buttons -->
+                </th>
+              </tr>
+            {% endfor %}
+          </table>
+
+        {% else %}
+          <p> there are no urls set up for this user </p>
+        {% endif %}
+      </th>
+      <th>
+        <form id="settings_form" method = "POST">
+          {% if user[2] == 1 %}
+            <input type="radio" name="privilege" value="blacklist" checked> blacklist (can view all sites but the listed ones)<br>
+            <input type="radio" name="privilege" value="whitelist"> whitelist (can view only the sites on the list)<br><br>
+          {% else %}
+            <input type="radio" name="privilege" value="blacklist" > blacklist (can view all sites but the listed ones)<br>
+            <input type="radio" name="privilege" value="whitelist" checked> whitelist (can view only the sites on the list)<br><br>
+          {% endif %}
+          <input type="submit" value="Set new privilege"/>
+        </form>
+       </th>
+    </tr>
+  </table>
+
+  <br><br>
+  <form id="add_url_form" method ="POST">
+    <h5> add new site to list </h5>
+    <input type="text" name="url"><br>
+    <input type="submit" value="Add"/>
+  </form>
+  <!-- TODO: if you have time, add confirmation window to url submiting -->
+
+
+
+  {% endblock %}

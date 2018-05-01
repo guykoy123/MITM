@@ -21,7 +21,7 @@ def add_user(data):
             return 1 #if exists do not add and return code: 1
 
     #insert the new user to the database
-    query =('''INSERT INTO users (name, password, privilege) VALUES ("%s","%s",%d);''' % (data[0],data[1],data[2]))
+    query =('''INSERT INTO users (name, password, privilege) VALUES ("%s","%s",%d);''' % (data[0],data[1],int(data[2])))
     conn.execute(query)
     conn.commit() #commit changes
     cursor=conn.execute('''SELECT user_id FROM users WHERE name = %s;''' % (data[0])) #get the new user id
@@ -36,7 +36,7 @@ def delete_user(data):
     """
 
     conn = sqlite3.connect(database) #connect to database
-    conn.execute('''DELETE FROM users WHERE user_id = %d;''' % (data)) #delete the url
+    conn.execute('''DELETE FROM users WHERE user_id = %d;''' % (int(data))) #delete the url
     conn.commit() #save changes
     conn.close()
 
@@ -46,7 +46,7 @@ def add_url(data):
     """
 
     conn=sqlite3.connect(database) #connect to database
-    conn.execute('''INSERT INTO sites (url,user_id) VALUES ("%s",%d);''' % (data[0],data[1]))#insert new url to sites table
+    conn.execute('''INSERT INTO sites (url,user_id) VALUES ("%s",%d);''' % (data[0],int(data[1])))#insert new url to sites table
     conn.commit()#save changes
     conn.close()
 
@@ -56,7 +56,7 @@ def delete_url(data):
     """
 
     conn=sqlite3.connect(database)#connect to database
-    conn.execute('''DELETE FROM sites WHERE url_id = %d;''' % (data)) #delete url from sites table
+    conn.execute('''DELETE FROM sites WHERE url_id = %d;''' % (int(data))) #delete url from sites table
     conn.commit() #save changes
     conn.close()
 
@@ -65,7 +65,7 @@ def update_password(data):
     update password for user
     """
     conn=sqlite3.connect(database)
-    conn.execute('''UPDATE users SET password = "%s" WHERE user_id = "%s";'''%(data[1],data[0]))
+    conn.execute('''UPDATE users SET password = "%s" WHERE user_id = %d;'''%(data[1],int(data[0])))
     conn.commit()
     conn.close()
 
@@ -88,7 +88,7 @@ def get_user(data):
     """
 
     conn=sqlite3.connect(database)#connect to database
-    cursor=conn.execute('''SELECT name, password, privilege FROM users WHERE user_id = %d;''' % (data))#retrieve data about user
+    cursor=conn.execute('''SELECT name, password, privilege FROM users WHERE user_id = %d;''' % (int(data)))#retrieve data about user
     for row in cursor:
         return row
 
@@ -98,7 +98,7 @@ def get_urls(data):
     """
 
     conn=sqlite3.connect(database)
-    cursor=conn.execute('''SELECT url_id, url FROM sites WHERE user_id = %d;''' % (data))
+    cursor=conn.execute('''SELECT url_id, url FROM sites WHERE user_id = %d;''' % (int(data)))
     url_list=list()
     for row in cursor:
         url_list.append(row)
@@ -109,9 +109,19 @@ def update_ip(data):
     updates user ip address
     """
     conn=sqlite3.connect(database) #connect to database
-    conn.execute('''UPDATE users SET ip = "%s" WHERE user_id = %s;''' % (data[1],data[0]))#update ip address
+    conn.execute('''UPDATE users SET ip = "%s" WHERE user_id = %d;''' % (data[1],int(data[0])))#update ip address
     conn.commit()#commit changes
     conn.close() #close connection
+
+def update_privilege(data):
+    """
+    updates privilege of users
+    """
+    conn=sqlite3.connect(database) #connect to databse
+    conn.execute('''UPDATE users SET privilege = "%s" WHERE user_id=%d;'''%(int(data[1]),int(data[0]))) #update privilege
+    conn.commit()#commit changes
+    conn.close()
+
 
 
 

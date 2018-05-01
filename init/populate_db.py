@@ -8,6 +8,13 @@ conn.execute('''INSERT INTO users (name,password,privilege) VALUES ("david","ghj
 conn.execute('''INSERT INTO users (name,password,privilege) VALUES ("shit","py",2);''')
 conn.execute('''INSERT INTO users (name,password,privilege) VALUES ("david","sdfg",2);''')
 
+#add sanmple sites to database
+conn.execute('''INSERT INTO sites (url,user_id) VALUES ("www.facebook.com",2);''')
+conn.execute('''INSERT INTO sites (url,user_id) VALUES ("www.youtube.com",2);''')
+conn.execute('''INSERT INTO sites (url,user_id) VALUES ("www.facebook.com",1);''')
+conn.execute('''INSERT INTO sites (url,user_id) VALUES ("www.pornhub.com",3);''')
+conn.execute('''INSERT INTO sites (url,user_id) VALUES ("www.shit.com",4);''')
+
 conn.commit()
 
 conn.close()
