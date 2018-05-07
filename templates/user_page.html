@@ -1,43 +1,45 @@
 {% extends "base_site.html" %}
 
-  {% block scripts %}
-    <script type="text/javascript" src="{{ url_for('static', filename='user_page.js') }}"></script>
-
-  {% endblock %}
-
   {% block page_title %}
-    <h1> User page for {{user[0]}} </h1>
+    <table style="width:100%">
+      <tr>
+        <th align="left">
+          <h1> User page for {{user[0]}} </h1>
+        </th>
+        <th align="right">
+          <a href= "{{url_for('users')}}"><h3> return to users menu </h3></a>
+        </th>
+      </tr>
+    </table>
   {% endblock%}
 
   {% block page %}
   <table style="width:100%">
 
     <tr>
-      <th>
-        <!--TODO: add admin privilege check -->
+      <th align="left">
         {% if user[2] == 1 %}
             <h2>Blacklisted sites:</h2>
         {%else%}
             <h2>Whitelisted sites:</h2>
         {%endif%}
       </th>
-      <th>
+      <th align="left">
         <h2>Settings</h2>
       </th>
     </tr>
 
     <tr>
-      <th>
+      <th align="left">
         {% if url_list != None %}
-          <table style = "width:60%">
+          <table style = "width:70%">
             {% for url in url_list%}
               <tr>
-                <th>
+                <th align="left">
                   <p>  {{url[1]}}  </p>
                 </th>
-                <th>
-                  <p> remove, update url </p>
-                  <!-- TODO: add remove and update url buttons -->
+                <th align="right">
+                  <a href ="{{ url_for('remove_url', url_id=url[0],user_id=user_id) }}"> remove </a>
                 </th>
               </tr>
             {% endfor %}
@@ -47,7 +49,7 @@
           <p> there are no urls set up for this user </p>
         {% endif %}
       </th>
-      <th>
+      <th align="left">
         <form id="settings_form" method = "POST">
           {% if user[2] == 1 %}
             <input type="radio" name="privilege" value="blacklist" checked> blacklist (can view all sites but the listed ones)<br>
@@ -58,6 +60,9 @@
           {% endif %}
           <input type="submit" value="Set new privilege"/>
         </form>
+        <br><br><br>
+        <a href = "{{url_for('show_password',password=user[1])}}">forgot password </a>
+        <!-- TODO: add change passowrd option -->
        </th>
     </tr>
   </table>
@@ -69,7 +74,7 @@
     <input type="submit" value="Add"/>
   </form>
   <!-- TODO: if you have time, add confirmation window to url submiting -->
-
+  <!-- TODO: add ability to delete user -->
 
 
   {% endblock %}

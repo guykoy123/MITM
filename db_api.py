@@ -24,11 +24,15 @@ def add_user(data):
     query =('''INSERT INTO users (name, password, privilege) VALUES ("%s","%s",%d);''' % (data[0],data[1],int(data[2])))
     conn.execute(query)
     conn.commit() #commit changes
-    cursor=conn.execute('''SELECT user_id FROM users WHERE name = %s;''' % (data[0])) #get the new user id
-    conn.close()
+    cursor=conn.execute('''SELECT user_id FROM users WHERE name = "%s";''' % (data[0])) #get the new user id
+
 
     for row in cursor:
-        return list(row[0]).append(privilege) #return new user id and privilege (for MITM)
+        user_id=row
+    conn.close()
+    new_user=list(user_id).append(int(data[2])) #return new user for MITM
+    return new_user
+
 
 def delete_user(data):
     """
@@ -72,10 +76,11 @@ def update_password(data):
 def get_users_list():
     """
     return list of all usernames and their ids
+    except the admin
     """
 
     conn=sqlite3.connect(database) #connect to database
-    cursor=conn.execute('''SELECT name, user_id FROM users;''') #retrieve all username and user ids
+    cursor=conn.execute('''SELECT name, user_id FROM users WHERE privilege != 0;''') #retrieve all username and user ids except admin user
     users=list()
     for row in cursor:
         users.append(row)

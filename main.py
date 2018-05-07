@@ -21,6 +21,7 @@ def main():
         if action == 1: #action: add user
             data=server_conn.recv()
             return_code = add_user(data)
+            print return_code
             server_conn.send(return_code)
             #TODO: add forwarding of new user to MITM (check status code first)
 

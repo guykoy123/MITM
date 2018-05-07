@@ -61,8 +61,12 @@ TODO: fix protocol
 
     receive action
 
+    if action is get user
+      return [name,password,privilege]
+
     if action is get users
       return [(name,user id)]
+      #does not return the admin user
 
     if action is get urls
       return [(url,url id)]
