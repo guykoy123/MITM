@@ -22,12 +22,14 @@ process communication protocol:
       delete user : 2,
       add url : 3,
       delete url : 4,
-      get users list : 5,
+      get users list (without admin) : 5,
       get user : 6,
       get urls : 7,
       update password : 8,
       update ip : 9
       update privilege : 10
+      get admin : 11
+      update username : 12
 
 
 
@@ -50,10 +52,13 @@ process communication protocol:
       send user id
 
     if action is update password
-      send [user id, password]
+      send [user id, new password]
 
     if action is update ip
       send [user id, ip address]
+
+    if action is update username
+      send [user id, new username]
 
 
 TODO: fix protocol
@@ -70,6 +75,11 @@ TODO: fix protocol
 
     if action is get urls
       return [(url,url id)]
+
+    if action is get admin
+      return [user id,username,password]
+
+
 
 
 

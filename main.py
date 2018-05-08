@@ -1,3 +1,5 @@
+
+# coding: utf-8
 from multiprocessing import Process, Pipe
 from MITM import main as MITM_main
 from server import main as server_main
@@ -55,6 +57,10 @@ def main():
         elif action == 10:
             data=server_conn.recv()
             update_privilege(data)
+
+        elif action == 11:
+            server_conn.send(get_admin())
+
 
         #TODO: add rest of parser
 

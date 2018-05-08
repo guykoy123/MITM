@@ -33,7 +33,6 @@ def add_user(data):
     new_user=list(user_id).append(int(data[2])) #return new user for MITM
     return new_user
 
-
 def delete_user(data):
     """
     remove user from database if data is valid
@@ -127,7 +126,18 @@ def update_privilege(data):
     conn.commit()#commit changes
     conn.close()
 
+def get_admin():
+    """
+    return admin id, username and password
+    """
 
+    conn=sqlite3.connect(database) #connect to database
+    cursor=conn.execute('''SELECT user_id, name, password FROM users WHERE privilege=0;''')
+    admin=None
+    for row in cursor:
+        admin=row
+    conn.close()
+    return admin
 
 
 

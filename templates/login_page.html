@@ -1,0 +1,16 @@
+{% extends "base_site.html" %}
+  {% block scripts %}
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='login_page.js') }}"></script>
+  -->{% endblock %}
+  {% block page_title %}
+    <h1> Login page </h1>
+  {% endblock%}
+
+  {% block page %}
+    <p>{{message}}</p>
+    <form id="login_form" method="post">
+      <p>Name: <input type="text" name="name" required></p><br>
+      <p>Password: <input type="text" name="password" required></p><br>
+      <input type="submit" value="login" name="Submit">
+    </form>
+  {% endblock %}

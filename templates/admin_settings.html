@@ -1,0 +1,25 @@
+{% extends "base_site.html" %}
+  {% block scripts %}
+    <script type="text/javascript" src="{{ url_for('static', filename='admin_settings.js') }}"></script>
+  {% endblock %}
+  {% block page_title %}
+    <table style="width:100%">
+      <tr>
+        <th align="left">
+          <h1> Settings page </h1>
+        </th>
+        <th align="right">
+          <a href = "{{ url_for('main_menu') }}"> return to main menu </a>
+        </th>
+      </tr>
+    </table>
+  {% endblock%}
+
+  {% block page %}
+    <p>You can change you login credentials here</p>
+    <form id="settings_form" method="post" onsubmit="return check_form()">
+      <p>Name: <input type="text" name="username" value = "{{user[1]}}" required></p><br>
+      <p>Password: <input type="text" name="password" value = "{{user[2]}}" required></p><br>
+      <input type="submit" value="Save" name="Submit">
+    </form>
+  {% endblock %}
