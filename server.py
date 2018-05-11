@@ -2,6 +2,7 @@
 from flask import Flask,render_template,request,redirect,url_for,session
 from random import randint
 from multiprocessing import Pipe
+#from forms import *
 
 app = Flask(__name__)
 app.secret_key="shit.py"
@@ -27,12 +28,12 @@ def login(message=''):
                     return redirect(url_for('main_menu'))
                 else:
                     message="username or password is incorrect"
-                    return render_template('login_page.html',message=message)
+                    return render_template('login_admin.html',message=message)
             else:
                 message="username or password is incorrect"
-                return render_template('login_page.html',message=message)
+                return render_template('login_admin.html',message=message)
 
-        return render_template('login_page.html',message=message)
+        return render_template('login_admin.html',message=message)
 
     return redirect(url_for('main_menu'))
 
@@ -121,6 +122,9 @@ def show_password(password):
 @app.route('/new_user',methods=['GET','POST'])
 @app.route('/new_user/<message>',methods=['GET','POST'])
 def new_user(message=""):
+    """
+    form for creating new user
+    """
     if 'admin' in session:
         if request.method=="POST":
 
@@ -143,6 +147,7 @@ def new_user(message=""):
     return redirect(url_for('login'))
 
 
+
 @app.route('/logout')
 def logout():
     session.pop('admin',None)
@@ -151,22 +156,50 @@ def logout():
 
 @app.route('/admin_settings',methods=['GET','POST'])
 def admin_settings():
+    """
+    shows admin settings
+    allows to change login details
+    """
     if 'admin' in session:
         if request.method=='POST':
             username=request.form['username']
             password=request.form['password']
             print username,password
+            main_conn.send(11)
+            old_admin=main_conn.recv()
+            print old_admin
+            if username != old_admin[1]:
+                main_conn.send(12)
+                main_conn.send([old_admin[0],username])
 
+            if password != old_admin[2]:
+                main_conn.send(8)
+                print 'shit'
+                main_conn.send([old_admin[0],password])
         main_conn.send(11)
-        return render_template('admin_settings.html',user=main_conn.recv())
+        new_admin=main_conn.recv()
+        print new_admin
+        return render_template('admin_settings.html',user=new_admin)
     return redirect(url_for('login'))
+
+
+@app.route('/user_login',methods=['GET','POST'])
+def user_login():
+    """
+    displays the user login page
+    (does not proccess the form post MITM does that)
+    """
+    if request.method=='POST':
+        pass
+    else:
+        return render_template('login_user.html')
 
 
 
 def main(conn=None):
     global main_conn #declare Pipe connection as global
     main_conn=conn
-    app.run(debug=True)
+    app.run(host='0.0.0.0',port=80)
 
 if __name__ == '__main__':
     main()

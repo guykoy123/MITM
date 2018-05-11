@@ -23,9 +23,8 @@ def main():
         if action == 1: #action: add user
             data=server_conn.recv()
             return_code = add_user(data)
-            print return_code
             server_conn.send(return_code)
-            #TODO: add forwarding of new user to MITM (check status code first)
+
 
         elif action == 2: #action: delete user
             data=server_conn.recv()
@@ -54,6 +53,10 @@ def main():
             data=server_conn.recv()
             server_conn.send(get_urls(data))
 
+        elif action == 8:
+            data=server_conn.recv()
+            update_password(data)
+
         elif action == 10:
             data=server_conn.recv()
             update_privilege(data)
@@ -61,6 +64,9 @@ def main():
         elif action == 11:
             server_conn.send(get_admin())
 
+        elif action == 12:
+            data=server_conn.recv()
+            update_username(data)
 
         #TODO: add rest of parser
 

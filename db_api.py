@@ -121,8 +121,8 @@ def update_privilege(data):
     """
     updates privilege of users
     """
-    conn=sqlite3.connect(database) #connect to databse
-    conn.execute('''UPDATE users SET privilege = "%s" WHERE user_id=%d;'''%(int(data[1]),int(data[0]))) #update privilege
+    conn=sqlite3.connect(database) #connect to database
+    conn.execute('''UPDATE users SET privilege = %d WHERE user_id=%d;'''%(int(data[1]),int(data[0]))) #update privilege
     conn.commit()#commit changes
     conn.close()
 
@@ -139,8 +139,14 @@ def get_admin():
     conn.close()
     return admin
 
-
-
+def update_username(data):
+    """
+    updates username of a user
+    """
+    conn=sqlite3.connect(database)
+    conn.execute('''UPDATE users SET name = "%s" WHERE user_id=%d;'''%(data[1],int(data[0])))
+    conn.commit()
+    conn.close()
 
 def main():
     pass

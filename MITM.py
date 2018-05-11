@@ -1,6 +1,6 @@
 #python 2.7
 
-from multiprocessing import Queue
+from multiprocessing import Pipe
 import logging
 from threading import Thread,Lock
 from time import sleep
@@ -8,7 +8,7 @@ from scapy.all import *
 from datetime import datetime
 import functions
 from sys import exit
-
+from user import *
 
 
 # except ImportError:
@@ -21,6 +21,28 @@ localAddresses=[]
 addressesLock=Lock()
 gatewayMAC=''
 bad_packet=[]
+user_list=[]
+localHost=''
+main_conn=Pipe()
+
+def blocked(user,url):
+    """
+    return True if site is blocked for user
+    """
+    if user.privilege == 0: #admin can access all sites
+        return False
+
+    if user.privilege == 1: #blacklist user
+        for l_url in user.url_list:
+            if l_url[1] == url:
+                return True
+        return True
+
+    for l_url in user.url_list: #whitelist user
+        if l_url[1] == url:
+            return False
+    return True
+
 
 def handle_Packet(pkt):
     """
@@ -32,12 +54,13 @@ def handle_Packet(pkt):
     if ARP not in pkt:
         #print pkt.show()
         #TODO: implement computer block list
-        functions.sendPacket(pkt,gatewayMAC)
+
 
         if TCP in pkt:
             if 80 == pkt[TCP].dport: #check if packet is http packet
                 #pkt.show()
                 logging.info("HTTP:"+ pkt.summary())
+
                 try:
                     fields=str(pkt[Raw]).split('\r\n') #split into packet fields
                     #logging.info(str(fields))
@@ -45,8 +68,35 @@ def handle_Packet(pkt):
                         if 'Host:' == field[:5]:        #if Host field exctract url
                             url=field[5:]
                             break
+
                     if (url != None):
                         logging.info("URL:"+url)
+                        if url != localHost:
+                            ip=pkt[IP]
+                            new_user=True
+                            for user in user_list:
+                                if ip == user.ip_address:
+                                    new_user=False
+                                    if not blocked(user,url):
+                                        functions.sendPacket(pkt,gatewayMAC)
+                                    else:
+                                        pass
+                                        #TODO: return page is blocked
+                            if new_user:
+                                redirect_to_login(ip)
+
+                        else:
+                            if "GET" in pkt[Raw]:
+                                functions.return_login_page(pkt)
+
+                            if "POST" in pkt[Raw]:
+                                functions.check_login(pkt)
+
+                            else:
+                                redirect_to_login(ip)
+
+
+
                     else:
                         logging.warning('url field not found') #save packets that cause errors
                         wrpcap('error.pcap',pkt)
@@ -95,6 +145,7 @@ def setup():
     """
     #get default gateway, local IP address and local MAC address
     global gatewayMAC
+    global localHost
     defaultGateway,localHost,gatewayMAC=functions.getLocalhostAddress()
     print defaultGateway,gatewayMAC,localHost
     logging.debug('got default gateway and local IP and MAC')
@@ -112,7 +163,7 @@ def setup():
 
 
 
-def main(q):
+def main(conn):
     """
     control the whole program
     gets the parameters for working
@@ -125,6 +176,8 @@ def main(q):
     setup() #get all required variables and start all threads
     logging.info('setup complete')
 
+    global main_conn
+    main_conn=conn
 
     sniff(prn=handle_Packet)
 
