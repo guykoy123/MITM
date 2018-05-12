@@ -68,6 +68,8 @@ def main():
             data=server_conn.recv()
             update_username(data)
 
+        elif action == 13:
+            print server_conn.recv()
         #TODO: add rest of parser
 
 

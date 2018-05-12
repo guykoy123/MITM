@@ -30,6 +30,7 @@ process communication protocol:
       update privilege : 10
       get admin : 11
       update username : 12
+      user connected : 13
 
 
 
@@ -60,6 +61,8 @@ process communication protocol:
     if action is update username
       send [user id, new username]
 
+    if action is user connected
+      send [user id,ip address]
 
 TODO: fix protocol
   main to server:

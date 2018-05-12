@@ -1,11 +1,17 @@
 <!doctype html>
 <header>
   <h3> login </h3>
+  <script type="text/javascript" src="{{ url_for('static', filename='user_login.js') }}"></script>
 </header>
 <body>
   <form id="login_form" method="post">
+    <p>{{message}}</p>
     <p>Name: <input type="text" name="name" required></p><br>
     <p>Password: <input type="text" name="password" required></p><br>
+    <input type="hidden" name="ip_address" id="ip_address"/>
+    <script>
+    getIPs(function(ip){document.getElementById("ip_address").value=ip;});
+    </script>
     <input type="submit" value="login" name="Submit">
   </form>
 </body>

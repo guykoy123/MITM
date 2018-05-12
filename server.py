@@ -9,7 +9,6 @@ app.secret_key="shit.py"
 no_login ="Please login first."
 
 @app.route('/', methods=['GET','POST'])
-@app.route('/<message>', methods=['GET','POST'])
 @app.route('/login', methods=['GET','POST'])
 @app.route('/login/<message>', methods=['GET','POST'])
 def login(message=''):
@@ -184,15 +183,41 @@ def admin_settings():
 
 
 @app.route('/user_login',methods=['GET','POST'])
-def user_login():
+@app.route('/user_login/<message>',methods=['GET','POST'])
+def user_login(message=''):
     """
     displays the user login page
-    (does not proccess the form post MITM does that)
+    if user logged on, sends users id and ip address to MITM
     """
     if request.method=='POST':
-        pass
+        username=request.form['name']
+        password=request.form['password']
+        main_conn.send(11)
+        admin=main_conn.recv()
+        if username==admin[1] and password==admin[2]:
+            main_conn.send(13)
+            main_conn.send([admin[0],request.form.get('ip_address')])
+            return render_template('login_user.html',message=message)
+        else:
+            main_conn.send(5)
+            user_list=main_conn.recv()
+            wrong_login=True
+            for user in user_list:
+                if user[0] == username:
+                    main_conn.send(6)
+                    main_conn.send(user[1])
+                    check_user=main_conn.recv()
+                    if check_user[1]==password:
+                        wrong_login=False
+                        main_conn.send(13)
+                        main_conn.send([user[1],request.form.get('ip_address')])
+                        return render_template('login_user.html',message=message)
+            if wrong_login:
+                message='Wrong username or password'
+                return render_template('login_user.html',message=message)
+
     else:
-        return render_template('login_user.html')
+        return render_template('login_user.html',message=message)
 
 
 
