@@ -157,7 +157,7 @@ def setup():
 
     arpThread=Thread(target=arpSpoof,args=(defaultGateway,localHost,))
     logging.debug('created thread for ARP spoofing')
-    arpThread.start()
+    #arpThread.start()
     logging.debug('spoofing all hosts on network')
 
 
@@ -179,11 +179,21 @@ def main(conn):
     global main_conn
     main_conn=conn
 
-    sniff(prn=handle_Packet)
+    #sniff(prn=handle_Packet)
 
 
     while True:
-        pass
+        command=main_conn.recv()
+
+        if command==13:
+            user=main_conn.recv()
+            url_list=main_conn.recv()
+            user_list.append(User(user[0],user[1],url_list))
+            print 'new user connected'
+            for user in user_list:
+                print user.get_url_list()
+
+                
     #TODO: add queue to communicate to main program to update changing information for each user for example :ip address, privilege, url list
 
 

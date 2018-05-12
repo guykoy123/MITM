@@ -89,15 +89,11 @@ TODO: fix protocol
   main to MITM:
 
     send action:
-      add user : 1,
       delete user : 2,
       add url : 3,
       delete url : 4
 
 
-
-    if action is add user
-      send [user id, ip address, privilege, [url]]
 
     if action is delete user
       send user id

@@ -15,8 +15,7 @@ finally:
       user_id INTEGER PRIMARY KEY AUTOINCREMENT,
       name TEXT NOT NULL,
       password TEXT NOT NULL,
-      privilege INTEGER NOT NULL,
-      ip TEXT);''')
+      privilege INTEGER NOT NULL);''')
 
     conn.execute('''DROP TABLE IF EXISTS sites;''')
 

@@ -10,7 +10,7 @@ from db_api import *
 def main():
     MITM_conn, child_conn= Pipe() #create queue for MITM
     MITM_p = Process(target=MITM_main, args=(child_conn,)) #create process for MITM and give the queue as a variable
-    #MITM_p.start()
+    MITM_p.start()
 
     server_conn,child_conn=Pipe() #create pipe for server
     server_p=Process(target=server_main,args=(child_conn,)) #create process for server and give the pipe as a variable
@@ -69,7 +69,10 @@ def main():
             update_username(data)
 
         elif action == 13:
-            print server_conn.recv()
+            MITM_conn.send(13)
+            user=server_conn.recv()
+            MITM_conn.send(user)
+            MITM_conn.send(get_urls(user[0]))
         #TODO: add rest of parser
 
 

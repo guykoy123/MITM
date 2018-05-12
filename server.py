@@ -181,44 +181,58 @@ def admin_settings():
         return render_template('admin_settings.html',user=new_admin)
     return redirect(url_for('login'))
 
-
 @app.route('/user_login',methods=['GET','POST'])
-@app.route('/user_login/<message>',methods=['GET','POST'])
-def user_login(message=''):
+@app.route('/user_login/<int:user_id>',methods=['GET','POST'])
+@app.route('/user_login/<int:user_id>/<message>',methods=['GET','POST'])
+def user_login(user_id=0,message=''):
     """
     displays the user login page
     if user logged on, sends users id and ip address to MITM
     """
+
     if request.method=='POST':
         username=request.form['name']
         password=request.form['password']
         main_conn.send(11)
         admin=main_conn.recv()
+
         if username==admin[1] and password==admin[2]:
             main_conn.send(13)
             main_conn.send([admin[0],request.form.get('ip_address')])
-            return render_template('login_user.html',message=message)
+            session[str(admin[0])]=True
+            return '''You are logged in'''
+
         else:
             main_conn.send(5)
             user_list=main_conn.recv()
             wrong_login=True
             for user in user_list:
+
                 if user[0] == username:
                     main_conn.send(6)
                     main_conn.send(user[1])
                     check_user=main_conn.recv()
+
                     if check_user[1]==password:
                         wrong_login=False
                         main_conn.send(13)
                         main_conn.send([user[1],request.form.get('ip_address')])
-                        return render_template('login_user.html',message=message)
+                        session[str(user[1])]=True
+                        return '''You are logged in'''
+
             if wrong_login:
                 message='Wrong username or password'
-                return render_template('login_user.html',message=message)
+                return render_template('login_user.html',user_id=user_id, message=message)
 
-    else:
-        return render_template('login_user.html',message=message)
+    if str(user_id) not in session:
+        user_id=0
+    return render_template('login_user.html',user_id=user_id, message=message)
 
+
+@app.route('/user_logout/<int:user_id>')
+def user_logout(user_id):
+    session.pop(str(user_id),None)
+    return '''Bye'''
 
 
 def main(conn=None):

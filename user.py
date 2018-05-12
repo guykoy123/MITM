@@ -3,8 +3,14 @@ class User:
         self.privilege=privilege
         self.ip_address=ip_address
         self.url_list=url_list
-        
+
     def remove_url(self,url_id):
         for i in range(len(self.url_list)):
             if url_id==self.url_list[i][0]:
                 del self.url_list[i]
+
+    def get_url_list(self):
+        urls=list()
+        for i in range(len(self.url_list)):
+            urls.append(self.url_list[i][1])
+        return urls
