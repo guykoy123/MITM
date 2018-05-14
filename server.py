@@ -216,7 +216,7 @@ def user_login(user_id=0,message=''):
                     if check_user[1]==password:
                         wrong_login=False
                         main_conn.send(13)
-                        main_conn.send([user[1],request.form.get('ip_address')])
+                        main_conn.send([user[1],request.form.get('ip_address'),check_user[2]])
                         session[str(user[1])]=True
                         return '''You are logged in'''
 

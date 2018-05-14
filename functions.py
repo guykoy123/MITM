@@ -5,14 +5,9 @@ from scapy.all import *
 import subprocess
 
 
-def redirect_to_login(ip,message=None):
-    pass
+def redirect_to_login(ip):
+    print "redirected to login page"
 
-def return_login_page(pkt):
-    pass
-
-def check_login(pkt):
-    pass
 
 
 def proc_output(command):

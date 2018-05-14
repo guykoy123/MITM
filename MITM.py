@@ -29,16 +29,16 @@ def blocked(user,url):
     """
     return True if site is blocked for user
     """
-    if user.privilege == 0: #admin can access all sites
+    if user.get_privilege() == 0: #admin can access all sites
         return False
 
-    if user.privilege == 1: #blacklist user
+    if user.get_privilege() == 1: #blacklist user
         for l_url in user.url_list:
             if l_url[1] == url:
                 return True
-        return True
+        return False
 
-    for l_url in user.url_list: #whitelist user
+    for l_url in user.get_url_list(): #whitelist user
         if l_url[1] == url:
             return False
     return True
@@ -71,11 +71,14 @@ def handle_Packet(pkt):
 
                     if (url != None):
                         logging.info("URL:"+url)
-                        if url != localHost:
-                            ip=pkt[IP]
+                        ip=pkt[IP]
+
+                        if url == "networkmanager.com" or url == "www.networkmanager.com":
+                            functions.redirect_to_login(ip)
+                        else:
                             new_user=True
                             for user in user_list:
-                                if ip == user.ip_address:
+                                if ip == user.get_ip():
                                     new_user=False
                                     if not blocked(user,url):
                                         functions.sendPacket(pkt,gatewayMAC)
@@ -83,17 +86,9 @@ def handle_Packet(pkt):
                                         pass
                                         #TODO: return page is blocked
                             if new_user:
-                                redirect_to_login(ip)
+                                functions.redirect_to_login(ip)
 
-                        else:
-                            if "GET" in pkt[Raw]:
-                                functions.return_login_page(pkt)
 
-                            if "POST" in pkt[Raw]:
-                                functions.check_login(pkt)
-
-                            else:
-                                redirect_to_login(ip)
 
 
 
@@ -101,7 +96,8 @@ def handle_Packet(pkt):
                         logging.warning('url field not found') #save packets that cause errors
                         wrpcap('error.pcap',pkt)
                 except Exception as exc:
-                    logging.warning('failed to extract url, '+str(exc),'in:',pkt.summary())
+                    print exc
+                    #logging.warning('failed to extract url, '+str(exc),'in:',pkt.summary())
     else:
         if pkt[ARP].op == 2: #check if ARP operation is: is-at
             address=pkt[ARP].psrc #extract IP address
@@ -123,7 +119,7 @@ def arpSpoof(router,localHost):
             addressesLock.acquire()
             print 'spoofing',str(len(localAddresses))
             for host in localAddresses:
-                if host != router and host != localHost and host not in whitelist: #check that ip does not match default gateway or local host to not send packets to them
+                if host != router and host != localHost: #check that ip does not match default gateway or local host to not send packets to them
 
                     victimPacket = Ether()/ARP(op=2,psrc = router, pdst=host)#create arp packets
                     gatewayPacket=Ether()/ARP(op=2,psrc=host,pdst=router)
@@ -157,7 +153,7 @@ def setup():
 
     arpThread=Thread(target=arpSpoof,args=(defaultGateway,localHost,))
     logging.debug('created thread for ARP spoofing')
-    #arpThread.start()
+    arpThread.start()
     logging.debug('spoofing all hosts on network')
 
 
@@ -179,7 +175,7 @@ def main(conn):
     global main_conn
     main_conn=conn
 
-    #sniff(prn=handle_Packet)
+    sniff(prn=handle_Packet)
 
 
     while True:
@@ -188,12 +184,12 @@ def main(conn):
         if command==13:
             user=main_conn.recv()
             url_list=main_conn.recv()
-            user_list.append(User(user[0],user[1],url_list))
-            print 'new user connected'
-            for user in user_list:
-                print user.get_url_list()
+            user_list.append(User(user[0],user[1],user[2],url_list))
+            logging.info('New user connected'+user[0])
+            print "user connected",user[0]
 
-                
+
+
     #TODO: add queue to communicate to main program to update changing information for each user for example :ip address, privilege, url list
 
 

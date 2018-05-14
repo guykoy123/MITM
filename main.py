@@ -69,8 +69,8 @@ def main():
             update_username(data)
 
         elif action == 13:
-            MITM_conn.send(13)
             user=server_conn.recv()
+            MITM_conn.send(13)
             MITM_conn.send(user)
             MITM_conn.send(get_urls(user[0]))
         #TODO: add rest of parser
