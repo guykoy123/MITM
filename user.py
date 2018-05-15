@@ -26,3 +26,6 @@ class User:
 
     def get_ip(self):
         return self.ip_address
+
+    def get_id(self):
+        return self.user_id

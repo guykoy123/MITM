@@ -5,10 +5,12 @@ from scapy.all import *
 import subprocess
 
 
-def redirect_to_login(ip):
+def redirect_to_login(pkt):
     print "redirected to login page"
-
-
+    redirectStr='HTTP/1.0 302 FOUND\r\nContent-Type: text/html;charset=utf-8\r\nContent=Length: 160\r\nLocation:http://192.168.1.35/user_login\r\nServer: Werkzeug/0.14.1 Python/2.7.12\r\n'
+    redirectPkt=Ether()/IP(dst=pkt[IP].src)/TCP(sport=80,dport=pkt[TCP].sport,seq=pkt[TCP].ack, ack=pkt[TCP].seq + 1, flags='A')/redirectStr
+    redirectPkt.show()
+    sendp(redirectPkt)
 
 def proc_output(command):
     """
@@ -70,7 +72,6 @@ def sendPacket(packet,gatewayMAC):
             logging.debug('sent: '+packet.summary())
         except Exception as exc:
             logging.critical('error occured:'+packet.summary()+'/r/n'+str(exc))
-            packet.show()
 
     else:
         packet.show()
