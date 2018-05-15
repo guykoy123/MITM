@@ -44,7 +44,7 @@ def getLocalhostAddress():
     uses arping package to get local host MAC address
     """
 
-    defaultGateway=proc_output('ip route | awk \'/default/ { print $3 }\'')
+    defaultGateway=proc_output('ip route | awk \'/default/ { print $3 }\'')[:-1]
     logging.debug('got default gateway')
 
     localHost=proc_output('ip route | awk \'/src/ { print $9 }\'')

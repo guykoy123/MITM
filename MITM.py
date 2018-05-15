@@ -17,7 +17,8 @@ from user import *
 #     print 'a module is missing please check you have all required modules'
 
 # global variables:
-localAddresses=[]
+hosts=['10.30.57.151']
+localAddresses=['10.30.57.151']
 addressesLock=Lock()
 gatewayMAC=''
 bad_packet=[]
@@ -75,6 +76,7 @@ def handle_Packet(pkt):
 
                         if url == "networkmanager.com" or url == "www.networkmanager.com":
                             functions.redirect_to_login(ip)
+
                         else:
                             new_user=True
                             for user in user_list:
@@ -103,7 +105,7 @@ def handle_Packet(pkt):
             address=pkt[ARP].psrc #extract IP address
             addressesLock.acquire()
             global localAddresses
-            if address not in localAddresses: #check for duplicates
+            if address not in localAddresses and address != defaultGateway and address!=localHost: #check for duplicates
                 localAddresses.append(address) #add IP address to list of all hosts
                 print 'added',address
             addressesLock.release()
@@ -117,19 +119,21 @@ def arpSpoof(router,localHost):
     while True:
         if len(localAddresses)>0:
             addressesLock.acquire()
-            print 'spoofing',str(len(localAddresses))
+            print 'spoofing',str(len(localAddresses)), localAddresses
             for host in localAddresses:
-                if host != router and host != localHost: #check that ip does not match default gateway or local host to not send packets to them
+                if host != localHost: #check that ip does not match default gateway or local host to not send packets to them
 
                     victimPacket = Ether()/ARP(op=2,psrc = router, pdst=host)#create arp packets
                     gatewayPacket=Ether()/ARP(op=2,psrc=host,pdst=router)
                     logging.debug('spoofing: '+victimPacket[ARP].pdst)
                     sendp(victimPacket,verbose=0)#send packets
                     sendp(gatewayPacket,verbose=0)
+                    victimPacket.show()
 
             addressesLock.release()
             print 'done spoofing'
-            sleep(30)
+            sleep(10)
+
 
 
 
@@ -142,12 +146,13 @@ def setup():
     #get default gateway, local IP address and local MAC address
     global gatewayMAC
     global localHost
+    global defaultGateway
     defaultGateway,localHost,gatewayMAC=functions.getLocalhostAddress()
     print defaultGateway,gatewayMAC,localHost
     logging.debug('got default gateway and local IP and MAC')
 
     global localAddresses
-    localAddresses=functions.get_Local_Addresses(defaultGateway,localHost) #get addresses of all hosts on network
+    #localAddresses=functions.get_Local_Addresses(defaultGateway,localHost) #get addresses of all hosts on network
     logging.debug('scanned network for all active hosts')
     print localAddresses
 
