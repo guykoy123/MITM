@@ -69,7 +69,7 @@ def sendPacket(packet,gatewayMAC):
         #packet[Ether].src='08:00:27:78:5b:be'
         try:
             sendp(packet,verbose=0)
-            logging.debug('sent: '+packet.summary())
+            logging.info('sent: '+packet.summary())
         except Exception as exc:
             logging.critical('error occured:'+packet.summary()+'/r/n'+str(exc))
 

