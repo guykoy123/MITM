@@ -14,7 +14,7 @@ def main():
 
     server_conn,child_conn=Pipe() #create pipe for server
     server_p=Process(target=server_main,args=(child_conn,)) #create process for server and give the pipe as a variable
-    server_p.start()
+    #server_p.start()
 
     while True:
         action=server_conn.recv()

