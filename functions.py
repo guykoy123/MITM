@@ -30,7 +30,7 @@ def get_Local_Addresses(defaultGateway,localHost):
     uses awk package to extract addresses
     """
 
-    output =proc_output('arp-scan --localnet | awk \'{print $1}\'')
+    output =proc_output('arp-scan --localnet | awk \'{print $1}\'') #TODO: add MAC address extraction
     return output.split('\n')[2:-4] #extract only IP addresses
 
 
