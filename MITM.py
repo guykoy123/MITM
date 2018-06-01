@@ -9,7 +9,7 @@ from datetime import datetime
 import functions
 from sys import exit
 from user import *
-
+from socket import *
 
 # except ImportError:
 #
@@ -18,13 +18,14 @@ from user import *
 
 
 # global variables:
-localAddresses=['192.168.1.29']
+localAddresses=['192.168.1.11']
 addressesLock=Lock()
 gatewayMAC=''
-bad_packet=[]
 user_list=[]
 localHost=''
 main_conn=Pipe()
+defaultGateway=''
+active_connections={}
 
 def blocked(user,url):
     """
@@ -51,99 +52,71 @@ def handle_Packet(pkt):
     if packet is an ARP packet check if new device needs to be added to list
     send it forward
     """
-
-    '''if TCP in pkt:
-        if 80 == pkt[TCP].dport: #check if packet is http packet
-            if Raw in pkt:
-                if "GET" in pkt[Raw]:
-                    pkt.show()'''
-    '''if Ether in pkt:
-        if pkt[Ether].src==gatewayMAC:
-            sendp(pkt)
-    else:'''
-
     if ARP not in pkt:
-        if Ether in pkt:
-            if pkt[Ether].src ==gatewayMAC:
-                if IP in pkt:
-                    if pkt[IP] != localHost:
-                        pkt[Ether].src="08:00:27:83:79:0b"
-                        sendp(pkt,verbose=0)
-            else:
-                functions.sendPacket(pkt,gatewayMAC)
-            if TCP in pkt:
-                if pkt[TCP].dport==80:
-                    print 'sent:',pkt.summary()
-            #else:
-                #if pkt[IP].dst != localHost:
-                    #pkt.show()
-    """url=None
-    if ARP not in pkt:
-        if TCP in pkt:
-            if 80 == pkt[TCP].dport: #check if packet is http packet
-                if Raw in pkt:
-                    if "GET" in pkt[Raw]:
-                        logging.debug("HTTP:"+ pkt.summary())
-                        functions.redirect_to_login(pkt,gatewayMAC)
-                        pkt.show()
-                    else:
-                        functions.sendPacket(pkt,gatewayMAC)
-                else:
-                    functions.sendPacket(pkt,gatewayMAC)
-                try:
-                    if Raw in pkt:
-                        fields=str(pkt[Raw]).split('\r\n') #split into packet fields
-                        for field in fields:
-                            if 'Host:' == field[:5]:        #if Host field exctract url
-                                url=field[5:]
-                                break
+    	if UDP in pkt:
+    		#print 'udp packet'
+    		if pkt[UDP].dport==53:
+    			new_pkt=pkt
+    			new_pkt[Ether].dst=gatewayMAC
+    			new_pkt[Ether].src="b8:27:eb:fc:2f:ef"
+    			new_pkt[IP].src=localHost
+    			new_pkt.show()
+    			resp= sr1(new_pkt,verbose=0)
+    			print resp.summary()
+    			return None
+    			
+			if pkt[UDP].sport==53:
+				pkt[Ether].src="b8:27:eb:fc:2f:ef"
+				sendp(pkt,verbose=0)
+				return None
+				
+		if TCP in pkt:
+			if pkt[TCP].dport==80:
+				pkt[Ether].dst=gatewayMAC
+				sendp(pkt,verbose=0)
+		   		if len(active_connections) ==0:
+		   			sendp(pkt,verbose=0)
+		   			active_connections[pkt[IP].dst]=[pkt[TCP].sport,long(pkt[TCP].ack)]
+		   			print "added"+str((pkt[IP].dst,pkt[TCP].sport))
+		   			return 1
+		   		    
+		   		else:
+			   		if pkt[IP].dst not in active_connections.keys():
+			   		    sendp(pkt,verbose=0)
+			   		    active_connections[pkt[IP].dst]=[pkt[TCP].sport,long(pkt[TCP].ack)]
+			   		    print "added"+str((pkt[IP].dst,pkt[TCP].sport))
+			   		    return 1
+			   		    
+			   		elif active_connections[pkt[IP].dst][0]== pkt[TCP].sport:
+			   		
+				   		if active_connections[pkt[IP].dst][1]<long(pkt[TCP].ack) or 'P' & pkt[TCP].flags:
+				   			sendp(pkt,verbose=0)
+				   			active_connections[pkt[IP].dst][1]=long(pkt[TCP].ack)
+				   			return 1
+				   			
+				   		elif 'F' & pkt[TCP].flags:
+				   			sendp(pkt,verbose=0)
+				   			active_connections.pop(pkt[IP].dst,None)
+				   			return 1
+				   	else:
+			   		    print "rejected"+str((pkt[IP].dst,pkt[TCP].sport))
+			   		    #TODO: send RST packet
+			   		    return 1
+		if Ether in pkt:
+			if pkt[Ether].dst!="b8:27:eb:fc:2f:ef":
+				sendp(pkt,verbose=0)
+				#print pkt.summary()
+				return None
+			   		    
+		   		
 
-                        if (url != None):
-                            logging.info("URL:"+url)
-                            ip=pkt[IP].src
-                            logging.info('IP:'+ip)
-                            new_user=True
-                            if len(user_list) ==0:
-                                functions.redirect_to_login(pkt)
-                            else:
-                                for user in user_list:
-                                    if ip == user.get_ip():
-                                        new_user=False
+			   			
+			   			
+			
 
-                                    if "networkmanager" in url or localHost in url: #check if requesting for network manager
-                                            pass
-
-                                    else:
-                                        if not blocked(user,url):
-                                            #functions.sendPacket(pkt,gatewayMAC)
-
-                                        else:
-                                            loggin.info('%s blocked for %s' %(url,ip))
-                                            #TODO: return page is blocked
-
-
-                                if new_user:
-                                    logging.info('redirecting %s to login (new user)' % (ip))
-                                    functions.redirect_to_login(pkt)
-                                    pkt.show()
-
-
-                        else:
-                            logging.warning('url field not found') #save packets that cause errors
-                            wrpcap('error.pcap',pkt)
-                except Exception as exc:
-                    print exc
-                    #logging.warning(str(exc)," : ",pkt.summary())
-
-    else:
-        if pkt[ARP].op == 2: #check if ARP operation is: is-at
-            address=pkt[ARP].psrc #extract IP address
-            addressesLock.acquire()
-            global localAddresses
-            if address not in localAddresses and address != defaultGateway and address!=localHost: #check for duplicates and not default gateway or local host
-                localAddresses.append(address) #add IP address to list of all hosts
-                print 'added',address
-            addressesLock.release()"""
+    
+    #print active_connections
+		
 
 
 
@@ -159,19 +132,15 @@ def arpSpoof(router):
             #print 'spoofing',str(len(localAddresses)), localAddresses
             for host in localAddresses :
                 #if host != localHost:
-                if host=='192.168.1.29':
+                if host=='192.168.1.11':
                     #print 'spoofing',host
-                    victimPacket =ARP(op=2,psrc = router, pdst=host,hwdst='ff:ff:ff:ff:ff:ff')#create arp packets (whdst doesn't matter can be broadcast or specific)
+                    victimPacket =Ether(dst='94:de:80:61:70:52')/ARP(op=2,psrc = router, pdst=host,hwdst='94:de:80:61:70:52')#create arp packets (whdst doesn't matter can be broadcast or specific)
                     #packet needs to have MAC addresses
-                    #gatewayPacket=Ether()/ARP(op=2,psrc=host,pdst=router)
                     logging.debug('spoofing: '+victimPacket[ARP].pdst)
-                    send(victimPacket,verbose=0)#send packets
-                    #sendp(gatewayPacket,verbose=0)
-                    #8c:7c:5a:84:68:20
+                    sendp(victimPacket,verbose=0)#send packets
+                    
             addressesLock.release()
-            #print 'done spoofing'
-            #sleep(3)
-
+            sleep(0.5)
 
 
 
@@ -200,18 +169,19 @@ def setup():
     logging.debug('created thread for ARP spoofing')
     arpThread.start()
     logging.debug('spoofing all hosts on network')
+    
 
 
 
 
-def main(conn):
+def main(conn=None):
     """
     control the whole program
     gets the parameters for working
     then calls all functions in order
     """
     #setup logging to file logFile.log
-    logging.basicConfig(filename='logFile.log',level=logging.INFO, format='%(lineno)s - %(levelname)s : %(message)s')
+    logging.basicConfig(filename='logFile.log',level=logging.DEBUG, format='%(lineno)s - %(levelname)s : %(message)s')
     logging.info('\n\n\n\n\n########## Program Start ##########\n\n')
 
     setup() #get all required variables and start all threads
@@ -223,7 +193,7 @@ def main(conn):
     sniff(prn=handle_Packet)
 
 
-    while True:
+    """while True:
         command=main_conn.recv()
 
         if command==13:
@@ -231,7 +201,7 @@ def main(conn):
             url_list=main_conn.recv()
             user_list.append(User(user[0],user[1],user[2],url_list))
             logging.info('New user connected'+user[0])
-            print "user connected",user[0]
+            print "user connected",user[0]"""
 
 
 
