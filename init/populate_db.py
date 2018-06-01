@@ -16,6 +16,7 @@ conn.execute('''INSERT INTO sites (url,user_id) VALUES ("www.facebook.com",1);''
 conn.execute('''INSERT INTO sites (url,user_id) VALUES ("www.pornhub.com",3);''')
 conn.execute('''INSERT INTO sites (url,user_id) VALUES ("www.shit.com",4);''')
 
+#TODO: add sample violations
 conn.commit()
 
 conn.close()

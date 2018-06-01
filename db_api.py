@@ -148,6 +148,18 @@ def update_username(data):
     conn.commit()
     conn.close()
 
+def get_violations(data):
+    """
+    returns violations for specific user
+    """
+
+    conn=sqlite3.connect(database)
+    cursor=conn.execute('''SELECT time_stamp, url FROM violations where user_id=%d'''%(data) )
+    violations=[]
+    for row in cursor: #TODO: add check if recent
+        violations.append(row)
+    return Violations
+
 def main():
     pass
 

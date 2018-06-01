@@ -25,4 +25,13 @@ finally:
       user_id INT,
       FOREIGN KEY (user_id) REFERENCES users(user_id));''')
 
+    conn.execute('''DROP TABLE IF EXISTS violations;''')
+
+    conn.execute('''CREATE TABLE IF NOT EXISTS violations (
+        violation_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        url TEXT NOT NULL,
+        time_stamp TEXT NOT NULL,
+        user_id INT,
+        FOREIGN KEY (user_id) REFERENCES users(user_id));''')
+
     conn.close()

@@ -20,11 +20,13 @@ from user import *
 # global variables:
 localAddresses=['192.168.1.29']
 addressesLock=Lock()
-gatewayMAC=''
+gatewayMAC='94:de:80:61:70:52'
 bad_packet=[]
 user_list=[]
-localHost=''
+localHost='192.168.1.11'
 main_conn=Pipe()
+defaultGateway='192.168.1.1'
+
 
 def blocked(user,url):
     """
@@ -45,107 +47,6 @@ def blocked(user,url):
     return True
 
 
-def handle_Packet(pkt):
-    """
-    add sniffed packets to queue of prescanned packets
-    if packet is an ARP packet check if new device needs to be added to list
-    send it forward
-    """
-
-    '''if TCP in pkt:
-        if 80 == pkt[TCP].dport: #check if packet is http packet
-            if Raw in pkt:
-                if "GET" in pkt[Raw]:
-                    pkt.show()'''
-    '''if Ether in pkt:
-        if pkt[Ether].src==gatewayMAC:
-            sendp(pkt)
-    else:'''
-
-    if ARP not in pkt:
-        if Ether in pkt:
-            if pkt[Ether].src ==gatewayMAC:
-                if IP in pkt:
-                    if pkt[IP] != localHost:
-                        pkt[Ether].src="08:00:27:83:79:0b"
-                        sendp(pkt,verbose=0)
-            else:
-                functions.sendPacket(pkt,gatewayMAC)
-            if TCP in pkt:
-                if pkt[TCP].dport==80:
-                    print 'sent:',pkt.summary()
-            #else:
-                #if pkt[IP].dst != localHost:
-                    #pkt.show()
-    """url=None
-    if ARP not in pkt:
-        if TCP in pkt:
-            if 80 == pkt[TCP].dport: #check if packet is http packet
-                if Raw in pkt:
-                    if "GET" in pkt[Raw]:
-                        logging.debug("HTTP:"+ pkt.summary())
-                        functions.redirect_to_login(pkt,gatewayMAC)
-                        pkt.show()
-                    else:
-                        functions.sendPacket(pkt,gatewayMAC)
-                else:
-                    functions.sendPacket(pkt,gatewayMAC)
-                try:
-                    if Raw in pkt:
-                        fields=str(pkt[Raw]).split('\r\n') #split into packet fields
-                        for field in fields:
-                            if 'Host:' == field[:5]:        #if Host field exctract url
-                                url=field[5:]
-                                break
-
-                        if (url != None):
-                            logging.info("URL:"+url)
-                            ip=pkt[IP].src
-                            logging.info('IP:'+ip)
-                            new_user=True
-                            if len(user_list) ==0:
-                                functions.redirect_to_login(pkt)
-                            else:
-                                for user in user_list:
-                                    if ip == user.get_ip():
-                                        new_user=False
-
-                                    if "networkmanager" in url or localHost in url: #check if requesting for network manager
-                                            pass
-
-                                    else:
-                                        if not blocked(user,url):
-                                            #functions.sendPacket(pkt,gatewayMAC)
-
-                                        else:
-                                            loggin.info('%s blocked for %s' %(url,ip))
-                                            #TODO: return page is blocked
-
-
-                                if new_user:
-                                    logging.info('redirecting %s to login (new user)' % (ip))
-                                    functions.redirect_to_login(pkt)
-                                    pkt.show()
-
-
-                        else:
-                            logging.warning('url field not found') #save packets that cause errors
-                            wrpcap('error.pcap',pkt)
-                except Exception as exc:
-                    print exc
-                    #logging.warning(str(exc)," : ",pkt.summary())
-
-    else:
-        if pkt[ARP].op == 2: #check if ARP operation is: is-at
-            address=pkt[ARP].psrc #extract IP address
-            addressesLock.acquire()
-            global localAddresses
-            if address not in localAddresses and address != defaultGateway and address!=localHost: #check for duplicates and not default gateway or local host
-                localAddresses.append(address) #add IP address to list of all hosts
-                print 'added',address
-            addressesLock.release()"""
-
-
 
 def arpSpoof(router):
     """
@@ -160,17 +61,11 @@ def arpSpoof(router):
             for host in localAddresses :
                 #if host != localHost:
                 if host=='192.168.1.29':
-                    #print 'spoofing',host
-                    victimPacket =ARP(op=2,psrc = router, pdst=host,hwdst='ff:ff:ff:ff:ff:ff')#create arp packets (whdst doesn't matter can be broadcast or specific)
-                    #packet needs to have MAC addresses
-                    #gatewayPacket=Ether()/ARP(op=2,psrc=host,pdst=router)
+                    victimPacket =Ether(dst='8c:70:5a:84:68:20')/ARP(op=2,psrc = router, pdst=host,hwdst='8c:70:5a:84:68:20')#create arp packets (whdst doesn't matter can be broadcast or specific)
                     logging.debug('spoofing: '+victimPacket[ARP].pdst)
-                    send(victimPacket,verbose=0)#send packets
-                    #sendp(gatewayPacket,verbose=0)
-                    #8c:7c:5a:84:68:20
+                    sendp(victimPacket,verbose=0)#send packets
             addressesLock.release()
-            #print 'done spoofing'
-            #sleep(3)
+
 
 
 
@@ -183,11 +78,8 @@ def setup():
     and start all threads
     """
     #get default gateway, local IP address and local MAC address
-    global gatewayMAC
-    global localHost
-    global defaultGateway
-    defaultGateway,localHost,gatewayMAC=functions.getLocalhostAddress()
-    print defaultGateway,gatewayMAC,localHost
+    #defaultGateway,localHost,gatewayMAC=functions.getLocalhostAddress()
+    #print defaultGateway,gatewayMAC,localHost
     logging.debug('got default gateway and local IP and MAC')
 
     global localAddresses
@@ -201,7 +93,8 @@ def setup():
     arpThread.start()
     logging.debug('spoofing all hosts on network')
 
-
+    proxyThread=Thread(target=proxy)
+    proxyThread.start()
 
 
 def main(conn):
@@ -220,7 +113,7 @@ def main(conn):
     global main_conn
     main_conn=conn
 
-    sniff(prn=handle_Packet)
+    #sniff(prn=handle_Packet)
 
 
     while True:

@@ -87,8 +87,10 @@ def user_page(key):
         main_conn.send(7)
         main_conn.send(key)
         url_list=main_conn.recv()
-
-        return render_template('user_page.html',user=user,url_list=url_list,user_id=key)
+        main_conn.send(key)
+        violations=main_conn.recv()
+        
+        return render_template('user_page.html',user=user,url_list=url_list,user_id=key,violations=violations)
     return redirect(url_for('login'))
 
 

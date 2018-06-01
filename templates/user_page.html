@@ -62,8 +62,35 @@
         </form>
         <br><br><br>
         <a href = "{{url_for('show_password',password=user[1])}}">forgot password </a>
-        <!-- TODO: add change passowrd option -->
+        <!-- TODO: add change password option -->
        </th>
+    </tr>
+    <tr>
+        <th>
+        </th>
+        <th>
+            <table style="width:40%">
+                <tr>
+                    <th>
+                        <h2>Violations</h2>
+                    </th>
+                </tr>
+                <th>
+                    <table>
+                        {% for violation in violations%}
+                        <tr>
+                            <th>
+                                {{violation[0]}}
+                            </th>
+                            <th>
+                                {{violation[1]}}
+                            </th>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </th>
+            </table>
+        </th>
     </tr>
   </table>
 

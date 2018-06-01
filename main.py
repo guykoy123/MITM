@@ -73,7 +73,12 @@ def main():
             MITM_conn.send(13)
             MITM_conn.send(user)
             MITM_conn.send(get_urls(user[0]))
+
+        elif action == 14:
+            user_id = server_conn.recv()
+            server_conn.send(get_violations(user_id))
         #TODO: add rest of parser
+        #TODO: fix parser (user cases not if statements)
 
 
 
