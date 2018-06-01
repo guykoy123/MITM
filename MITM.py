@@ -108,8 +108,65 @@ def handle_Packet(pkt):
 				#print pkt.summary()
 				return None
 			   		    
-		   		
-
+#-------------old code---------------		   		
+    """url=None
+    if ARP not in pkt:
+        if TCP in pkt:
+            if 80 == pkt[TCP].dport: #check if packet is http packet
+                if Raw in pkt:
+                    if "GET" in pkt[Raw]:
+                        logging.debug("HTTP:"+ pkt.summary())
+                        functions.redirect_to_login(pkt,gatewayMAC)
+                        pkt.show()
+                    else:
+                        functions.sendPacket(pkt,gatewayMAC)
+                else:
+                    functions.sendPacket(pkt,gatewayMAC)
+                try:
+                    if Raw in pkt:
+                        fields=str(pkt[Raw]).split('\r\n') #split into packet fields
+                        for field in fields:
+                            if 'Host:' == field[:5]:        #if Host field exctract url
+                                url=field[5:]
+                                break
+                        if (url != None):
+                            logging.info("URL:"+url)
+                            ip=pkt[IP].src
+                            logging.info('IP:'+ip)
+                            new_user=True
+                            if len(user_list) ==0:
+                                functions.redirect_to_login(pkt)
+                            else:
+                                for user in user_list:
+                                    if ip == user.get_ip():
+                                        new_user=False
+                                    if "networkmanager" in url or localHost in url: #check if requesting for network manager
+                                            pass
+                                    else:
+                                        if not blocked(user,url):
+                                            #functions.sendPacket(pkt,gatewayMAC)
+                                        else:
+                                            loggin.info('%s blocked for %s' %(url,ip))
+                                            #TODO: return page is blocked
+                                if new_user:
+                                    logging.info('redirecting %s to login (new user)' % (ip))
+                                    functions.redirect_to_login(pkt)
+                                    pkt.show()
+                        else:
+                            logging.warning('url field not found') #save packets that cause errors
+                            wrpcap('error.pcap',pkt)
+                except Exception as exc:
+                    print exc
+                    #logging.warning(str(exc)," : ",pkt.summary())
+    else:
+        if pkt[ARP].op == 2: #check if ARP operation is: is-at
+            address=pkt[ARP].psrc #extract IP address
+            addressesLock.acquire()
+            global localAddresses
+            if address not in localAddresses and address != defaultGateway and address!=localHost: #check for duplicates and not default gateway or local host
+                localAddresses.append(address) #add IP address to list of all hosts
+                print 'added',address
+            addressesLock.release()"""
 			   			
 			   			
 			
