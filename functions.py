@@ -5,11 +5,11 @@ from scapy.all import *
 import subprocess
 
 
-def redirect_to_login(pkt,gatewayMAC):
+def redirect_to_login(pkt):
     print "redirected to login page"
-    redirectStr='HTTP/1.0 302 FOUND\r\nLocation: http://10.30.59.67/user_login\r\n\r\n'
-    new_pkt=Ether()/IP(dst=pkt[IP].src)/TCP()/(redirectStr)
-    sendPacket(new_pkt,gatewayMAC)
+    redirectStr='HTTP/1.0 302 FOUND\r\nLocation: http://192.168.1.10/user_login\r\n\r\n'
+    new_pkt=Ether()/IP(dst=pkt[IP].src)/TCP(sport=80,ack=pkt[TCP].ack,seq=pkt[TCP].seq,dport=pkt[TCP].sport)/(redirectStr)
+    send(new_pkt)
 
 def proc_output(command):
     """
@@ -30,8 +30,13 @@ def get_Local_Addresses(defaultGateway,localHost):
     uses awk package to extract addresses
     """
 
-    output =proc_output('arp-scan --localnet | awk \'{print $1}\'') #TODO: add MAC address extraction
-    return output.split('\n')[2:-4] #extract only IP addresses
+    output =proc_output('arp-scan --localnet | awk \'{print $1,$2}\'') #TODO: add MAC address extraction
+    ip_n_mac=output.split('\n')[2:-4] #extract only IP and MAC addresses (in one line)
+    addresses={}
+    for i in ip_n_mac:
+    	addrss=i.split(' ')
+    	addresses[addrss[0]]=addrss[1]
+    return addresses
 
 
 
@@ -46,13 +51,13 @@ def getLocalhostAddress():
     """
 
     defaultGateway=proc_output('ip route | awk \'/default/ { print $3 }\'')[:-1]
-    logging.debug('got default gateway')
+    logging.info('got default gateway'+defaultGateway)
 
     localHost=proc_output('ip route | awk \'/src/ { print $9 }\'')
-    logging.debug('got localhost ip')
+    logging.info('got localhost ip'+localHost)
 
     gatewayMAC=proc_output("arping -f -I $(ip route show match 0/0 | awk '{print $5, $3}')|awk '{print  $5}' | grep '\['")[1:-2]
-    logging.debug('got default gateway MAC')
+    logging.info('got default gateway MAC'+gatewayMAC)
 
     return defaultGateway,localHost,gatewayMAC
 

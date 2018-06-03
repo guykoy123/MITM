@@ -240,6 +240,7 @@ def user_logout(user_id):
 def main(conn=None):
     global main_conn #declare Pipe connection as global
     main_conn=conn
+    app.config['network.monitor']='server:80'
     app.run(host='0.0.0.0',port=80)
 
 if __name__ == '__main__':

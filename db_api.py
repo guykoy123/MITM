@@ -160,6 +160,21 @@ def get_violations(data):
         violations.append(row)
     return Violations
 
+def add_new_hosts(addresses):
+	
+	conn.sqlite3.connect(database)
+	cursor=conn.execute('''SELECT mac_addr FROM hosts''')
+	mac_addrss=[]
+	for row in cursor:
+		mac_addrss.append(row)
+		
+	for ip in addresses.keys():
+		if addresses[ip] not in mac_addrss:
+			conn.execute('''INSERT INTO hosts (mac_addr) VALUES ({})'''.format(addresses[ip]))
+			
+	conn.commit()
+	conn.close()
+		
 def main():
     pass
 
