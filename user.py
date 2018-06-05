@@ -29,9 +29,3 @@ class User:
 
     def get_id(self):
         return self.user_id
-        
-    def set_ip(self,ip):
-    	self.ip_address=ip
-    
-    def get_ip(self):
-    	return self.ip_address

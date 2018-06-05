@@ -8,15 +8,16 @@ from db_api import *
 
 
 def main():
-    MITM_conn, child_conn= Pipe() #create queue for MITM
+    MITM_conn, child_conn= Pipe() #create pipe for MITM
     MITM_p = Process(target=MITM_main, args=(child_conn,)) #create process for MITM and give the queue as a variable
-    #MITM_p.start()
+    MITM_p.start()
+
 
     server_conn,child_conn=Pipe() #create pipe for server
     server_p=Process(target=server_main,args=(child_conn,)) #create process for server and give the pipe as a variable
     server_p.start()
 
-    while True:
+   """ while True:
         action=server_conn.recv()
 
 
@@ -78,7 +79,7 @@ def main():
             user_id = server_conn.recv()
             server_conn.send(get_violations(user_id))
         #TODO: add rest of parser
-        #TODO: fix parser (user cases not if statements)
+        #TODO: fix parser (user cases not if statements)"""
 
 
 

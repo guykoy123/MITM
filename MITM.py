@@ -1,9 +1,9 @@
 #python 2.7
 
-from multiprocessing import Pipe,Process
+from multiprocessing import Queue,Process
 import logging
 from threading import Thread,Lock
-from time import sleep
+from time import sleep,strftime
 from scapy.all import *
 from datetime import datetime
 import functions
@@ -12,6 +12,7 @@ from user import *
 from os import system
 from subprocess import Popen,PIPE
 from urlparse import urlparse
+from db_api import *
 # except ImportError:
 #
 #     #TODO: handle all cases of missing modules and try to solve
@@ -23,7 +24,7 @@ localAddresses=[]
 addressesLock=Lock()
 user_list=[]
 localHost=''
-main_conn=Pipe()
+main_conn=Queue()
 defaultGateway=''
 
 
@@ -46,7 +47,13 @@ def blocked(user,url):
     return True
 
 def process_domain(domain,ip):
-	pass
+	for user in user_list:
+		if user.get_mac() == localAddresses[ip]:
+			if blocked(user,domain):
+				add_violation((user.get_id(),domain,str(strftime("%y-%m-%d %H:%M:%S"))))
+				print 'violation: ip {}, domain {}'.format(ip,domain)
+				logging.info('violation: ip {}, domain {}'.format(ip,domain))
+	
 def handle_packet(pkt):
 	"""
 	checks for new host/addresses changes on network
@@ -62,9 +69,6 @@ def handle_packet(pkt):
 			global localAddresses
 			global localHost
 			global defaultGateway
-			print localHost+'_'
-			print defaultGateway+'_'
-			print address+'_'
 			if address not in localAddresses.keys() and address != defaultGateway and address!=localHost: #check for duplicates and not default gateway or local host
 				localAddresses[address]=pkt[Ether].src #add IP  and MAC address to dict of all hosts
 				logging.info('added: {}'.format(address))
@@ -102,12 +106,40 @@ def arp_sniff():
 	"""
 	sniff(prn=handle_packet)
     
-    
+def url_sniff():
+	urlsnarf=Popen('urlsnarf',stdout=PIPE,shell=True)
+	logging.info('urlsnarf started')
+	last_domain=''
+	while True:
+		output=urlsnarf.stdout.readline()
+		fields=output.split(' ')
+		ip=fields[0]
+		for f in fields:
+			if 'http' in f and '?' not in f:
+				url=f
+				domain=url.split('/')[2]
+				if domain != last_domain:
+					last_domain=domain
+					logging.debug('ip:{},domain:{}'.format(ip,domain))
+					process_domain(domain,ip) 
+    				
 def setup():
     """
     get all necessary values for the program to run
     and start all threads
     """
+    
+    hosts=get_users_list()
+    for host in hosts:
+    	new_host=get_user(host[1])
+    	urls=get_urls(host[1])
+    	user_list.append(User(host[1],new_host[0],new_host[1],urls))
+    	logging.debug('new user:{},{},{}'.format(host[1],host[0],user_list[-1].get_url_list()))
+    print 'all users created'
+    logging.info('all users created ({})'.format(len(user_list)))
+    
+    
+    	
     #get default gateway, local IP address and local MAC address
     global defaultGateway
     global localHost
@@ -123,6 +155,9 @@ def setup():
     	logging.debug('removed default gateway from local addresses list')
     logging.info('scanned network for all active hosts')
     print localAddresses
+    
+    #add mac addresses to database that do not have a user associated with them
+    add_new_hosts(localAddresses)
 	
 	#turn ip forwarding on
     system('sysctl -w net.ipv4.ip_forward=1')
@@ -136,18 +171,15 @@ def setup():
     logging.info('created process for ARP spoofing')
     arpThread.start()
     
-    """target='192.168.1.33'
-    s=Thread(target=spoof,args=(target,defaultGateway,)) #thread for spoofing target
-    s.start()
-    s2=Thread(target=spoof,args=(defaultGateway,target)) #thread for spoofing router
-    s2.start()"""
+    #create process for urlsnarf
+    url_sniffer=Process(target=url_sniff)
+    url_sniffer.start()
 				
+	#create thread for sniffing for arp packets to add new hosts to list
     arp_sniffer=Thread(target=arp_sniff)
     arp_sniffer.start()
     logging.info('arp sniffer started')
-    print 'arp sniffer'
     
-    return 1
 
 
 
@@ -160,40 +192,21 @@ def main(conn=None):
     #setup logging to file logFile.log
     logging.basicConfig(filename='logFile.log',level=logging.DEBUG, format='%(lineno)s - %(levelname)s : %(message)s')
     logging.info('\n\n\n\n\n########## Program Start ##########\n\n')
-
-	#get all required variables and start all threads
-    setup() 
-    logging.info('setup complete')
     
-    
-	
     global main_conn
     main_conn=conn
     
-    print 'sniffing urls'
-    urlsnarf=Popen('urlsnarf',stdout=PIPE,shell=True)
-    logging.info('urlsnarf started')
-    last_domain=''
-    while True:
-    	output=urlsnarf.stdout.readline()
-    	fields=output.split(' ')
-    	ip=fields[0]
-
-    	for f in fields:
-    		if 'http' in f and '?' not in f:
-    			url=f
-    			domain=url.split('/')[2]
-    			if domain != last_domain:
-    				last_domain=domain
-    				logging.debug('ip:{},domain:{}'.format(ip,domain))
-					#process_domain(domain,ip) 	
+	#get all required variables and start all threads
+    setup() 
+    logging.info('setup complete')
+    		
     """while True:
         command=main_conn.recv()
 
         if command==13:
             user=main_conn.recv()
             url_list=main_conn.recv()
-            user_list.append(User(user[0],user[1],user[2],url_list))
+            user_list.append(User(user,url_list))
             logging.info('New user connected'+user[0])
             print "user connected",user[0]"""
 
