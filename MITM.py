@@ -5,7 +5,6 @@ import logging
 from threading import Thread,Lock
 from time import sleep,strftime
 from scapy.all import *
-from datetime import datetime
 import functions
 from sys import exit,stdin
 from user import *
@@ -49,8 +48,7 @@ def blocked(user,url):
 def process_domain(domain,ip):
 	for user in user_list:
 		if user.get_mac() == localAddresses[ip]:
-			if blocked(user,domain):
-				add_violation((user.get_id(),domain,str(strftime("%y-%m-%d %H:%M:%S"))))
+				add_violation((user.get_id(),domain,str(strftime("%y-%m-%d %H:%M:%S")))) #add violation to database
 				print 'violation: ip {}, domain {}'.format(ip,domain)
 				logging.info('violation: ip {}, domain {}'.format(ip,domain))
 	
@@ -107,21 +105,21 @@ def arp_sniff():
 	sniff(prn=handle_packet)
     
 def url_sniff():
-	urlsnarf=Popen('urlsnarf',stdout=PIPE,shell=True)
+	urlsnarf=Popen('urlsnarf',stdout=PIPE,shell=True) #start urlsnarf
 	logging.info('urlsnarf started')
 	last_domain=''
 	while True:
-		output=urlsnarf.stdout.readline()
+		output=urlsnarf.stdout.readline() #read from output
 		fields=output.split(' ')
-		ip=fields[0]
+		ip=fields[0] #extact ip address
 		for f in fields:
-			if 'http' in f and '?' not in f:
+			if 'http' in f and '?' not in f: #for url that is noy query
 				url=f
-				domain=url.split('/')[2]
-				if domain != last_domain:
-					last_domain=domain
+				domain=url.split('/')[2] #extract domain
+				if domain != last_domain:#if it is a new site
+					last_domain=domain 
 					logging.debug('ip:{},domain:{}'.format(ip,domain))
-					process_domain(domain,ip) 
+					process_domain(domain,ip) #process domain if blocked
     				
 def setup():
     """
