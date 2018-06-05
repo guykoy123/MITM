@@ -1,15 +1,9 @@
 #python 2.7
 
 
-from scapy.all import *
+#from scapy.all import *
 import subprocess
 
-
-def redirect_to_login(pkt):
-    print "redirected to login page"
-    redirectStr='HTTP/1.0 302 FOUND\r\nLocation: http://192.168.1.10/user_login\r\n\r\n'
-    new_pkt=Ether()/IP(dst=pkt[IP].src)/TCP(sport=80,ack=pkt[TCP].ack,seq=pkt[TCP].seq,dport=pkt[TCP].sport)/(redirectStr)
-    send(new_pkt)
 
 def proc_output(command):
     """
@@ -51,37 +45,15 @@ def getLocalhostAddress():
     """
 
     defaultGateway=proc_output('ip route | awk \'/default/ { print $3 }\'')[:-1]
-    logging.info('got default gateway'+defaultGateway)
+    #logging.info('got default gateway'+defaultGateway)
 
     localHost=proc_output('ip route | awk \'/src/ { print $9 }\'')
-    logging.info('got localhost ip'+localHost)
+    #logging.info('got localhost ip'+localHost)
 
-    gatewayMAC=proc_output("arping -f -I $(ip route show match 0/0 | awk '{print $5, $3}')|awk '{print  $5}' | grep '\['")[1:-2]
-    logging.info('got default gateway MAC'+gatewayMAC)
+    #gatewayMAC=proc_output("arping -f -I $(ip route show match 0/0 | awk '{print $5, $3}')|awk '{print  $5}' | grep '\['")[1:-2]
+    #logging.info('got default gateway MAC'+gatewayMAC)
 
-    return defaultGateway,localHost,gatewayMAC
-
-
-
-def sendPacket(packet,gatewayMAC):
-    """
-    sends packet to intended destination
-    """
-    #TODO: rewrite
-    if Ether in packet:
-
-        packet[Ether].dst=gatewayMAC
-        #packet[Ether].src='08:00:27:78:5b:be'
-        try:
-            sendp(packet,verbose=0)
-            logging.info('sent: '+packet.summary())
-        except Exception as exc:
-            logging.critical('error occured:'+packet.summary()+'/r/n'+str(exc))
-
-    else:
-        #packet.show()
-        pass
-
+    return defaultGateway,localHost
 
 
 

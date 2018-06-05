@@ -9,3 +9,6 @@
 
 #ignore database folder
 database/*
+
+#ignore text files
+*.txt
