@@ -198,15 +198,44 @@ def main(conn=None):
     setup() 
     logging.info('setup complete')
     		
-    """while True:
+    while True:
         command=main_conn.recv()
+		
+		if command==1:
+			host_id=main_conn.recv()
+			new_user=get_user(host_id)
+			user_list.append(User(host_id,new_user[0],new_user[1],get_urls(host_id)))
+			
+		elif command==2:
+			host_id=main_conn.recv()
+			for i in len(user_list):
+				if host_id==user_list[i].get_id():
+					del user_list[i]
+					logging.info('user {} deleted'.format(host_id))
+					break
+					
+		elif command == 3:
+			host_id=main_conn.recv()
+			for i in len(user_list):
+				if host_id==user_list[i].get_id():
+					user_list[i].update_url_list(get_urls(host_id))
+					logging.debug('updated url list for user {}'.format(host_id))
+					break
+					
+		elif command==4:
+			url_id=main_conn.recv()
+			for host in user_list:
+				if host.remove(url_id):
+					logging.debug('url {} deleted for user {}'.format(url_id,host.get_id())
+					break
+					
+		elif command==10:
+			data=main_conn.recv()
+			for host in user_list:
+				if host.get_id() == data[0]:
+					host.set_privilege(data[1])
+					break
 
-        if command==13:
-            user=main_conn.recv()
-            url_list=main_conn.recv()
-            user_list.append(User(user,url_list))
-            logging.info('New user connected'+user[0])
-            print "user connected",user[0]"""
 
 
 

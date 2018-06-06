@@ -17,67 +17,68 @@ def main():
     server_p=Process(target=server_main,args=(child_conn,)) #create process for server and give the pipe as a variable
     server_p.start()
     
-    """ while True:
+   while True:
         action=server_conn.recv()
-
-
-        if action == 1: #action: add user
-            data=server_conn.recv()
-            return_code = add_user(data)
-            server_conn.send(return_code)
-
-
+		
+		if action ==1: #action: add user
+			data=server_conn.recv()
+			MITM_conn.send(1)
+			MITM_conn.send(data)
+			
         elif action == 2: #action: delete user
             data=server_conn.recv()
             return_code=delete_user(data)
             server_conn(return_code)
-            #TODO: forward user to remove to MITM (check status code first)
+            MITM_conn.send(2)
+            MITM_conn.send(data)
+
 
         elif action == 3: #action: add url
             data=server_conn.recv()
             add_url(data)
-            #TODO: forward new url to MITM
+            MITM_conn.send(3)
+            MITM_conn.send(data[1])
+            
 
         elif action == 4: #action: delete url
             data=server_conn.recv()
             delete_url(data)
-            #TODO: forward url to delete to MITM
+            MITM_conn.send(4)
+            MITM_conn.send(data)
 
-        elif action == 5:
+
+        elif action == 5: #action: get users list
             server_conn.send(get_users_list())
 
-        elif action == 6:
+        elif action == 6: #action: get user
             data=server_conn.recv()
             server_conn.send(get_user(data))
 
-        elif action == 7:
+        elif action == 7: #action: get urls list for user
             data=server_conn.recv()
             server_conn.send(get_urls(data))
 
-        elif action == 8:
+        elif action == 8: #actions: update password
             data=server_conn.recv()
             update_password(data)
 
-        elif action == 10:
+        elif action == 10: #action: update privilege
             data=server_conn.recv()
             update_privilege(data)
-
-        elif action == 11:
+			MITM_conn.send(10)
+			MITM_conn.send(data)
+					
+        elif action == 11: #action: get admin
             server_conn.send(get_admin())
 
-        elif action == 12:
+        elif action == 12: #action: update username
             data=server_conn.recv()
             update_username(data)
 
-        elif action == 13:
-            user=server_conn.recv()
-            MITM_conn.send(13)
-            MITM_conn.send(user)
-            MITM_conn.send(get_urls(user[0]))
-
-        elif action == 14:
+        elif action == 13: #action: get violations
             user_id = server_conn.recv()
             server_conn.send(get_violations(user_id))
+            
         #TODO: add rest of parser
         #TODO: fix parser (user cases not if statements)"""
 
