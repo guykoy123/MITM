@@ -7,6 +7,7 @@ conn.execute('''INSERT INTO users (name,password,privilege) VALUES ("admin","adm
 
 #add sample hosts
 conn.execute('''INSERT INTO hosts (mac_addr,privilege) VALUES ("94:de:80:61:70:52",1);''')
+conn.execute('''INSERT INTO hosts (mac_addr,privilege,ignore) VALUES ("28:d2:44:0b:ef:ab",1,1);''')
 
 #add sample sites to database
 conn.execute('''INSERT INTO sites (url,host_id) VALUES ("html.net",1);''')

@@ -4,7 +4,7 @@ from multiprocessing import Process, Pipe
 from MITM import main as MITM_main
 from server import main as server_main
 from db_api import *
-#from server import main  as server_main
+
 
 
 def main():
@@ -16,8 +16,8 @@ def main():
     server_conn,child_conn=Pipe() #create pipe for server
     server_p=Process(target=server_main,args=(child_conn,)) #create process for server and give the pipe as a variable
     server_p.start()
-
-   """ while True:
+    
+    """ while True:
         action=server_conn.recv()
 
 

@@ -1,6 +1,6 @@
 #python 2.7
 
-from multiprocessing import Queue,Process
+from multiprocessing import Pipe,Process
 import logging
 from threading import Thread,Lock
 from time import sleep,strftime
@@ -130,9 +130,10 @@ def setup():
     hosts=get_users_list()
     for host in hosts:
     	new_host=get_user(host[1])
-    	urls=get_urls(host[1])
-    	user_list.append(User(host[1],new_host[0],new_host[1],urls))
-    	logging.debug('new user:{},{},{}'.format(host[1],host[0],user_list[-1].get_url_list()))
+    	if new_host[2] != 1:
+			urls=get_urls(host[1])
+			user_list.append(User(host[1],new_host[0],new_host[1],urls))
+			logging.debug('new user:{},{},{}'.format(host[1],host[0],user_list[-1].get_url_list()))
     print 'all users created'
     logging.info('all users created ({})'.format(len(user_list)))
     
@@ -177,7 +178,6 @@ def setup():
     arp_sniffer=Thread(target=arp_sniff)
     arp_sniffer.start()
     logging.info('arp sniffer started')
-    
 
 
 

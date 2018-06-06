@@ -64,7 +64,7 @@ def get_user(data):
     """
 
     conn=sqlite3.connect(database)#connect to database
-    cursor=conn.execute('''SELECT mac_addr, privilege FROM hosts WHERE host_id = %d;''' % (int(data)))#retrieve data about user
+    cursor=conn.execute('''SELECT mac_addr, privilege, ignore FROM hosts WHERE host_id = %d;''' % (int(data)))#retrieve data about user
     for row in cursor:
         return row
 
@@ -127,7 +127,7 @@ def add_new_hosts(addresses):
 		
 	for ip in addresses.keys():
 		if addresses[ip] not in mac_addrss:
-			conn.execute('''INSERT INTO hosts (mac_addr) VALUES ({})'''.format(addresses[ip]))
+			conn.execute('''INSERT INTO hosts (mac_addr) VALUES ("{}")'''.format(addresses[ip]))
 			
 	conn.commit()
 	conn.close()

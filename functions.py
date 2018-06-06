@@ -50,9 +50,6 @@ def getLocalhostAddress():
     localHost=proc_output('ip route | awk \'/src/ { print $9 }\'')
     #logging.info('got localhost ip'+localHost)
 
-    #gatewayMAC=proc_output("arping -f -I $(ip route show match 0/0 | awk '{print $5, $3}')|awk '{print  $5}' | grep '\['")[1:-2]
-    #logging.info('got default gateway MAC'+gatewayMAC)
-
     return defaultGateway,localHost
 
 
