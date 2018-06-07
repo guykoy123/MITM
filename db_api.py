@@ -46,8 +46,7 @@ def update_password(data):
 
 def get_users_list():
     """
-    return list of all usernames and their ids
-    except the admin
+    return list of all MACs and their ids
     """
 
     conn=sqlite3.connect(database) #connect to database
@@ -116,28 +115,28 @@ def get_violations(data):
         violations.append(row)
     return Violations
 
-#TODO: add function for adding new violations
+
 def add_new_hosts(addresses):
-	
+
 	conn=sqlite3.connect(database)
 	cursor=conn.execute('''SELECT mac_addr FROM hosts''')
 	mac_addrss=[]
 	for row in cursor:
 		mac_addrss.append(row)
-		
+
 	for ip in addresses.keys():
 		if addresses[ip] not in mac_addrss:
 			conn.execute('''INSERT INTO hosts (mac_addr) VALUES ("{}")'''.format(addresses[ip]))
-			
+
 	conn.commit()
 	conn.close()
-		
+
 def add_violation(data):
 	conn=sqlite3.connect(database)
 	conn.execute('''INSERT INTO violations (host_id,url,time_stamp) VALUES ("{}","{}","{}");'''.format(data[0],data[1],data[2]))
 	conn.commit()
 	conn.close()
-	
+
 def main():
     pass
 

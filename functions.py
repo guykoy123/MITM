@@ -24,7 +24,7 @@ def get_Local_Addresses(defaultGateway,localHost):
     uses awk package to extract addresses
     """
 
-    output =proc_output('arp-scan --localnet | awk \'{print $1,$2}\'') #TODO: add MAC address extraction
+    output =proc_output('arp-scan --localnet | awk \'{print $1,$2}\'')
     ip_n_mac=output.split('\n')[2:-4] #extract only IP and MAC addresses (in one line)
     addresses={}
     for i in ip_n_mac:
