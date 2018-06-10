@@ -238,6 +238,8 @@ def user_logout(user_id):
 
 
 def main(conn=None):
+	#setup logging to file logFile.log
+    logging.basicConfig(filename='server_log.log',level=logging.DEBUG, format='%(lineno)s - %(levelname)s : %(message)s')
     global main_conn #declare Pipe connection as global
     main_conn=conn
     app.config['network.monitor']='server:80'

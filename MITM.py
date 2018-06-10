@@ -185,8 +185,8 @@ def main(conn=None):
     then calls all functions in order
     """
     #setup logging to file logFile.log
-    logging.basicConfig(filename='logFile.log',level=logging.DEBUG, format='%(lineno)s - %(levelname)s : %(message)s')
-    logging.info('\n\n\n\n\n########## Program Start ##########\n\n')
+    logging.basicConfig(filename='MITM_log.log',level=logging.DEBUG, format='%(lineno)s - %(levelname)s : %(message)s')
+    logging.info('\n\n\n\n\n########## MITM Start ##########\n\n')
 
     global main_conn
     main_conn=conn
