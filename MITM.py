@@ -46,7 +46,7 @@ def process_domain(domain,ip):
 	for user in user_list:
 		if user.get_mac() == localAddresses[ip]:
             if blocked(user,domain):
-				add_violation((user.get_id(),domain,str(strftime("%y-%m-%d %H:%M:%S")))) #add violation to database
+                add_violation((user.get_id(),domain,str(strftime("%y-%m-%d %H:%M:%S")))) #add violation to database
 				print 'violation: ip {}, domain {}'.format(ip,domain)
 				logging.info('violation: ip {}, domain {}'.format(ip,domain))
 
@@ -127,7 +127,7 @@ def setup():
     hosts=get_users_list()
     for host in hosts:
     	new_host=get_user(host[1])
-    	if new_host[2] != 1:
+    	if new_host[2] == 2:
 			urls=get_urls(host[1])
 			user_list.append(User(host[1],new_host[0],new_host[1],urls))
 			logging.debug('new user:{},{},{}'.format(host[1],host[0],user_list[-1].get_url_list()))

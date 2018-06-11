@@ -2,6 +2,7 @@
 from flask import Flask,render_template,request,redirect,url_for,session
 from random import randint
 from multiprocessing import Pipe
+import logging
 #from forms import *
 
 app = Flask(__name__)
@@ -56,7 +57,8 @@ def users():
     if 'admin' in session:
         main_conn.send(5)
         users=main_conn.recv()
-        return render_template('users_menu.html',users=users)
+        new_hosts=main_conn.recv()
+        return render_template('users_menu.html',users=users,new_hosts=new_hosts)
     return redirect(url_for('login'))
 
 
@@ -71,7 +73,7 @@ def user_page(key):
         main_conn.send(6)
         main_conn.send(key)
         user=main_conn.recv()
-
+        print user
         if request.method == 'POST':
             try:
                 print request.form['url']
@@ -87,9 +89,12 @@ def user_page(key):
         main_conn.send(7)
         main_conn.send(key)
         url_list=main_conn.recv()
+        print url_list
+        main_conn.send(13)
         main_conn.send(key)
         violations=main_conn.recv()
-        
+        print violations
+
         return render_template('user_page.html',user=user,url_list=url_list,user_id=key,violations=violations)
     return redirect(url_for('login'))
 
@@ -106,46 +111,6 @@ def remove_url(url_id,user_id):
         return redirect(url_for('user_page',key=user_id))
     return redirect(url_for('login'))
 
-
-
-@app.route('/show_password/<password>')
-def show_password(password):
-    """
-    shows password for 30 seconds then returns to the previous page
-    """
-    if 'admin' in session:
-        return render_template('show_password.html',password=password)
-    return redirect(url_for('login'))
-
-
-
-
-@app.route('/new_user',methods=['GET','POST'])
-@app.route('/new_user/<message>',methods=['GET','POST'])
-def new_user(message=""):
-    """
-    form for creating new user
-    """
-    if 'admin' in session:
-        if request.method=="POST":
-
-            if request.form['privilege'] == 'blacklist': #determine privilege selected
-                privilege=1
-            else:
-                privilege=2
-
-            main_conn.send(1)
-            main_conn.send([request.form["name"],request.form["password"],privilege])
-            code=main_conn.recv()
-
-            if code ==1:
-                message="User already exists!"
-                return render_template('new_user.html',message=message)
-            else:
-                return redirect(url_for('users'))
-
-        return render_template('new_user.html',message=message)
-    return redirect(url_for('login'))
 
 
 
@@ -183,58 +148,19 @@ def admin_settings():
         return render_template('admin_settings.html',user=new_admin)
     return redirect(url_for('login'))
 
-@app.route('/user_login',methods=['GET','POST'])
-@app.route('/user_login/<int:user_id>',methods=['GET','POST'])
-@app.route('/user_login/<int:user_id>/<message>',methods=['GET','POST'])
-def user_login(user_id=0,message=''):
-    """
-    displays the user login page
-    if user logged on, sends users id and ip address to MITM
-    """
+@app.route('/add_user/<key>')
+def add_user(key):
+    main_conn.send(14)
+    main_conn.send((key,2)) #set ignore value to 2 (do not ignore)
+    main_conn.send(10)
+    main_conn.send((key,1)) #set default privilege to 1 (blacklist)
+    return redirect(url_for('users'))
 
-    if request.method=='POST':
-        username=request.form['name']
-        password=request.form['password']
-        main_conn.send(11)
-        admin=main_conn.recv()
-
-        if username==admin[1] and password==admin[2]:
-            main_conn.send(13)
-            main_conn.send([admin[0],request.form.get('ip_address')])
-            session[str(admin[0])]=True
-            return '''You are logged in'''
-
-        else:
-            main_conn.send(5)
-            user_list=main_conn.recv()
-            wrong_login=True
-            for user in user_list:
-
-                if user[0] == username:
-                    main_conn.send(6)
-                    main_conn.send(user[1])
-                    check_user=main_conn.recv()
-
-                    if check_user[1]==password:
-                        wrong_login=False
-                        main_conn.send(13)
-                        main_conn.send([user[1],request.form.get('ip_address'),check_user[2]])
-                        session[str(user[1])]=True
-                        return '''You are logged in'''
-
-            if wrong_login:
-                message='Wrong username or password'
-                return render_template('login_user.html',user_id=user_id, message=message)
-
-    if str(user_id) not in session:
-        user_id=0
-    return render_template('login_user.html',user_id=user_id, message=message)
-
-
-@app.route('/user_logout/<int:user_id>')
-def user_logout(user_id):
-    session.pop(str(user_id),None)
-    return '''Bye'''
+@app.route('/ignore_host/<key>')
+def ignore_host(key):
+    main_conn.send(14)
+    main_conn.send((key,1)) #set ignore value to 1 (ignore)
+    return redirect(url_for('users'))
 
 
 def main(conn=None):
@@ -242,8 +168,8 @@ def main(conn=None):
     logging.basicConfig(filename='server_log.log',level=logging.DEBUG, format='%(lineno)s - %(levelname)s : %(message)s')
     global main_conn #declare Pipe connection as global
     main_conn=conn
-    app.config['network.monitor']='server:80'
-    app.run(host='0.0.0.0',port=80)
+    #app.config['network.monitor']='server:80'
+    app.run(host='127.0.0.1',port=5000,debug=True)
 
 if __name__ == '__main__':
     main()

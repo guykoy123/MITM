@@ -50,7 +50,7 @@ def get_users_list():
     """
 
     conn=sqlite3.connect(database) #connect to database
-    cursor=conn.execute('''SELECT mac_addr, host_id FROM hosts;''') #retrieve all username and user ids except admin user
+    cursor=conn.execute('''SELECT mac_addr, host_id FROM hosts WHERE ignore=2;''') #retrieve all username and user ids except admin user
     hosts=list()
     for row in cursor:
         hosts.append(row)
@@ -85,7 +85,7 @@ def update_privilege(data):
     updates privilege of users
     """
     conn=sqlite3.connect(database) #connect to database
-    conn.execute('''UPDATE host SET privilege = %d WHERE host_id=%d;'''%(int(data[1]),int(data[0]))) #update privilege
+    conn.execute('''UPDATE hosts SET privilege = %d WHERE host_id=%d;'''%(int(data[1]),int(data[0]))) #update privilege
     conn.commit()#commit changes
     conn.close()
 
@@ -109,11 +109,11 @@ def get_violations(data):
     """
 
     conn=sqlite3.connect(database)
-    cursor=conn.execute('''SELECT time_stamp, url FROM violations where host_id=%d'''%(data) )
+    cursor=conn.execute('''SELECT time_stamp, url FROM violations where host_id=%d'''%(int(data)) )
     violations=[]
     for row in cursor: #TODO: add check if recent
         violations.append(row)
-    return Violations
+    return violations
 
 
 def add_new_hosts(addresses):
@@ -126,7 +126,7 @@ def add_new_hosts(addresses):
 
 	for ip in addresses.keys():
 		if addresses[ip] not in mac_addrss:
-			conn.execute('''INSERT INTO hosts (mac_addr) VALUES ("{}")'''.format(addresses[ip]))
+			conn.execute('''INSERT INTO hosts (mac_addr,ignore) VALUES ("{}",0)'''.format(addresses[ip]))
 
 	conn.commit()
 	conn.close()
@@ -136,6 +136,21 @@ def add_violation(data):
 	conn.execute('''INSERT INTO violations (host_id,url,time_stamp) VALUES ("{}","{}","{}");'''.format(data[0],data[1],data[2]))
 	conn.commit()
 	conn.close()
+
+def get_new_hosts():
+    conn=sqlite3.connect(database)
+    cursor=conn.execute('''SELECT mac_addr,host_id FROM hosts WHERE ignore = 0;''')
+    new_hosts=[]
+    for row in cursor:
+        new_hosts.append(row)
+    conn.close()
+    return new_hosts
+
+def update_ignore(data):
+    conn=sqlite3.connect(database)
+    conn.execute('''UPDATE hosts SET ignore = {} WHERE host_id="{}"'''.format(data[1],data[0]))
+    conn.commit()
+    conn.close()
 
 def main():
     pass
