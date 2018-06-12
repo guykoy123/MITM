@@ -134,13 +134,12 @@ def add_new_hosts(addresses):
 	for row in cursor:
 		mac_addrss.append(row[0])
 	
-	for host in addresses.values():
+	for host in addresses.values(): #check that host mac
 		add=True
 		for mac in mac_addrss:
-			if host == str(mac):
+			if host == str(mac): #is not in the existing list
 				add=False
 		if add:
-			print "adding:"+host
 			conn.execute('''INSERT INTO hosts (mac_addr,ignore) VALUES ("{}",0)'''.format(host))
 
 	conn.commit()

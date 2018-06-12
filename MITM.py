@@ -117,7 +117,7 @@ def url_sniff():
 					if ip in localAddresses.keys():
 						last_domain=domain
 						logging.debug('ip:{},domain:{}'.format(ip,domain))
-						process_domain(domain.split('www.')[-1],ip) #process domain if blocked (split domain to remove 'www.' to prevent errors)
+						process_domain(domain.split('www.')[-1],ip) #process domain if blocked (split domain to remove 'www.' to prevent errors) 
 
 def setup():
     """
