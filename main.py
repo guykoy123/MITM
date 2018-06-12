@@ -37,7 +37,6 @@ def main():
         elif action == 3: #action: add url
             data=server_conn.recv()
             add_url(data)
-            print "main urls:"+str(get_urls(data[1]))
             MITM_conn.send(3)
             MITM_conn.send(data[1])
             logging.debug('url added '+str(data))

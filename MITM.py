@@ -33,20 +33,19 @@ def blocked(user,url):
 	"""
 	if user.get_privilege() == 1: #blacklist user
 		for l_url in user.url_list:
-		    if l_url[1] == url:
-		        return True
+			if l_url[1] == url:
+		   		return True
 		return False
 
 	for l_url in user.get_url_list(): #whitelist user
 		if l_url[1] == url:
-		    return False
+		   	return False
 	return True
 
 def process_domain(domain,ip):
 	global user_list
 	for user in user_list:
 		if user.get_mac() == localAddresses[ip]:
-			print "urls d:"+str(user.get_url_list())
 			if blocked(user,domain):
 				add_violation((user.get_id(),domain,str(strftime("%y-%m-%d %H:%M:%S")))) #add violation to database
 				print 'violation: ip {}, domain {}'.format(ip,domain)
@@ -70,7 +69,6 @@ def handle_packet(pkt):
 				add_new_hosts(localAddresses)
 				logging.info('added: {}'.format(address))
 				print 'added: {}'.format(address)
-				print 'scapy:'+str(localAddresses)
 			addressesLock.release()
 
 
@@ -209,34 +207,22 @@ def main(conn=None):
 			print "new user:"+str(new_user)
 			
 			user_list.append(User(host_id,str(new_user[0]),new_user[1],get_urls(host_id)))
-			#sniffer_q.put_nowait(user_list)
 			print "user add len:"+ str(len(user_list))
 			
 		elif command==2:
 			host_id=main_conn.recv()
-			#global user_list
 			for i in len(user_list):
 				
 				if host_id==user_list[i].get_id():
-					#global user_list
 					del user_list[i]
-					#sniffer_q.put_nowait(user_list)
 					logging.info('user {} deleted'.format(host_id))
 					
 
 		elif command == 3:
 			host_id=main_conn.recv()
-			print "id"+str(host_id) +str(len(user_list))
-			#global user_list
 			for i in range(len(user_list)+1):
-				print i
-				print "shit"+str(user_list[i].get_url_list())
-				print host_id==user_list[i].get_id()
 				if host_id==user_list[i].get_id():
-					print type(get_urls(host_id))
-					print user_list[i].update_url_list(get_urls(host_id))
-					print "check:"+str(user_list[i].get_url_list())
-					#sniffer_q.put_nowait(user_list)
+					user_list[i].update_url_list(get_urls(host_id))
 					logging.debug('updated url list for user {}'.format(host_id))
 			for host in user_list:
 				print "urls:"+str(host.get_url_list())
@@ -244,18 +230,15 @@ def main(conn=None):
 
 		elif command==4:
 			url_id=main_conn.recv()
-			#global user_list
 			for host in user_list:
 				if host.remove(url_id):
 					logging.debug('url {} deleted for user {}'.format(url_id,host.get_id()))
 					
 		elif command==10:
 			data=main_conn.recv()
-			#global user_list
 			for host in user_list:
 				if host.get_id() == data[0]:
 					host.set_privilege(data[1])
-					#sniffer_q.put_nowait(user_list)
 					print "updated privilege "+data[0]
 					
 
