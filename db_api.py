@@ -1,9 +1,7 @@
 import sqlite3
 
 database='database/test.db'
-#TODO: add function to update the database
 
-#TODO: update documantation
 
 def delete_user(data):
     """
@@ -174,11 +172,3 @@ def get_ignored():
         ignored.append(row)
     conn.close()
     return ignored
-
-
-def main():
-    pass
-
-
-if __name__ =="__main__":
-    main()
