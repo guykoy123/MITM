@@ -1,6 +1,6 @@
 #python 2.7
 
-from multiprocessing import Pipe,Process
+from multiprocessing import Pipe,Process, Queue
 import logging
 from threading import Thread,Lock
 from time import sleep,strftime
@@ -28,23 +28,25 @@ defaultGateway=''
 
 
 def blocked(user,url):
-    """
-    return True if site is blocked for user
-    """
-    if user.get_privilege() == 1: #blacklist user
-        for l_url in user.url_list:
-            if l_url[1] == url:
-                return True
-        return False
+	"""
+	return True if site is blocked for user
+	"""
+	if user.get_privilege() == 1: #blacklist user
+		for l_url in user.url_list:
+		    if l_url[1] == url:
+		        return True
+		return False
 
-    for l_url in user.get_url_list(): #whitelist user
-        if l_url[1] == url:
-            return False
-    return True
+	for l_url in user.get_url_list(): #whitelist user
+		if l_url[1] == url:
+		    return False
+	return True
 
 def process_domain(domain,ip):
+	global user_list
 	for user in user_list:
 		if user.get_mac() == localAddresses[ip]:
+			print "urls d:"+str(user.get_url_list())
 			if blocked(user,domain):
 				add_violation((user.get_id(),domain,str(strftime("%y-%m-%d %H:%M:%S")))) #add violation to database
 				print 'violation: ip {}, domain {}'.format(ip,domain)
@@ -68,6 +70,7 @@ def handle_packet(pkt):
 				add_new_hosts(localAddresses)
 				logging.info('added: {}'.format(address))
 				print 'added: {}'.format(address)
+				print 'scapy:'+str(localAddresses)
 			addressesLock.release()
 
 
@@ -92,7 +95,7 @@ def arp_spoof(defaultGateway):
 				s2.start()
 				threads[target]=[s,s2]
 				logging.debug('spoofing:'+target)
-        sleep(20)
+		sleep(20)
 
 
 def arp_sniff():
@@ -120,63 +123,64 @@ def url_sniff():
 						process_domain(domain.split('www.')[-1],ip) #process domain if blocked (split domain to remove 'www.' to prevent errors) 
 
 def setup():
-    """
-    get all necessary values for the program to run
-    and start all threads
-    """
+	"""
+	get all necessary values for the program to run
+	and start all threads
+	"""
 
-    hosts=get_users_list()
-    for host in hosts:
-    	new_host=get_user(host[1])
-    	if new_host[2] == 2:
+	hosts=get_users_list()
+	for host in hosts:
+		new_host=get_user(host[1])
+		if new_host[2] == 2:
 			urls=get_urls(host[1])
-			user_list.append(User(host[1],new_host[0],new_host[1],urls))
+			global user_list
+			user_list.append(User(host[1],str(new_host[0]),new_host[1],urls))
 			logging.debug('new user:{},{},{}'.format(host[1],host[0],user_list[-1].get_url_list()))
-    print 'all users created'
-    logging.info('all users created ({})'.format(len(user_list)))
+	print 'all users created'
+	logging.info('all users created ({})'.format(len(user_list)))
 
 
 
-    #get default gateway, local IP address and local MAC address
-    global defaultGateway
-    global localHost
-    defaultGateway,localHost=functions.getLocalhostAddress()
-    logging.info('router:{}, local host:{}'.format(defaultGateway,localHost))
-    print defaultGateway,localHost
+	#get default gateway, local IP address and local MAC address
+	global defaultGateway
+	global localHost
+	defaultGateway,localHost=functions.getLocalhostAddress()
+	logging.info('router:{}, local host:{}'.format(defaultGateway,localHost))
+	print defaultGateway,localHost
 
 	#get addresses of all hosts on network
-    global localAddresses
-    localAddresses=functions.get_Local_Addresses(defaultGateway,localHost)
-    if defaultGateway in localAddresses.keys():
-    	del localAddresses[defaultGateway] #remove default gateway from address dict to prevent unneccery spoofing etc.
-    	logging.debug('removed default gateway from local addresses list')
-    logging.info('scanned network for all active hosts')
-    print localAddresses
+	global localAddresses
+	localAddresses=functions.get_Local_Addresses(defaultGateway,localHost)
+	if defaultGateway in localAddresses.keys():
+		del localAddresses[defaultGateway] #remove default gateway from address dict to prevent unneccery spoofing etc.
+		logging.debug('removed default gateway from local addresses list')
+	logging.info('scanned network for all active hosts')
+	print localAddresses
 
-    #add mac addresses to database that do not have a user associated with them
-    add_new_hosts(localAddresses)
+	#add mac addresses to database that do not have a user associated with them
+	add_new_hosts(localAddresses)
 
 	#turn ip forwarding on
-    system('sysctl -w net.ipv4.ip_forward=1')
-    logging.info('ip forwarding enabled')
-
-    Popen('iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000', stdout=PIPE, stderr=PIPE, shell=True)
-    Popen('sslstrip -p -k -f', stdout=PIPE, stderr=PIPE, shell=True)
+	system('sysctl -w net.ipv4.ip_forward=1')
+	Popen('iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000', stdout=PIPE, stderr=PIPE, shell=True)
+	Popen('sslstrip -p -k -f', stdout=PIPE, stderr=PIPE, shell=True)
+	logging.info('ip forwarding enabled')
 
 	#create process for spoofing all hosts on network
-    arpThread=Process(target=arp_spoof,args=(defaultGateway,))
-    logging.info('created process for ARP spoofing')
-    arpThread.start()
+	arpThread=Process(target=arp_spoof,args=(defaultGateway,))
+	logging.info('created process for ARP spoofing')
+	arpThread.start()
 
-    #create process for urlsnarf
-    url_sniffer=Process(target=url_sniff)
-    url_sniffer.start()
+	#create process for urlsnarf
+	#q=Queue()
+	url_sniffer=Thread(target=url_sniff)
+	url_sniffer.start()
 
 	#create thread for sniffing for arp packets to add new hosts to list
-    arp_sniffer=Thread(target=arp_sniff)
-    arp_sniffer.start()
-    logging.info('arp sniffer started')
-
+	arp_sniffer=Thread(target=arp_sniff)
+	arp_sniffer.start()
+	logging.info('arp sniffer started')
+	#return q
 
 
 def main(conn=None):
@@ -194,41 +198,65 @@ def main(conn=None):
 	#get all required variables and start all threads
 	setup()
 	logging.info('setup complete')
+	global user_list
 	while True:
 		command=main_conn.recv()
 
 		if command==1:
+			
 			host_id=main_conn.recv()
 			new_user=get_user(host_id)
-			user_list.append(User(host_id,new_user[0],new_user[1],get_urls(host_id)))
-
+			print "new user:"+str(new_user)
+			
+			user_list.append(User(host_id,str(new_user[0]),new_user[1],get_urls(host_id)))
+			#sniffer_q.put_nowait(user_list)
+			print "user add len:"+ str(len(user_list))
+			
 		elif command==2:
 			host_id=main_conn.recv()
+			#global user_list
 			for i in len(user_list):
+				
 				if host_id==user_list[i].get_id():
+					#global user_list
 					del user_list[i]
+					#sniffer_q.put_nowait(user_list)
 					logging.info('user {} deleted'.format(host_id))
 					
 
 		elif command == 3:
 			host_id=main_conn.recv()
-			for i in len(user_list):
+			print "id"+str(host_id) +str(len(user_list))
+			#global user_list
+			for i in range(len(user_list)+1):
+				print i
+				print "shit"+str(user_list[i].get_url_list())
+				print host_id==user_list[i].get_id()
 				if host_id==user_list[i].get_id():
-					user_list[i].update_url_list(get_urls(host_id))
+					print type(get_urls(host_id))
+					print user_list[i].update_url_list(get_urls(host_id))
+					print "check:"+str(user_list[i].get_url_list())
+					#sniffer_q.put_nowait(user_list)
 					logging.debug('updated url list for user {}'.format(host_id))
+			for host in user_list:
+				print "urls:"+str(host.get_url_list())
 					
 
 		elif command==4:
 			url_id=main_conn.recv()
+			#global user_list
 			for host in user_list:
 				if host.remove(url_id):
 					logging.debug('url {} deleted for user {}'.format(url_id,host.get_id()))
 					
 		elif command==10:
 			data=main_conn.recv()
+			#global user_list
 			for host in user_list:
 				if host.get_id() == data[0]:
 					host.set_privilege(data[1])
+					#sniffer_q.put_nowait(user_list)
+					print "updated privilege "+data[0]
 					
 
 

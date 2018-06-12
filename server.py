@@ -73,12 +73,12 @@ def user_page(key):
         main_conn.send(6)
         main_conn.send(key)
         user=main_conn.recv()
-        print user
         if request.method == 'POST':
             try:
-                print request.form['url']
+                
                 main_conn.send(3)
                 main_conn.send([request.form['url'].split('www.')[-1],key])
+
             except Exception:
                 main_conn.send(10)
                 if request.form['privilege'] == 'blacklist':
@@ -151,11 +151,11 @@ def admin_settings():
 
 @app.route('/add_user/<key>')
 def add_user(key):
-    main_conn.send(14)
-    main_conn.send((key,2)) #set ignore value to 2 (do not ignore)
-    main_conn.send(10)
-    main_conn.send((key,1)) #set default privilege to 1 (blacklist)
-    return redirect(url_for('users'))
+	main_conn.send(10)
+	main_conn.send((key,1)) #set default privilege to 1 (blacklist)
+	main_conn.send(14)
+	main_conn.send((key,2)) #set ignore value to 2 (do not ignore)
+	return redirect(url_for('users'))
 
 @app.route('/ignore_host/<key>')
 def ignore_host(key):

@@ -51,7 +51,7 @@
       </th>
       <th align="left">
         <form id="settings_form" method = "POST">
-          {% if user[2] == 1 %}
+          {% if user[1] == 1 %}
             <input type="radio" name="privilege" value="blacklist" checked> blacklist (can view all sites but the listed ones)<br>
             <input type="radio" name="privilege" value="whitelist"> whitelist (can view only the sites on the list)<br><br>
           {% else %}
@@ -76,7 +76,7 @@
                     </tr>
                     <th>
                         <table>
-                            {% for violation in violations%}
+                            {% for violation in violations[::-1][:100] %}
                             <tr>
                                 <th>
                                     {{violation[0]}}

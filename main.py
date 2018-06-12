@@ -25,33 +25,29 @@ def main():
     while True:
         action=server_conn.recv()
 
-        if action ==1: #action: add user
-			data=server_conn.recv()
-			#!MITM_conn.send(1)
-			#!MITM_conn.send(data)
-			logging.debug('user added'+str(data))
 
-        elif action == 2: #action: delete user
+        if action == 2: #action: delete user
             data=server_conn.recv()
             return_code=delete_user(data)
             server_conn(return_code)
-            #!MITM_conn.send(2)
-            #!MITM_conn.send(data)
+            MITM_conn.send(2)
+            MITM_conn.send(data)
             logging.debug('user deleted'+ str(data))
 
         elif action == 3: #action: add url
             data=server_conn.recv()
             add_url(data)
-            #!MITM_conn.send(3)
-            #!MITM_conn.send(data[1])
+            print "main urls:"+str(get_urls(data[1]))
+            MITM_conn.send(3)
+            MITM_conn.send(data[1])
             logging.debug('url added '+str(data))
 
 
         elif action == 4: #action: delete url
             data=server_conn.recv()
             delete_url(data)
-            #!MITM_conn.send(4)
-            #!MITM_conn.send(data)
+            MITM_conn.send(4)
+            MITM_conn.send(data)
             logging.debug('url deleted '+str(data))
 
 
@@ -77,9 +73,10 @@ def main():
         elif action == 10: #action: update privilege
             data=server_conn.recv()
             update_privilege(data)
-            #!MITM_conn.send(10)
-            #!MITM_conn.send(data)
+            MITM_conn.send(10)
+            MITM_conn.send(data)
             logging.debug('updated privilege ' +str(data))
+            
 
         elif action == 11: #action: get admin
             server_conn.send(get_admin())
@@ -98,6 +95,10 @@ def main():
             data=server_conn.recv()
             update_ignore(data)
             logging.debug('updated ignore '+str(data))
+            if data[1]==2:
+            	MITM_conn.send(1)
+            	MITM_conn.send(data[0])
+            	logging.debug('user added'+str(data))
 
         elif action == 15:
             server_conn.send(get_ignored())
