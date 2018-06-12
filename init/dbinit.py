@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS violations (
     FOREIGN KEY (host_id) REFERENCES hosts(host_id)
 );""")
 
-    #add admin to database
-    conn.execute('''INSERT INTO users (name,password,privilege) VALUES ("admin","admin",0);''')
+	#add admin to database
+	conn.execute('''INSERT INTO users (name,password,privilege) VALUES ("admin","admin",0);''')
 	conn.commit()
 	conn.close()

@@ -45,8 +45,8 @@ def blocked(user,url):
 def process_domain(domain,ip):
 	for user in user_list:
 		if user.get_mac() == localAddresses[ip]:
-            if blocked(user,domain):
-                add_violation((user.get_id(),domain,str(strftime("%y-%m-%d %H:%M:%S")))) #add violation to database
+			if blocked(user,domain):
+				add_violation((user.get_id(),domain,str(strftime("%y-%m-%d %H:%M:%S")))) #add violation to database
 				print 'violation: ip {}, domain {}'.format(ip,domain)
 				logging.info('violation: ip {}, domain {}'.format(ip,domain))
 
@@ -65,7 +65,7 @@ def handle_packet(pkt):
 			global defaultGateway
 			if address not in localAddresses.keys() and address != defaultGateway and address!=localHost: #check for duplicates and not default gateway or local host
 				localAddresses[address]=pkt[Ether].src #add IP  and MAC address to dict of all hosts
-                add_new_hosts(localAddresses)
+				add_new_hosts(localAddresses)
 				logging.info('added: {}'.format(address))
 				print 'added: {}'.format(address)
 			addressesLock.release()
@@ -179,24 +179,22 @@ def setup():
 
 
 def main(conn=None):
-    """
-    control the whole program
-    gets the parameters for working
-    then calls all functions in order
-    """
-    #setup logging to file logFile.log
-    logging.basicConfig(filename='MITM_log.log',level=logging.DEBUG, format='%(lineno)s - %(levelname)s : %(message)s')
-    logging.info('\n\n\n\n\n########## MITM Start ##########\n\n')
+	"""
+	control the whole program
+	gets the parameters for working
+	then calls all functions in order
+	"""
+	#setup logging to file logFile.log
+	logging.basicConfig(filename='MITM_log.log',level=logging.DEBUG, format='%(lineno)s - %(levelname)s : %(message)s')
+	logging.info('\n\n\n\n\n########## MITM Start ##########\n\n')
 
-    global main_conn
-    main_conn=conn
-
+	global main_conn
+	main_conn=conn
 	#get all required variables and start all threads
-    setup()
-    logging.info('setup complete')
-
-    while True:
-        command=main_conn.recv()
+	setup()
+	logging.info('setup complete')
+	while True:
+		command=main_conn.recv()
 
 		if command==1:
 			host_id=main_conn.recv()
@@ -209,7 +207,7 @@ def main(conn=None):
 				if host_id==user_list[i].get_id():
 					del user_list[i]
 					logging.info('user {} deleted'.format(host_id))
-					break
+					
 
 		elif command == 3:
 			host_id=main_conn.recv()
@@ -217,21 +215,20 @@ def main(conn=None):
 				if host_id==user_list[i].get_id():
 					user_list[i].update_url_list(get_urls(host_id))
 					logging.debug('updated url list for user {}'.format(host_id))
-					break
+					
 
 		elif command==4:
 			url_id=main_conn.recv()
 			for host in user_list:
 				if host.remove(url_id):
-					logging.debug('url {} deleted for user {}'.format(url_id,host.get_id())
-					break
-
+					logging.debug('url {} deleted for user {}'.format(url_id,host.get_id()))
+					
 		elif command==10:
 			data=main_conn.recv()
 			for host in user_list:
 				if host.get_id() == data[0]:
 					host.set_privilege(data[1])
-					break
+					
 
 
 

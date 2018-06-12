@@ -168,8 +168,8 @@ def main(conn=None):
     logging.basicConfig(filename='server_log.log',level=logging.DEBUG, format='%(lineno)s - %(levelname)s : %(message)s')
     global main_conn #declare Pipe connection as global
     main_conn=conn
-    #app.config['network.monitor']='server:80'
-    app.run(host='127.0.0.1',port=5000,debug=True)
+    app.config['network.monitor']='server:80'
+    app.run(host='127.0.0.1',port=80)
 
 if __name__ == '__main__':
     main()

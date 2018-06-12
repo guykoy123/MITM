@@ -1,7 +1,7 @@
 
 # coding: utf-8
 from multiprocessing import Process, Pipe
-#from MITM import main as MITM_main
+from MITM import main as MITM_main
 from server import main as server_main
 from db_api import *
 import logging
@@ -13,8 +13,8 @@ def main():
     logging.basicConfig(filename='netmon_log.log',level=logging.DEBUG, format='%(lineno)s - %(levelname)s : %(message)s')
 
     MITM_conn, child_conn= Pipe() #create pipe for MITM
-    #MITM_p = Process(target=MITM_main, args=(child_conn,)) #create process for MITM and give the queue as a variable
-    #MITM_p.start()
+    MITM_p = Process(target=MITM_main, args=(child_conn,)) #create process for MITM and give the queue as a variable
+    MITM_p.start()
     logging.info('MITM started')
 
     server_conn,child_conn=Pipe() #create pipe for server
