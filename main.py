@@ -99,7 +99,9 @@ def main():
             update_ignore(data)
             logging.debug('updated ignore '+str(data))
 
-
+        elif action == 15:
+            server_conn.send(get_ignored())
+            
         #TODO: add rest of parser
         #TODO: fix parser (user cases not if statements)"""
 

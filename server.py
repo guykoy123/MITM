@@ -78,7 +78,7 @@ def user_page(key):
             try:
                 print request.form['url']
                 main_conn.send(3)
-                main_conn.send([request.form['url'],key])
+                main_conn.send([request.form['url'].split('www.')[-1],key])
             except Exception:
                 main_conn.send(10)
                 if request.form['privilege'] == 'blacklist':
@@ -144,8 +144,9 @@ def admin_settings():
                 main_conn.send([old_admin[0],password])
         main_conn.send(11)
         new_admin=main_conn.recv()
-        print new_admin
-        return render_template('admin_settings.html',user=new_admin)
+        main_conn.send(15)
+        ignored = main_conn.recv()
+        return render_template('admin_settings.html',user=new_admin,ignored=ignored)
     return redirect(url_for('login'))
 
 @app.route('/add_user/<key>')
@@ -161,7 +162,6 @@ def ignore_host(key):
     main_conn.send(14)
     main_conn.send((key,1)) #set ignore value to 1 (ignore)
     return redirect(url_for('users'))
-
 
 def main(conn=None):
 	#setup logging to file logFile.log

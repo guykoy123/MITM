@@ -89,6 +89,16 @@ def update_privilege(data):
     conn.commit()#commit changes
     conn.close()
 
+
+def update_username(data):
+    """
+    updates username of a user
+    """
+    conn=sqlite3.connect(database)
+    conn.execute('''UPDATE users SET name = "%s" WHERE user_id=%d;'''%(data[1],int(data[0])))
+    conn.commit()
+    conn.close()
+
 def get_admin():
     """
     return admin id, username and password
@@ -151,6 +161,16 @@ def update_ignore(data):
     conn.execute('''UPDATE hosts SET ignore = {} WHERE host_id="{}"'''.format(data[1],data[0]))
     conn.commit()
     conn.close()
+
+def get_ignored():
+    conn=sqlite3.connect(database)
+    cursor=conn.execute('''SELECT mac_addr,host_id FROM hosts WHERE ignore=1;''')
+    ignored=[]
+    for row in cursor:
+        ignored.append(row)
+    conn.close()
+    return ignored
+
 
 def main():
     pass
