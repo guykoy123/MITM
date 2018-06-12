@@ -114,9 +114,10 @@ def url_sniff():
 				url=f
 				domain=url.split('/')[2] #extract domain
 				if domain != last_domain:#if it is a new site
-					last_domain=domain
-					logging.debug('ip:{},domain:{}'.format(ip,domain))
-					process_domain(domain,ip) #process domain if blocked
+					if ip in localAddresses.keys():
+						last_domain=domain
+						logging.debug('ip:{},domain:{}'.format(ip,domain))
+						process_domain(domain.split('www.')[-1],ip) #process domain if blocked (split domain to remove 'www.' to prevent errors)
 
 def setup():
     """
