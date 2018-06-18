@@ -3,13 +3,17 @@ This program is a Man in the middle
 
 It will reroute all traffic on the network through the localhost and saves all data
 
+TODO:
+  fix privilege updating
+  url removing
+  add email notification
 
 
 privilege:
 
-  0: admin
-  1: blacklist
-  2: whitelist
+  0 - admin
+  1 - blacklist
+  2 - whitelist
 
 
 
