@@ -5,7 +5,9 @@ It will reroute all traffic on the network through the localhost and saves all d
 
 TODO:
   fix privilege updating
+  
   url removing
+  
   add email notification
 
 
