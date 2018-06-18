@@ -1,16 +1,17 @@
 #python 2.7
 
-from multiprocessing import Pipe
+from multiprocessing import Pipe,Process, Queue
 import logging
 from threading import Thread,Lock
-from time import sleep
+from time import sleep,strftime
 from scapy.all import *
-from datetime import datetime
 import functions
-from sys import exit
+from sys import exit,stdin
 from user import *
-from socket import *
-
+from os import system
+from subprocess import Popen,PIPE
+from urlparse import urlparse
+from db_api import *
 # except ImportError:
 #
 #     #TODO: handle all cases of missing modules and try to solve
@@ -18,9 +19,8 @@ from socket import *
 
 
 # global variables:
-localAddresses=['192.168.1.11']
+localAddresses=[]
 addressesLock=Lock()
-gatewayMAC=''
 user_list=[]
 localHost=''
 main_conn=Pipe()
@@ -103,7 +103,7 @@ def handle_Packet(pkt):
 			   		    #TODO: send RST packet
 			   		    return 1
 		if Ether in pkt:
-			if pkt[Ether].dst!="b8:27:eb:fc:2f:ef":
+			if pkt[Ether].dst!="______": #add host MAC address
 				sendp(pkt,verbose=0)
 				#print pkt.summary()
 				return None
@@ -173,96 +173,153 @@ def handle_Packet(pkt):
 
     
     #print active_connections
-		
 
 
+def blocked(user,url):
+	"""
+	return True if site is blocked for user
+	"""
+	if user.get_privilege() == 1: #blacklist user
+		for l_url in user.url_list:
+			if l_url[1] == url:
+		   		return True
+		return False
 
-def arpSpoof(router):
-    """
-    every 30 seconds send ARP broadcast to spoof all machines on LAN
-    """
-    print 'router:',router
-    while True:
-
-        if len(localAddresses)>0:
-            addressesLock.acquire()
-            #print 'spoofing',str(len(localAddresses)), localAddresses
-            for host in localAddresses :
-                #if host != localHost:
-                if host=='192.168.1.11':
-                    #print 'spoofing',host
-                    victimPacket =Ether(dst='94:de:80:61:70:52')/ARP(op=2,psrc = router, pdst=host,hwdst='94:de:80:61:70:52')#create arp packets (whdst doesn't matter can be broadcast or specific)
-                    #packet needs to have MAC addresses
-                    logging.debug('spoofing: '+victimPacket[ARP].pdst)
-                    sendp(victimPacket,verbose=0)#send packets
-                    
-            addressesLock.release()
-            sleep(0.5)
+	for l_url in user.get_url_list(): #whitelist user
+		if l_url[1] == url:
+		   	return False
+	return True
 
 
+def spoof(target,defaultGateway):
+	"""
+	arp spoofs specific ip address
+	utilizes arpspoof package
+	"""
+	Popen('arpspoof -i eth0 -t {} {}'.format(target,defaultGateway),shell=True) #-i [interface] -t [target] [gateway]
 
-
+def arp_spoof(defaultGateway):
+	"""
+	creates threads for spoofing each host on network
+	"""
+	threads={}
+	while True:
+		for target in localAddresses.keys():
+			if target not in threads.keys():
+				s=Thread(target=spoof,args=(target,defaultGateway,)) #thread for spoofing target
+				s.start()
+				s2=Thread(target=spoof,args=(defaultGateway,target)) #thread for spoofing router
+				s2.start()
+				threads[target]=[s,s2]
+				logging.debug('spoofing:'+target)
+		sleep(20)
 
 def setup():
-    """
-    get all necessary values for the program to run
-    and start all threads
-    """
-    #get default gateway, local IP address and local MAC address
-    global gatewayMAC
-    global localHost
-    global defaultGateway
-    defaultGateway,localHost,gatewayMAC=functions.getLocalhostAddress()
-    print defaultGateway,gatewayMAC,localHost
-    logging.debug('got default gateway and local IP and MAC')
+	"""
+	get all necessary values for the program to run
+	and start all threads
+	"""
 
-    global localAddresses
-    #TODO: retrieve MAC addresses as well as IP addresses
-    #localAddresses=functions.get_Local_Addresses(defaultGateway,localHost) #get addresses of all hosts on network
-    logging.debug('scanned network for all active hosts')
-    print localAddresses
+	hosts=get_users_list()
+	for host in hosts:
+		new_host=get_user(host[1])
+		if new_host[2] == 2:
+			urls=get_urls(host[1])
+			global user_list
+			user_list.append(User(host[1],str(new_host[0]),new_host[1],urls))
+			logging.debug('new user:{},{},{}'.format(host[1],host[0],user_list[-1].get_url_list()))
+	print 'all users created'
+	logging.info('all users created ({})'.format(len(user_list)))
 
-    arpThread=Thread(target=arpSpoof,args=(defaultGateway,))
-    logging.debug('created thread for ARP spoofing')
-    arpThread.start()
-    logging.debug('spoofing all hosts on network')
-    
+	#get default gateway, local IP address and local MAC address
+	global defaultGateway
+	global localHost
+	defaultGateway,localHost=functions.getLocalhostAddress()
+	logging.info('router:{}, local host:{}'.format(defaultGateway,localHost))
+	print defaultGateway,localHost
 
+	#get addresses of all hosts on network
+	global localAddresses
+	localAddresses=functions.get_Local_Addresses(defaultGateway,localHost)
+	if defaultGateway in localAddresses.keys():
+		del localAddresses[defaultGateway] #remove default gateway from address dict to prevent unneccery spoofing etc.
+		logging.debug('removed default gateway from local addresses list')
+	logging.info('scanned network for all active hosts')
+	print localAddresses
+
+	#add mac addresses to database that do not have a user associated with them
+	add_new_hosts(localAddresses)
+
+	#create process for spoofing all hosts on network
+	arpThread=Process(target=arp_spoof,args=(defaultGateway,))
+	logging.info('created process for ARP spoofing')
+	arpThread.start()
 
 
 
 def main(conn=None):
-    """
-    control the whole program
-    gets the parameters for working
-    then calls all functions in order
-    """
-    #setup logging to file logFile.log
-    logging.basicConfig(filename='logFile.log',level=logging.DEBUG, format='%(lineno)s - %(levelname)s : %(message)s')
-    logging.info('\n\n\n\n\n########## Program Start ##########\n\n')
+	"""
+	control the whole program
+	gets the parameters for working
+	then calls all functions in order
+	"""
+	#setup logging to file logFile.log
+	logging.basicConfig(filename='MITM_log.log',level=logging.DEBUG, format='%(lineno)s - %(levelname)s : %(message)s')
+	logging.info('\n\n\n\n\n########## MITM Start ##########\n\n')
 
-    setup() #get all required variables and start all threads
-    logging.info('setup complete')
+	global main_conn
+	main_conn=conn
+	#get all required variables and start all threads
+	setup()
+	logging.info('setup complete')
+	global user_list
+  sniff(prn=handle_packet)
+	while True:
+		command=main_conn.recv()
 
-    global main_conn
-    main_conn=conn
+		if command==1:
+			
+			host_id=main_conn.recv()
+			new_user=get_user(host_id)
+			print "new user:"+str(new_user)
+			
+			user_list.append(User(host_id,str(new_user[0]),new_user[1],get_urls(host_id)))
+			print "user add len:"+ str(len(user_list))
+			
+		elif command==2:
+			host_id=main_conn.recv()
+			for i in len(user_list):
+				
+				if host_id==user_list[i].get_id():
+					del user_list[i]
+					logging.info('user {} deleted'.format(host_id))
+					
 
-    sniff(prn=handle_Packet)
+		elif command == 3:
+			host_id=main_conn.recv()
+			for i in range(len(user_list)+1):
+				if host_id==user_list[i].get_id():
+					user_list[i].update_url_list(get_urls(host_id))
+					logging.debug('updated url list for user {}'.format(host_id))
+			for host in user_list:
+				print "urls:"+str(host.get_url_list())
+					
+
+		elif command==4:
+			url_id=main_conn.recv()
+			for host in user_list:
+				if host.remove(url_id):
+					logging.debug('url {} deleted for user {}'.format(url_id,host.get_id()))
+					
+		elif command==10:
+			data=main_conn.recv()
+			for host in user_list:
+				if host.get_id() == data[0]:
+					host.set_privilege(data[1])
+					print "updated privilege "+data[0]
+					
 
 
-    """while True:
-        command=main_conn.recv()
-
-        if command==13:
-            user=main_conn.recv()
-            url_list=main_conn.recv()
-            user_list.append(User(user[0],user[1],user[2],url_list))
-            logging.info('New user connected'+user[0])
-            print "user connected",user[0]"""
-
-
-
-    #TODO: add queue to communicate to main program to update changing information for each user for example :ip address, privilege, url list
 
 
 

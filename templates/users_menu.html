@@ -8,18 +8,27 @@
     <table style="width:100%">
       <tr>
         <th align="left">
-          <ul>
-            {% for user in users %}
-              <li>
-                  <a href ={{ url_for('user_page',key=user[1] ) }}>
-                      {{user[0]}} <!-- TODO: add link/redirect to a users profile -->
-                  </a>
-              </li>
-            {% endfor %}
-          </ul>
+            <h3>existing users:</h3>
+              <ul>
+                {% for user in users %}
+                  <li>
+                      <a href ={{ url_for('user_page',key=user[1] ) }}>
+                          {{user[0]}} <!-- TODO: add link/redirect to a users profile -->
+                      </a>
+                  </li>
+                {% endfor %}
+              </ul>
         </th>
-        <th>
-          <a href = "{{url_for('new_user')}}"> add new user</a>
+        <th align="left">
+            <h3>new users on network</h3>
+            <ul>
+                {% for new_host in new_hosts %}
+                <li>
+                    <a>{{new_host[0]}}</a><a href={{url_for('add_user',key=new_host[1])}}>       add user </a><a href={{url_for('ignore_host',key=new_host[1])}}>        remove</a>
+               </li>
+                {% endfor %}
+            </ul>
+
         </th>
       </tr>
     </table>

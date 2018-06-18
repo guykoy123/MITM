@@ -1,37 +1,7 @@
 import sqlite3
 
 database='database/test.db'
-#TODO: add function to update the database
 
-def add_user(data):
-    """
-    adds new user to database if not exists
-    when successful return new user id
-
-    return codes:
-    1: user already exists
-    """
-
-    conn=sqlite3.connect(database) #connect to database
-
-    cursor = conn.execute(''' SELECT name, password FROM users;''') #retrieve name and passwords
-    for row in cursor:
-        if row[0] == data[0] and row[1] == data[1]: #check if the user already exists
-            conn.close()
-            return 1 #if exists do not add and return code: 1
-
-    #insert the new user to the database
-    query =('''INSERT INTO users (name, password, privilege) VALUES ("%s","%s",%d);''' % (data[0],data[1],int(data[2])))
-    conn.execute(query)
-    conn.commit() #commit changes
-    cursor=conn.execute('''SELECT user_id FROM users WHERE name = "%s";''' % (data[0])) #get the new user id
-
-
-    for row in cursor:
-        user_id=row
-    conn.close()
-    new_user=list(user_id).append(int(data[2])) #return new user for MITM
-    return new_user
 
 def delete_user(data):
     """
@@ -39,7 +9,7 @@ def delete_user(data):
     """
 
     conn = sqlite3.connect(database) #connect to database
-    conn.execute('''DELETE FROM users WHERE user_id = %d;''' % (int(data))) #delete the url
+    conn.execute('''DELETE FROM hosts WHERE host_id = %d;''' % (int(data))) #delete the url
     conn.commit() #save changes
     conn.close()
 
@@ -49,7 +19,7 @@ def add_url(data):
     """
 
     conn=sqlite3.connect(database) #connect to database
-    conn.execute('''INSERT INTO sites (url,user_id) VALUES ("%s",%d);''' % (data[0],int(data[1])))#insert new url to sites table
+    conn.execute('''INSERT INTO sites (url,host_id) VALUES ("%s",%d);''' % (data[0],int(data[1])))#insert new url to sites table
     conn.commit()#save changes
     conn.close()
 
@@ -74,17 +44,16 @@ def update_password(data):
 
 def get_users_list():
     """
-    return list of all usernames and their ids
-    except the admin
+    return list of all MACs and their ids
     """
 
     conn=sqlite3.connect(database) #connect to database
-    cursor=conn.execute('''SELECT name, user_id FROM users WHERE privilege != 0;''') #retrieve all username and user ids except admin user
-    users=list()
+    cursor=conn.execute('''SELECT mac_addr, host_id FROM hosts WHERE ignore=2;''') #retrieve all username and user ids except admin user
+    hosts=list()
     for row in cursor:
-        users.append(row)
+        hosts.append(row)
     conn.close()
-    return users
+    return hosts
 
 def get_user(data):
     """
@@ -92,7 +61,7 @@ def get_user(data):
     """
 
     conn=sqlite3.connect(database)#connect to database
-    cursor=conn.execute('''SELECT name, password, privilege FROM users WHERE user_id = %d;''' % (int(data)))#retrieve data about user
+    cursor=conn.execute('''SELECT mac_addr, privilege, ignore FROM hosts WHERE host_id = %d;''' % (int(data)))#retrieve data about user
     for row in cursor:
         return row
 
@@ -102,28 +71,30 @@ def get_urls(data):
     """
 
     conn=sqlite3.connect(database)
-    cursor=conn.execute('''SELECT url_id, url FROM sites WHERE user_id = %d;''' % (int(data)))
+    cursor=conn.execute('''SELECT url_id, url FROM sites WHERE host_id = %d;''' % (int(data)))
     url_list=list()
     for row in cursor:
         url_list.append(row)
     return url_list
 
-def update_ip(data):
-    """
-    updates user ip address
-    """
-    conn=sqlite3.connect(database) #connect to database
-    conn.execute('''UPDATE users SET ip = "%s" WHERE user_id = %d;''' % (data[1],int(data[0])))#update ip address
-    conn.commit()#commit changes
-    conn.close() #close connection
 
 def update_privilege(data):
     """
     updates privilege of users
     """
     conn=sqlite3.connect(database) #connect to database
-    conn.execute('''UPDATE users SET privilege = %d WHERE user_id=%d;'''%(int(data[1]),int(data[0]))) #update privilege
+    conn.execute('''UPDATE hosts SET privilege = %d WHERE host_id=%d;'''%(int(data[1]),int(data[0]))) #update privilege
     conn.commit()#commit changes
+    conn.close()
+
+
+def update_username(data):
+    """
+    updates username of a user
+    """
+    conn=sqlite3.connect(database)
+    conn.execute('''UPDATE users SET name = "%s" WHERE user_id=%d;'''%(data[1],int(data[0])))
+    conn.commit()
     conn.close()
 
 def get_admin():
@@ -139,18 +110,65 @@ def get_admin():
     conn.close()
     return admin
 
-def update_username(data):
+
+def get_violations(data):
     """
-    updates username of a user
+    returns violations for specific user
     """
+
     conn=sqlite3.connect(database)
-    conn.execute('''UPDATE users SET name = "%s" WHERE user_id=%d;'''%(data[1],int(data[0])))
+    cursor=conn.execute('''SELECT time_stamp, url FROM violations where host_id=%d'''%(int(data)) )
+    violations=[]
+    for row in cursor: #TODO: add check if recent
+        violations.append(row)
+    return violations
+
+
+def add_new_hosts(addresses):
+
+	conn=sqlite3.connect(database)
+	cursor=conn.execute('''SELECT mac_addr FROM hosts''')
+	mac_addrss=[]
+	for row in cursor:
+		mac_addrss.append(row[0])
+	
+	for host in addresses.values(): #check that host mac
+		add=True
+		for mac in mac_addrss:
+			if host == str(mac): #is not in the existing list
+				add=False
+		if add:
+			conn.execute('''INSERT INTO hosts (mac_addr,ignore) VALUES ("{}",0)'''.format(host))
+
+	conn.commit()
+	conn.close()
+
+def add_violation(data):
+	conn=sqlite3.connect(database)
+	conn.execute('''INSERT INTO violations (host_id,url,time_stamp) VALUES ("{}","{}","{}");'''.format(data[0],data[1],data[2]))
+	conn.commit()
+	conn.close()
+
+def get_new_hosts():
+    conn=sqlite3.connect(database)
+    cursor=conn.execute('''SELECT mac_addr,host_id FROM hosts WHERE ignore = 0;''')
+    new_hosts=[]
+    for row in cursor:
+        new_hosts.append(row)
+    conn.close()
+    return new_hosts
+
+def update_ignore(data):
+    conn=sqlite3.connect(database)
+    conn.execute('''UPDATE hosts SET ignore = {} WHERE host_id="{}"'''.format(data[1],data[0]))
     conn.commit()
     conn.close()
 
-def main():
-    pass
-
-
-if __name__ =="__main__":
-    main()
+def get_ignored():
+    conn=sqlite3.connect(database)
+    cursor=conn.execute('''SELECT mac_addr,host_id FROM hosts WHERE ignore=1;''')
+    ignored=[]
+    for row in cursor:
+        ignored.append(row)
+    conn.close()
+    return ignored

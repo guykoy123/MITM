@@ -18,7 +18,7 @@
 
     <tr>
       <th align="left">
-        {% if user[2] == 1 %}
+        {% if user[1] == 1 %}
             <h2>Blacklisted sites:</h2>
         {%else%}
             <h2>Whitelisted sites:</h2>
@@ -51,7 +51,7 @@
       </th>
       <th align="left">
         <form id="settings_form" method = "POST">
-          {% if user[2] == 1 %}
+          {% if user[1] == 1 %}
             <input type="radio" name="privilege" value="blacklist" checked> blacklist (can view all sites but the listed ones)<br>
             <input type="radio" name="privilege" value="whitelist"> whitelist (can view only the sites on the list)<br><br>
           {% else %}
@@ -61,9 +61,38 @@
           <input type="submit" value="Set new privilege"/>
         </form>
         <br><br><br>
-        <a href = "{{url_for('show_password',password=user[1])}}">forgot password </a>
-        <!-- TODO: add change passowrd option -->
        </th>
+    </tr>
+    <tr>
+        <th>
+        </th>
+        <th>
+            {% if violations != None %}
+                <table style="width:40%">
+                    <tr>
+                        <th>
+                            <h2>Violations</h2>
+                        </th>
+                    </tr>
+                    <th>
+                        <table>
+                            {% for violation in violations[::-1][:100] %}
+                            <tr>
+                                <th>
+                                    {{violation[0]}}
+                                </th>
+                                <th>
+                                    {{violation[1]}}
+                                </th>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </th>
+                </table>
+            {% else %}
+            <a> There are no violations at this time</a>
+            {% endif %}
+        </th>
     </tr>
   </table>
 

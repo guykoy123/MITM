@@ -3,26 +3,55 @@ from os import makedirs
 
 try:
     makedirs('../database/')
+
+except OSError:
+	pass
+
 finally:
     with open('../database/test.db','wb') as f:
         pass
 
-    conn =sqlite3.connect('../database/test.db')
+	conn =sqlite3.connect('../database/test.db')
 
-    conn.execute('''DROP TABLE IF EXISTS users;''')
+	conn.executescript("""
+DROP TABLE IF EXISTS users;
 
-    conn.execute('''CREATE TABLE IF NOT EXISTS users (
-      user_id INTEGER PRIMARY KEY AUTOINCREMENT,
-      name TEXT NOT NULL,
-      password TEXT NOT NULL,
-      privilege INTEGER NOT NULL);''')
+CREATE TABLE IF NOT EXISTS users (
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    password TEXT NOT NULL,
+    privilege INTEGER NOT NULL
+);
 
-    conn.execute('''DROP TABLE IF EXISTS sites;''')
+DROP TABLE IF EXISTS hosts;
 
-    conn.execute('''CREATE TABLE IF NOT EXISTS sites (
-      url_id INTEGER PRIMARY KEY AUTOINCREMENT,
-      url TEXT NOT NULL,
-      user_id INT,
-      FOREIGN KEY (user_id) REFERENCES users(user_id));''')
+CREATE TABLE IF NOT EXISTS hosts (
+	host_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	mac_addr TEXT NOT NULL,
+	privilege INTEGER,
+	ignore INTEGER
+);
 
-    conn.close()
+DROP TABLE IF EXISTS sites;
+
+CREATE TABLE IF NOT EXISTS sites (
+    url_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    url TEXT NOT NULL,
+    host_id INT,
+    FOREIGN KEY (host_id) REFERENCES hosts(host_id)
+);
+
+DROP TABLE IF EXISTS violations;
+
+CREATE TABLE IF NOT EXISTS violations (
+    violation_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    url TEXT NOT NULL,
+    time_stamp TEXT NOT NULL,
+    host_id INT,
+    FOREIGN KEY (host_id) REFERENCES hosts(host_id)
+);""")
+
+	#add admin to database
+	conn.execute('''INSERT INTO users (name,password,privilege) VALUES ("admin","admin",0);''')
+	conn.commit()
+	conn.close()

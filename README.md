@@ -31,6 +31,7 @@ process communication protocol:
       get admin : 11
       update username : 12
       user connected : 13
+      get violations : 14
 
 
 
@@ -64,7 +65,10 @@ process communication protocol:
     if action is user connected
       send [user id,ip address]
 
-TODO: fix protocol
+    if action is get Violations
+      send user id
+
+
   main to server:
 
     receive action
@@ -82,11 +86,13 @@ TODO: fix protocol
     if action is get admin
       return [user id,username,password]
 
+    if action is get Violations
+      return [time,url]
 
 
 
 
-  main to MITM:
+
 
     send action:
       delete user : 2,
@@ -94,7 +100,7 @@ TODO: fix protocol
       delete url : 4
 
 
-
+  main to MITM:
     if action is delete user
       send user id
 

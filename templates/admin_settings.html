@@ -16,10 +16,38 @@
   {% endblock%}
 
   {% block page %}
-    <p>You can change you login credentials here</p>
-    <form id="settings_form" method="post" onsubmit="return check_form()">
-      <p>Name: <input type="text" name="username" value = "{{user[1]}}" required></p><br>
-      <p>Password: <input type="text" name="password" value = "{{user[2]}}" required></p><br>
-      <input type="submit" value="Save" name="Submit">
-    </form>
+      <table style="width:100%">
+          <tr>
+              <th align="left">
+                  <p>You can change you login credentials here</p>
+                  <form id="settings_form" method="post" onsubmit="return check_form()">
+                    <p>Name: <input type="text" name="username" value = "{{user[1]}}" required></p><br>
+                    <p>Password: <input type="text" name="password" value = "{{user[2]}}" required></p><br>
+                    <input type="submit" value="Save" name="Submit">
+                  </form>
+              </th>
+              {% if ingored != None %}
+                <th align="left">
+                      <h3>ignored computers:</h3>
+                      <table>
+                          {% for host in ignored %}
+                            <tr>
+                                <th>
+                                    {{host[0]}}
+                                </th>
+                                <th>
+                                    <a href={{url_for('add_user',key=host[1])}}> add user </a>
+                                </th>
+                            </tr>
+                            {% endfor %}
+                      </table>
+                </th>
+              {% else %}
+                <th>
+                    <a> There are no ignored computers </a>            
+                </th>
+              {% endif %}
+          </tr>
+      </table>
+
   {% endblock %}
