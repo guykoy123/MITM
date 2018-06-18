@@ -25,154 +25,6 @@ user_list=[]
 localHost=''
 main_conn=Pipe()
 defaultGateway=''
-active_connections={}
-
-def blocked(user,url):
-    """
-    return True if site is blocked for user
-    """
-    if user.get_privilege() == 0: #admin can access all sites
-        return False
-
-    if user.get_privilege() == 1: #blacklist user
-        for l_url in user.url_list:
-            if l_url[1] == url:
-                return True
-        return False
-
-    for l_url in user.get_url_list(): #whitelist user
-        if l_url[1] == url:
-            return False
-    return True
-
-
-def handle_Packet(pkt):
-    """
-    add sniffed packets to queue of prescanned packets
-    if packet is an ARP packet check if new device needs to be added to list
-    send it forward
-    """
-    if ARP not in pkt:
-    	if UDP in pkt:
-    		#print 'udp packet'
-    		if pkt[UDP].dport==53:
-    			new_pkt=pkt
-    			new_pkt[Ether].dst=gatewayMAC
-    			new_pkt[Ether].src="b8:27:eb:fc:2f:ef"
-    			new_pkt[IP].src=localHost
-    			new_pkt.show()
-    			resp= sr1(new_pkt,verbose=0)
-    			print resp.summary()
-    			return None
-    			
-			if pkt[UDP].sport==53:
-				pkt[Ether].src="b8:27:eb:fc:2f:ef"
-				sendp(pkt,verbose=0)
-				return None
-				
-		if TCP in pkt:
-			if pkt[TCP].dport==80:
-				pkt[Ether].dst=gatewayMAC
-				sendp(pkt,verbose=0)
-		   		if len(active_connections) ==0:
-		   			sendp(pkt,verbose=0)
-		   			active_connections[pkt[IP].dst]=[pkt[TCP].sport,long(pkt[TCP].ack)]
-		   			print "added"+str((pkt[IP].dst,pkt[TCP].sport))
-		   			return 1
-		   		    
-		   		else:
-			   		if pkt[IP].dst not in active_connections.keys():
-			   		    sendp(pkt,verbose=0)
-			   		    active_connections[pkt[IP].dst]=[pkt[TCP].sport,long(pkt[TCP].ack)]
-			   		    print "added"+str((pkt[IP].dst,pkt[TCP].sport))
-			   		    return 1
-			   		    
-			   		elif active_connections[pkt[IP].dst][0]== pkt[TCP].sport:
-			   		
-				   		if active_connections[pkt[IP].dst][1]<long(pkt[TCP].ack) or 'P' & pkt[TCP].flags:
-				   			sendp(pkt,verbose=0)
-				   			active_connections[pkt[IP].dst][1]=long(pkt[TCP].ack)
-				   			return 1
-				   			
-				   		elif 'F' & pkt[TCP].flags:
-				   			sendp(pkt,verbose=0)
-				   			active_connections.pop(pkt[IP].dst,None)
-				   			return 1
-				   	else:
-			   		    print "rejected"+str((pkt[IP].dst,pkt[TCP].sport))
-			   		    #TODO: send RST packet
-			   		    return 1
-		if Ether in pkt:
-			if pkt[Ether].dst!="______": #add host MAC address
-				sendp(pkt,verbose=0)
-				#print pkt.summary()
-				return None
-			   		    
-#-------------old code---------------		   		
-    """url=None
-    if ARP not in pkt:
-        if TCP in pkt:
-            if 80 == pkt[TCP].dport: #check if packet is http packet
-                if Raw in pkt:
-                    if "GET" in pkt[Raw]:
-                        logging.debug("HTTP:"+ pkt.summary())
-                        functions.redirect_to_login(pkt,gatewayMAC)
-                        pkt.show()
-                    else:
-                        functions.sendPacket(pkt,gatewayMAC)
-                else:
-                    functions.sendPacket(pkt,gatewayMAC)
-                try:
-                    if Raw in pkt:
-                        fields=str(pkt[Raw]).split('\r\n') #split into packet fields
-                        for field in fields:
-                            if 'Host:' == field[:5]:        #if Host field exctract url
-                                url=field[5:]
-                                break
-                        if (url != None):
-                            logging.info("URL:"+url)
-                            ip=pkt[IP].src
-                            logging.info('IP:'+ip)
-                            new_user=True
-                            if len(user_list) ==0:
-                                functions.redirect_to_login(pkt)
-                            else:
-                                for user in user_list:
-                                    if ip == user.get_ip():
-                                        new_user=False
-                                    if "networkmanager" in url or localHost in url: #check if requesting for network manager
-                                            pass
-                                    else:
-                                        if not blocked(user,url):
-                                            #functions.sendPacket(pkt,gatewayMAC)
-                                        else:
-                                            loggin.info('%s blocked for %s' %(url,ip))
-                                            #TODO: return page is blocked
-                                if new_user:
-                                    logging.info('redirecting %s to login (new user)' % (ip))
-                                    functions.redirect_to_login(pkt)
-                                    pkt.show()
-                        else:
-                            logging.warning('url field not found') #save packets that cause errors
-                            wrpcap('error.pcap',pkt)
-                except Exception as exc:
-                    print exc
-                    #logging.warning(str(exc)," : ",pkt.summary())
-    else:
-        if pkt[ARP].op == 2: #check if ARP operation is: is-at
-            address=pkt[ARP].psrc #extract IP address
-            addressesLock.acquire()
-            global localAddresses
-            if address not in localAddresses and address != defaultGateway and address!=localHost: #check for duplicates and not default gateway or local host
-                localAddresses.append(address) #add IP address to list of all hosts
-                print 'added',address
-            addressesLock.release()"""
-			   			
-			   			
-			
-
-    
-    #print active_connections
 
 
 def blocked(user,url):
@@ -189,6 +41,35 @@ def blocked(user,url):
 		if l_url[1] == url:
 		   	return False
 	return True
+
+def process_domain(domain,ip):
+	global user_list
+	for user in user_list:
+		if user.get_mac() == localAddresses[ip]:
+			if blocked(user,domain):
+				add_violation((user.get_id(),domain,str(strftime("%y-%m-%d %H:%M:%S")))) #add violation to database
+				print 'violation: ip {}, domain {}'.format(ip,domain)
+				logging.info('violation: ip {}, domain {}'.format(ip,domain))
+
+def handle_packet(pkt):
+	"""
+	checks for new host/address changes on network
+	checks if arp operation is 'is-at' adn then update new address in the local addresses dict
+	"""
+
+	if ARP in pkt:
+		if pkt[ARP].op == 2:#check if ARP operation is: is-at
+			address=pkt[ARP].psrc #extract IP address
+			addressesLock.acquire()
+			global localAddresses
+			global localHost
+			global defaultGateway
+			if address not in localAddresses.keys() and address != defaultGateway and address!=localHost: #check for duplicates and not default gateway or local host
+				localAddresses[address]=pkt[Ether].src #add IP  and MAC address to dict of all hosts
+				add_new_hosts(localAddresses)
+				logging.info('added: {}'.format(address))
+				print 'added: {}'.format(address)
+			addressesLock.release()
 
 
 def spoof(target,defaultGateway):
@@ -214,6 +95,31 @@ def arp_spoof(defaultGateway):
 				logging.debug('spoofing:'+target)
 		sleep(20)
 
+
+def arp_sniff():
+	"""
+	sniff for incoming arp packets
+	"""
+	sniff(prn=handle_packet)
+
+def url_sniff():
+	urlsnarf=Popen('urlsnarf',stdout=PIPE,shell=True) #start urlsnarf
+	logging.info('urlsnarf started')
+	last_domain=''
+	while True:
+		output=urlsnarf.stdout.readline() #read from output
+		fields=output.split(' ')
+		ip=fields[0] #extact ip address
+		for f in fields:
+			if 'http' in f and '?' not in f: #for url that is noy query
+				url=f
+				domain=url.split('/')[2] #extract domain
+				if domain != last_domain:#if it is a new site
+					if ip in localAddresses.keys():
+						last_domain=domain
+						logging.debug('ip:{},domain:{}'.format(ip,domain))
+						process_domain(domain.split('www.')[-1],ip) #process domain if blocked (split domain to remove 'www.' to prevent errors) 
+
 def setup():
 	"""
 	get all necessary values for the program to run
@@ -230,6 +136,8 @@ def setup():
 			logging.debug('new user:{},{},{}'.format(host[1],host[0],user_list[-1].get_url_list()))
 	print 'all users created'
 	logging.info('all users created ({})'.format(len(user_list)))
+
+
 
 	#get default gateway, local IP address and local MAC address
 	global defaultGateway
@@ -250,11 +158,27 @@ def setup():
 	#add mac addresses to database that do not have a user associated with them
 	add_new_hosts(localAddresses)
 
+	#turn ip forwarding on
+	system('sysctl -w net.ipv4.ip_forward=1')
+	Popen('iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000', stdout=PIPE, stderr=PIPE, shell=True)
+	Popen('sslstrip -p -k -f', stdout=PIPE, stderr=PIPE, shell=True)
+	logging.info('ip forwarding enabled')
+
 	#create process for spoofing all hosts on network
 	arpThread=Process(target=arp_spoof,args=(defaultGateway,))
 	logging.info('created process for ARP spoofing')
 	arpThread.start()
 
+	#create process for urlsnarf
+	#q=Queue()
+	url_sniffer=Thread(target=url_sniff)
+	url_sniffer.start()
+
+	#create thread for sniffing for arp packets to add new hosts to list
+	arp_sniffer=Thread(target=arp_sniff)
+	arp_sniffer.start()
+	logging.info('arp sniffer started')
+	#return q
 
 
 def main(conn=None):
@@ -273,7 +197,6 @@ def main(conn=None):
 	setup()
 	logging.info('setup complete')
 	global user_list
-  sniff(prn=handle_packet)
 	while True:
 		command=main_conn.recv()
 
